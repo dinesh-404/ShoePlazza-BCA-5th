@@ -179,8 +179,8 @@ body .center {
   border-bottom: 1px dotted white;
 }
 .txtfield .idpassinput:focus~label,
-.txtfield .age:focus~label,
-.txtfield .age:valid~label,
+.txtfield #age:focus~label,
+.txtfield #age:valid~label,
 .txtfield .idpassinput:valid~label {
   top: -1px;
   color: black;

@@ -42,25 +42,25 @@
             </div>
           </div>
           <div class="txtfield">
-            <input type="text" required name="age" oninput="input(1)" id="age" class="age"/>
+            <input type="text" required name="age" class="idpassinput" oninput="input(1)" id="age"/>
             <label class="idpasslbl">age</label>
           </div>
           <div class="txtfield">
-            <input type="text" required name="email" class="idpassinput" oninput="input(1)" />
+            <input type="text" required name="email" class="idpassinput" oninput="input(2)" id="mail" />
             <label class="idpasslbl">Email-address</label>
           </div>
         </div>
         <div class="tab">
           <div class="txtfield">
-            <input type="text" required name="username" class="idpassinput" oninput="input(2)" />
+            <input type="text" required name="username" class="idpassinput" oninput="input(3)" />
             <label class="idpasslbl">Username</label>
           </div>
           <div class="txtfield">
-            <input type="password" required name="password" class="idpassinput" id="pass" oninput="input(3)" />
+            <input type="password" required name="password" class="idpassinput" id="pass" oninput="input(4)" />
             <label class="idpasslbl">password</label>
           </div>
           <div class="txtfield">
-            <input type="txtfield" required name="mobilenumber" id="mobileno" class="idpassinput" oninput="input(4)" />
+            <input type="txtfield" required name="mobilenumber" id="mobileno" class="idpassinput" oninput="input(5)" />
             <label class="idpasslbl">Mobile no</label>
           </div>
           <div class="txtfield" style="border:none;">
