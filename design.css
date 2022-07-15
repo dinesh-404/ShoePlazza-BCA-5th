@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@font-face {
+  font-family: 'commonpro';
+  src: url('fonts/TT Commons Pro Trial Light.ttf');
+}
+
+.navbar {
+  background-color: #4b4b4b;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  display: inline;
+  margin-inline-start: 50px;
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: 'commonpro';
+  font-style: bold;
+  float: right;
+  /* cursor: none; */
+}
+
+ul {
+  background-color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  cursor: none;
+  overflow: hidden;
+}
+
+.body {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'commonpro';
+  background: linear-gradient(45deg, #7DA17D, #F2D496, #F1B11D, #5B8F9A, #394261);
+  background-size: 800% 800%;
+  animation: AnimationName 30s ease infinite;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 55% 0%
+  }
+
+  50% {
+    background-position: 46% 100%
+  }
+
+  100% {
+    background-position: 55% 0%
+  }
+}
+
+/* login form css */
+body .center {
+  width: 90%;
+  height: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex: 1 1 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  align-content: stretch;
+  justify-content: space-between;
+  background: url("loginstuff/marek-piwnicki-TqCRkyPXGbM-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.372);
+}
+.left {
+  width: 100%;
+  height: 100%;
+}
+
+.center .left h1 {
+  margin: 30px;
+  font-size: 10vh;
+  text-align: left;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 500;
+}
+
+.center .left h2 {
+  margin: 30px;
+  font-size: 20px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-weight: 100;
+}
+
+.txtfield input[type=text] {
+  width: 100%;
+  padding: 0 0 0 10px;
+  height: 100%;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.right h1 {
+  margin: 0;
+  font-size: 10vh;
+  text-align: right;
+  padding: 0 30px 40px 0;
+  font-family: 'roboto', cursive;
+}
+
+.right form .txtfield {
+  position: relative;
+}
+.tab{
+  display:none;
+}
+.right .button {
+  width: 50%;
+  height: 50px;
+  background-color: #313131;
+  border-radius: 10px;
+  border: none;
+  margin: 40px 0 10px 25%;
+}
+
+.right {
+  padding-top: 0%;
+  padding-left: 10px;
+  overflow: hidden;
+  cursor: auto;
+}
+
+.center .txtfield .idpassinput {
+  width: 100%;
+  padding: 0 5px;
+  height: 20px;
+  color: #1d1d1dc7;
+  font-size: 16px;
+  background: none;
+  outline: none;
+}
+
+.center .txtfield label {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+.signupradio{ 
+  color:white;
+  border-bottom: 1px dotted white;
+}
+.signupradio .radiolbl{
+  
+  height: 100px;
+  margin: 10px;
+}
+.center select{
+  background: none;
+  color : white;
+  border:none;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px dotted white;
+}
+.txtfield .idpassinput:focus~label,
+.txtfield .age:focus~label,
+.txtfield .age:valid~label,
+.txtfield .idpassinput:valid~label {
+  top: -1px;
+  color: black;
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+
+.center .right {
+  width: max-content;
+  background: rgba(255, 255, 255, 0.119);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  width: 400px;
+}
+
+.center .right .txtfield {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 10px;
+  border-bottom: 1px dotted white;
+}
+
+/* signup page */
+.signupcenter {
+  width: 90%;
+  height: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex: 1 1 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  align-content: stretch;
+  justify-content: space-between;
+  background: url("loginstuff/marek-piwnicki-TqCRkyPXGbM-unsplash.jpg");
+  background-size: cover;
+}
+
+.signupcenter .right {
+  width: max-content;
+  background: rgba(255, 255, 255, 0.119);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  width: 400px;
+}
+.signupcenter .txtfield label {
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+/* mouse cursor */
+.changecursor {
+  height: 30px;
+  width: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 50ms linear;
+  background-color: white;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+
+}
+
+.midcursor {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 3px solid black;
+  position: absolute;
+  background-color: gray;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.hover {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+.onclick {
+  border: 10px solid #313131;
+  background-color: #313131;
+}
+
+.txtfieldfocus {
+  transition: all 1s;
+  background: gray;
+  border-radius: 20px;
+}
+
+.nocursor {
+  height: 0px;
+  width: 0px;
+}
+
+/* dropdown */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.optcol{
+  color:black;
+}
+.right input{
+  border:none;
+}
+.txtarea{
+  position: absolute;
+  padding: 5px 5px 0 0;
+  background: none;
+  width: 100%;
+  border: none;
+  outline: none ;
+  border-bottom: 1px dotted white;
+  resize: none;
+}
+input.invalid{
+  background-color:red;
+  color:red;
+  border: 2x solid red;
+}
+
+.tab .radio input[type="radio"]{
+  display: inline-block;
+  height: 20px;
+  width:20px;
+  color:red;
+}
+.radio{
+  color:white;
+}
+.radio input[type="radio"]{
+ accent-color: black;
+}
