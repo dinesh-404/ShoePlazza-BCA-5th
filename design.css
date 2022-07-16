@@ -130,6 +130,7 @@ body .center {
   width: 50%;
   height: 50px;
   background-color: #313131;
+  color :white;
   border-radius: 10px;
   border: none;
   margin: 40px 0 10px 25%;
@@ -184,6 +185,10 @@ body .center {
 .txtfield .idpassinput:valid~label {
   top: -1px;
   color: black;
+}
+.txtfield .txtarea:focus~label,
+.txtfield .txtarea:valid~label{
+  color:black;
 }
  
 @import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
@@ -324,6 +329,7 @@ body .center {
   border-bottom: 1px dotted white;
   resize: none;
 }
+
 input.invalid{
   background-color:red;
   color:red;
@@ -341,4 +347,8 @@ input.invalid{
 }
 .radio input[type="radio"]{
  accent-color: black;
+}
+.signup{
+  position: relative;
+  display: block;
 }

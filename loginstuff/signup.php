@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="txtfield">
-            <input type="text" required name="age" class="idpassinput" oninput="input(1)" id="age"/>
+            <input type="text" required name="age" class="idpassinput" oninput="input(1)" id="age" />
             <label class="idpasslbl">age</label>
           </div>
           <div class="txtfield">
@@ -63,19 +63,21 @@
             <input type="txtfield" required name="mobilenumber" id="mobileno" class="idpassinput" oninput="input(5)" />
             <label class="idpasslbl">Mobile no</label>
           </div>
-          <div class="txtfield" style="border:none;">
-            <textarea class="txtarea"></textarea>
+          <div class="txtfield"style="border:none;">
+            <textarea class="txtarea" required name="address"></textarea>
             <label class="idpasslbl">Address</label>
           </div>
         </div>
+        
         <button type="button" class="button" id="signupbtn" onclick="current_tab(1)">next</button>
+        <div class="signup">
+              <input type="checkbox" id="showpass">
+              <label class="showpassword" for="showpass">Show password</label>
+              already a member ?<a href="signin.php">sign in</a>
+          </div>
         <button type="button" class="button" id="prevbtn" onclick="current_tab(-1)">prev</button>
         <input type="submit" value="Submit" class="button" id="signupsubmit" style="display: none;">
-        <div class="signup">
-          <input type="checkbox" id="showpass">
-          <label class="showpassword" for="showpass">Show password</label>
-          already a member ?<a href="signin.php">sign in</a>
-        </div>
+
       </div>
     </form>
   </div>
