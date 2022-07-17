@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body ,html{
+    padding: 0;
+    height: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+.image{
+    width: 49%;
+    height: 48%; 
+       
+}
+.imgmain{
+    display: block;
+    width: 100%;
+    
+}
+.center{
+    display: flex;
+    flex: 1 1 100%;
+   
+    width: 100%;
+    height: 100%;
+    
+}
+.left{
+    height: 100%;
+    width: 1000px;
+}
+.noscroll{
+    position: fixed;
+    text-align: center;
+    padding-bottom:100px ;
+    overflow: scroll;
+    height: 90%;
+    
+}
+.noscroll h1{
+    font-size: 40px;
+}
+.noscroll p{
+    margin: 50px;
+    height: 100px;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+.noscroll h1{
+    font-weight: lighter;
+}
+.noscroll .button{
+    transform: translateY(200px);
+    width: 100px;
+    height: 30px;
+}
+.rbtn{
+    display: none;
+}
+.radiolbl{
+    display: inline;
+    font-size: 30px;
+    height: 50px;
+    background:none;
+    width: 100%;
+    cursor: grab;
+    
+}
+.btncol{
+    background: white;
+    border: 1px solid black;
+} 
+.btnchange{
+    background: black;
+    color: white;
+}
+.shoptable{
+    border-collapse: collapse;
+    text-align: center;
+    transform: translateY(100%);
+    margin-left: 180px;
+    background: none;
+    row-gap: none;
+}
+.btncol:hover{
+    transition: .5s all;
+    background: black;
+    color: white;
+}
