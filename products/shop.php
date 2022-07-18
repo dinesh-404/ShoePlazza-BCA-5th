@@ -72,9 +72,9 @@
                 <input type="hidden" name="productname" value="airjordan4">
                 
                 <input type="hidden" name="price" value="20000">
-                <button class="qtybtn" onclick="quantity(1)">+</button>
+                <button type="button" class="qtybtn" onclick="quantity(1)">+</button>
                 <input type="text" name="qty" readonly value="1" class="qty" id="qty">
-                <button class="qtybtn" onclick="quantity(-1)">-</button><br>
+                <button type="button" class="qtybtn" onclick="quantity(-1)">-</button><br>
                 <label for="price">price</label>        
                 <input type="text" name="price" class='price' id="price"readonly value="15000"><br>
                 
