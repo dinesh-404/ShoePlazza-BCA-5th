@@ -26,6 +26,9 @@
                 <img src="\products\jordan4air\jordan4-5.jpg" alt="" srcset="" class="image">
                 <img src="\products\jordan4air\jordan4-6.jpg" alt="" srcset="" class="image">
             </div>
+            <div class="imgwide">
+                <img src="\products\jordan4air\jordan4-7.jpg" alt="" class="wideimage">
+            </div>
         </div>
         <div class="right" id="right">
             <div class="noscroll" id="noscroll">
@@ -89,7 +92,7 @@
         </div>
         
     </div><br>
-    <div class="down">down</div>
+    
     <script src="products.js"></script>
     <script src="scroll.js"></script>
    
