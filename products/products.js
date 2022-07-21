@@ -36,3 +36,5 @@ function price(x){
     valu = priceval*x;
     document.getElementById('price').value=valu;
 }
+
+        
