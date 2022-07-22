@@ -1,6 +1,6 @@
 .card{
     width: 100%;
-    height: 420px;
+    height: 400px;
     background: red;
     position: relative;
 }
@@ -11,15 +11,37 @@
 }
 .cardrow{
     position: absolute;
-    overflow: hidden;
     width: 100%;
     height: 500px;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 24% 24% 24% 24%;
     column-gap: 10px;
     background: pink;
 }
 .imgtxt{
     position: absolute;
     top:0;
+}
+.card button{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    background: black;
+    color: white
+}
+.cardimage:hover{
+    position: relative;
+    z-index: 1;
+    box-shadow: 1px 1px 1px 1px black;
+    transition: box-shadow 2s;
+    animation: width 5s none ;
+}
+@keyframes width {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 400px;
+    }
 }
