@@ -9,7 +9,6 @@
 
     <title>Document</title>
 </head>
-
 <body>
     <!-- product one -->
     <div class="center">
