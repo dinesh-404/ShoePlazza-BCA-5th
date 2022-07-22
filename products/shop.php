@@ -23,6 +23,7 @@
             </div>
         </div>
         <div class="card">
+            <div class="cardimage">
                 <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
             </div>
         </div>
