@@ -36,7 +36,6 @@
             </div>
         </div>
         <div class="card">
-
             <div class="img">
                 <img src="\products\jordan4air\jordan4-1.jpg" alt="" srcset="">
             </div>
