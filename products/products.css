@@ -206,6 +206,7 @@ body::-webkit-scrollbar {
     height:400px;
     margin: 10px;
     overflow: hidden;
+    display: block;
 }
 .img button{
     width: 100%;

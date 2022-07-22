@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="grid">
         <div class="card">
             <div class="img">
@@ -19,7 +20,7 @@
                     <p>Jordan Air 4 shoes for men/women</p>
                 </div>
                 <div>
-                   <button>show more</button>
+                    <button>show more</button>
                 </div>
 
             </div>
