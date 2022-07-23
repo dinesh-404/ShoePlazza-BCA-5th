@@ -14,20 +14,44 @@
         <div class="cardleft">
             <div class="cardimage">
                 <div class="imgtxt">
-
                     <h1>Jordan Air 4 retro</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
+                <img src="jordan4air\jordan4-1.jpg" alt="" srcset="">
                 <button>see more</button>
             </div>
-            
         </div>
         <div class="cardleft">
             <div class="cardimage">
                 <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
             </div>
-
+        </div>
+        <div class="cardright">
+            <div class="cardimage">
+                <img src="jordan4air\jordan4-3.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="cardright">
+            <div class="cardimage">
+                <img src="jordan4air\jordan4-4.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="cardrow">
+        <div class="cardleft">
+            <div class="cardimage">
+                <div class="imgtxt">
+                    <h1>Jordan Air 4 retro</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <img src="jordan4air\jordan4-5.jpg" alt="" srcset="">
+                <button>see more</button>
+            </div>
+        </div>
+        <div class="cardleft">
+            <div class="cardimage">
+                <img src="jordan4air\jordan4-6.jpg" alt="" srcset="">
+            </div>
         </div>
         <div class="cardright">
             <div class="cardimage">
@@ -47,16 +71,14 @@
                     <h1>Jordan Air 4 retro</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
+                <img src="jordan4air\jordan4-5.jpg" alt="" srcset="">
                 <button>see more</button>
             </div>
-            
         </div>
         <div class="cardleft">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
+                <img src="jordan4air\jordan4-6.jpg" alt="" srcset="">
             </div>
-
         </div>
         <div class="cardright">
             <div class="cardimage">

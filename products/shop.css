@@ -7,7 +7,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-.cardleft {
+.cardleft , .cardright{
     width: 100%;
     height: 400px;
     background: black;
@@ -35,9 +35,9 @@ body {
     top: 0;
 }
 
-.cardleft button {
+.cardleft button , .cardright button{
     width: 100%;
-    height:100px ;
+    height:100% ;
     margin: 0;
     border: 0;
     background: red;
@@ -51,6 +51,13 @@ body {
     transition: box-shadow 2s;
     animation: width 1s forwards;
 }
+.cardright:hover{
+    position:relative;
+    z-index: 1;
+    margin: 10px , 10px , 0 ,0;
+    height:450px;
+    animation: right 1s forwards;
+}
 img{
     font-size: 0;
 }
@@ -60,7 +67,21 @@ img{
 .cardimage:hover p{
     display:block;
 }
+@keyframes right {
+    0%{
+        width: 100%;
+        height:400px;
+        margin-top:0;
+        margin-right:  0;;
+    }
 
+    100%{
+        height:450px;
+        width: 400px;
+        margin-top:10px;
+        marigin-right:10px;
+    }
+}
 @keyframes width {
     0%{
         width: 100%;
