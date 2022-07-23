@@ -49,4 +49,3 @@ a.forEach(item => {
         mouseCursor.classList.remove('hover');
     });
 });
-

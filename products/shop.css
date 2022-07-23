@@ -1,16 +1,27 @@
-.card{
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.cardleft {
     width: 100%;
     height: 400px;
-    background: red;
-    position: relative;
+    background: black;
+    overflow: hidden;
 }
-.cardimage img{
+
+.cardimage img {
     width: 100%;
     height: 400px;
     font-size: 0;
 }
-.cardrow{
-    position: absolute;
+
+.cardrow {
+    
     width: 100%;
     height: 500px;
     display: grid;
@@ -18,30 +29,48 @@
     column-gap: 10px;
     background: pink;
 }
-.imgtxt{
+
+.imgtxt {
     position: absolute;
-    top:0;
+    top: 0;
 }
-.card button{
+
+.cardleft button {
     width: 100%;
-    height: 100%;
+    height:100px ;
     margin: 0;
     border: 0;
-    background: black;
+    background: red;
     color: white
 }
-.cardimage:hover{
+
+.cardleft:hover {
     position: relative;
     z-index: 1;
     box-shadow: 1px 1px 1px 1px black;
     transition: box-shadow 2s;
-    animation: width 5s none ;
+    animation: width 1s forwards;
 }
+img{
+    font-size: 0;
+}
+.cardimage p{
+    display:none;
+}
+.cardimage:hover p{
+    display:block;
+}
+
 @keyframes width {
     0%{
         width: 100%;
+        height:400px;
+        margin: 0;
     }
+
     100%{
+        height:450px;
         width: 400px;
+        margin: 10px;
     }
 }
