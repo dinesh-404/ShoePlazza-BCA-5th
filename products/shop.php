@@ -20,7 +20,7 @@
                 <img src="jordan4air\jordan4-1.jpg" alt="" srcset="">
                 
             </div>
-            <button>see more</button>
+            <a class="linkbtn" href="#">see more</a>
         </div>
         <div class="card">
             <div class="cardimage">
