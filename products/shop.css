@@ -7,11 +7,13 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-.cardleft , .cardright{
+.card{
+    position: relative;
     width: 100%;
     height: 400px;
-    background: black;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .cardimage img {
@@ -21,77 +23,69 @@ body {
 }
 
 .cardrow {
-    
-    width: 100%;
-    height: 500px;
+    position: relative;
+    padding:20px;
     display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
-    background: pink;
+    
 }
 
-.imgtxt {
-    position: absolute;
-    top: 0;
-}
-
-.cardleft button , .cardright button{
-    width: 100%;
-    height:100% ;
+.card button{
+    bottom:0;
     margin: 0;
     border: 0;
-    background: red;
-    color: white
+    display: none;
+    background: black;
+    color: white;
+    position: absolute;
 }
 
-.cardleft:hover {
-    position: relative;
+.card:hover{
     z-index: 1;
-    box-shadow: 1px 1px 1px 1px black;
-    transition: box-shadow 2s;
-    animation: width 1s forwards;
+    transition: box-shadow .5s;
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 22px 70px 4px;
 }
-.cardright:hover{
-    position:relative;
-    z-index: 1;
-    margin: 10px , 10px , 0 ,0;
-    height:450px;
-    animation: right 1s forwards;
+/* @keyframes margin {
+    0%{
+        margin: 0;
+    }
+    100%{
+        margin: 10px;
+    }
+    
+} */
+.card:hover button{
+    display: block;
+    animation: topdown 1s forwards ease;
 }
+.card button:hover{
+    background:#0000007b;
+    color:black;
+    
+}
+
 img{
     font-size: 0;
+}
+.imgtxt{
+    position: absolute;
+    top:0;
 }
 .cardimage p{
     display:none;
 }
-.cardimage:hover p{
+.card:hover p{
     display:block;
 }
-@keyframes right {
+@keyframes topdown {
     0%{
         width: 100%;
-        height:400px;
-        margin-top:0;
-        margin-right:  0;;
+        height: 0;
     }
-
     100%{
-        height:450px;
-        width: 400px;
-        margin-top:10px;
-        marigin-right:10px;
-    }
-}
-@keyframes width {
-    0%{
         width: 100%;
-        height:400px;
-        margin: 0;
-    }
-
-    100%{
-        height:450px;
-        width: 400px;
-        margin: 10px;
+        height: 40px;
     }
 }
