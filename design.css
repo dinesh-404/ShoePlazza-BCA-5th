@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
-@font-face {
-  font-family: 'commonpro';
-  src: url('fonts/TT Commons Pro Trial Light.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 .navbar {
   background-color: #4b4b4b;
@@ -18,7 +14,7 @@ li {
   margin-inline-start: 50px;
   padding-top: 10px;
   font-size: 30px;
-  font-family: 'commonpro';
+  font-family: 'Titillium Web', sans-serif;
   font-style: bold;
   float: right;
   /* cursor: none; */
@@ -47,7 +43,7 @@ body {
 .body {
   margin: 0%;
   padding: 0%;
-  font-family: 'commonpro';
+  font-family: 'Titillium Web', sans-serif;
   background: linear-gradient(45deg, #7DA17D, #F2D496, #F1B11D, #5B8F9A, #394261);
   background-size: 800% 800%;
   animation: AnimationName 30s ease infinite;
@@ -79,8 +75,9 @@ body .center {
   align-content: stretch;
   justify-content: space-between;
   background: url("loginstuff/marek-piwnicki-TqCRkyPXGbM-unsplash.jpg");
+  
   background-size: cover;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.372);
+  box-shadow: rgba(0, 0, 0, 0.61) 0px 22px 70px 4px;
 }
 .left {
   width: 100%;
@@ -241,53 +238,6 @@ body .center {
 }
 
 /* mouse cursor */
-.changecursor {
-  height: 30px;
-  width: 30px;
-  border: 3px solid white;
-  border-radius: 50%;
-  position: absolute;
-  transition: all 50ms linear;
-  background-color: white;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-
-}
-
-.midcursor {
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  border: 3px solid black;
-  position: absolute;
-  background-color: gray;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-}
-
-.hover {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-}
-
-.onclick {
-  border: 10px solid #313131;
-  background-color: #313131;
-}
-
-.txtfieldfocus {
-  transition: all 1s;
-  background: gray;
-  border-radius: 20px;
-}
-
-.nocursor {
-  height: 0px;
-  width: 0px;
-}
 
 /* dropdown */
 
