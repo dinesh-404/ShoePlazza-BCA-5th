@@ -14,19 +14,19 @@
     <div class="center">
         <div class="left" id="left">
             <div class="imgmain">
-                <img src="\products\jordan4air\jordan4-1.jpg" alt="" srcset="" class="image">
-                <img src="\products\jordan4air\jordan4-2.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-1.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-2.jpg" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="\products\jordan4air\jordan4-3.jpg" alt="" srcset="" class="image">
-                <img src="\products\jordan4air\jordan4-4.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-3.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-4.jpg" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="\products\jordan4air\jordan4-5.jpg" alt="" srcset="" class="image">
-                <img src="\products\jordan4air\jordan4-6.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-5.jpg" alt="" srcset="" class="image">
+                <img src="\products\productimg\jordan4-6.jpg" alt="" srcset="" class="image">
             </div>
             <div class="imgwide">
-                <img src="\products\jordan4air\jordan4-7.jpg" alt="" class="wideimage">
+                <img src="\products\productimg\jordan4-7.jpg" alt="" class="wideimage">
             </div>
         </div>
         <div class="right" id="right">

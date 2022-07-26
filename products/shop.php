@@ -17,24 +17,24 @@
                     <h1>Jordan Air 4 retro</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <img src="jordan4air\jordan4-1.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-1.jpg" alt="" srcset="">
                 
             </div>
             <a class="linkbtn" href="#">see more</a>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-2.jpg" alt="" srcset="">
             </div>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-3.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-3.jpg" alt="" srcset="">
             </div>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-4.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-4.jpg" alt="" srcset="">
             </div>
         </div>
     </div>
@@ -45,23 +45,23 @@
                     <h1>Jordan Air 4 retro</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <img src="jordan4air\jordan4-1.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-1.jpg" alt="" srcset="">
                 <button>see more</button>
             </div>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-2.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-2.jpg" alt="" srcset="">
             </div>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-3.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-3.jpg" alt="" srcset="">
             </div>
         </div>
         <div class="card">
             <div class="cardimage">
-                <img src="jordan4air\jordan4-4.jpg" alt="" srcset="">
+                <img src="productimg\jordan4-4.jpg" alt="" srcset="">
             </div>
         </div>
     </div>
