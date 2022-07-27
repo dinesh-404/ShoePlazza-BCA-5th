@@ -1,4 +1,4 @@
-// mouse cursor
+// mouse cursor variables
 var mouseCursor = document.querySelector(".cursor");
 var midcur = document.querySelector(".innercursor");
 var a = document.querySelectorAll("li");
@@ -6,10 +6,8 @@ var body = document.querySelectorAll("body");
 var txtfield = document.querySelectorAll("txtfield");
 var login = document.getElementById("center");
 var logbutton = document.getElementById("logbtn");
-document.addEventListener("DOMContentLoaded", function () {
-    mouseCursor.classList.remove("changecursor");
-    midcur.classList.remove("midcursor");
-});
+var image = document.querySelectorAll('img');
+//main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
 
@@ -18,16 +16,6 @@ function cursor(e) {
     midcur.style.top = e.pageY + "px";
     midcur.style.left = e.pageX + "px";
 }
-body.forEach(item => {
-    item.addEventListener("mousemove", function () {
-        mouseCursor.classList.add("changecursor");
-        midcur.classList.add("midcursor");
-    });
-    item.addEventListener("mouseleave", function () {
-        mouseCursor.classList.remove("changecursor");
-        midcur.classList.remove("midcursor");
-    });
-});
 //mouse click
 document.addEventListener('mousedown', function () {
 
@@ -47,5 +35,34 @@ a.forEach(item => {
     });
     item.addEventListener('mouseleave', () => {
         mouseCursor.classList.remove('hover');
+    });
+});
+image.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('imghover');
+    });
+    item.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('imghover');
+    });
+});
+
+// know cursor style and remove 
+document.addEventListener('mouseover', e => {
+    const tgt = e.target;
+    const computed = window.getComputedStyle(tgt)["cursor"];
+    if (computed == 'none') {
+        mouseCursor.classList.add("changecursor");
+        midcur.classList.add("midcursor");
+    }
+    else {
+        mouseCursor.classList.remove("changecursor");
+        midcur.classList.remove("midcursor");
+    }
+});
+//no cursor if mouse not in webpage
+body.forEach(item => {
+    item.addEventListener("mouseleave", function () {
+        mouseCursor.classList.remove("changecursor");
+        midcur.classList.remove("midcursor");
     });
 });

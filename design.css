@@ -236,9 +236,6 @@ body .center {
   pointer-events: none;
   transition: .5s;
 }
-
-/* mouse cursor */
-
 /* dropdown */
 
 .dropdown-content {

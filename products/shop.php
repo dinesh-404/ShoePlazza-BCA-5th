@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="\cursor.css">
     <title>shop</title>
 </head>
 
 <body>
+    <div class="cursor"></div>
+    <div class="innercursor"></div>
     <div class="cardrow">
         <div class="card">
             <div class="cardimage">
@@ -18,9 +21,9 @@
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <img src="productimg\jordan4-1.jpg" alt="" srcset="">
-                
+
             </div>
-            <a class="linkbtn" href="#">see more</a>
+            <a class="linkbtn" href="/products/productpages/jordanair4.php">see more</a>
         </div>
         <div class="card">
             <div class="cardimage">
@@ -65,6 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="\cursor.js"></script>
 </body>
 
 </html>

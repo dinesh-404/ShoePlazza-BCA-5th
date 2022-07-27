@@ -28,13 +28,12 @@
         <a href="/loginstuff/signin.php">login</a>
     <?php } ?>
     </ul>
-    <div class="cursor"></div>
-    <div class="innercursor"></div>
+   
     <script src="test.js"></script>
 
     <button>cluck</button>
     <div class="cursor"></div>
-    <div class="center" id="ok"style="display: none;">
+    <div class="center" style="display: none;">
         <div class="left">
             <h1>Hello there !</h1>
             <h2>login here to get access to your account and more...</h2>

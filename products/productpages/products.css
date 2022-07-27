@@ -6,7 +6,8 @@ html {
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
     -ms-overflow-style: none;
-
+    background-color: white;
+    cursor: none;
     /* IE and Edge */
     scrollbar-width: none;
 }
