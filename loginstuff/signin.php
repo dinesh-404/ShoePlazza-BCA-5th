@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="\design.css" />
+  <link rel="stylesheet" href="\cursor.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
   <title>Login</title>
@@ -13,6 +14,7 @@
 
 <body class="body" style="margin-top: 20px;">
   <div class="cursor"></div>
+  <div class="innercursor"></div>
   <div class="center">
     <div class="left">
       <h1>Hello there !</h1>
@@ -41,6 +43,6 @@
     </form>
   </div>
   <script src="loginthings.js"></script>
-  <script src="\test.js"></script>
+  <script src="\cursor.js"></script>
 </body>
 </html>
