@@ -1,13 +1,25 @@
-.footer img{
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+img {
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: white;
     
-    cursor: grab;
-}
-body{
-    background: black;
+    float: right;
 }
 
+img:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
 
+.footer {
+    width: 100%;
+    display: grid;
+    background: gray;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    
+}
