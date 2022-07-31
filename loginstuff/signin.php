@@ -12,7 +12,7 @@
   <title>Login</title>
 </head>
 
-<body class="body" style="margin-top: 20px;">
+<body class="body">
   <div class="cursor"></div>
   <div class="innercursor"></div>
   <div class="center">

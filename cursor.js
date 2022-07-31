@@ -7,6 +7,7 @@ var txtfield = document.querySelectorAll("txtfield");
 var login = document.getElementById("center");
 var logbutton = document.getElementById("logbtn");
 var image = document.querySelectorAll('img');
+var footer = document.getElementsByClassName('footer');
 //main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
@@ -66,3 +67,7 @@ body.forEach(item => {
         midcur.classList.remove("midcursor");
     });
 });
+footer.addEventListener("mouseover",function(){
+    midcur.classList.remove("midcursor");
+    mouseCursor.classList.remove("changecursor");
+})

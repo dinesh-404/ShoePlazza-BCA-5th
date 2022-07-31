@@ -1,4 +1,4 @@
-<ul class="navbar">
+<ul class="navbar" id="navbar">
     <li><a href="products.html">products</a></li>
     <li><a href="aboutus.html">about us</a></li>
     <li><a href="contactus.html">Contact us</a></li>
@@ -19,4 +19,4 @@
     <a href="/loginstuff/signin.php">login</a>
 <?php } ?>
 </ul>
-<script src="cursor.js"></script>
+
