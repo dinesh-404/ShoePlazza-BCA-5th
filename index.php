@@ -6,19 +6,16 @@
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="cursor.css">
     <link rel="stylesheet" href="testdesign.css">
-    <style>
-        .content {
-            height: 1000px;
-            overflow: scroll;
-        }
-    </style>
 </head>
 
 <body class="body" id="body">
     
 
     <?php include('navbar.php'); ?>
-    <div class="content"></div>
+    <div class="ProductScroll">
+        <img src="" alt="" srcset="">
+        <img src="" alt="" srcset="">
+    </div>
     <?php include('footer.php'); ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>

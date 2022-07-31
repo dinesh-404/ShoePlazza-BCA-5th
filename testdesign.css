@@ -2,6 +2,8 @@
 :root{
     --textcolor:rgba(0, 0, 0, 0.63);
     --txthover:black;
+    --footerbg:gray;
+    
 }
 .FooterRight img {
     margin: 10px;
@@ -17,9 +19,11 @@
 .footer {
     width: 100%;
     height: max-content;
+    position: relative;
     display: grid;
     background: gray;
     color: var(--textcolor);
+    grid-template-rows: 1fr 30px;
     grid-template-columns: 1fr 1fr;
     margin:0;
     padding: 0;
@@ -28,6 +32,10 @@
 .footer .FooterLeft{
     display: block;
     cursor: auto;
+    grid-row: 1;
+}
+.footer .FooterRight{
+    grid-row: 1;
 }
 
 .FooterMid a{
@@ -37,6 +45,17 @@
     text-decoration: none;
 }
 .FooterMid a:hover{
-
     color: var(--txthover);
+}
+.FooterCopy {
+    text-align: center;
+    height: 10px;
+    bottom: 0;
+    grid-row: 2;
+    height: 0;
+    margin: 0;
+    transform: translateX(50%);
+    padding: 0;
+    color: var(--textcolor);
+    background: var(--footerbg);
 }

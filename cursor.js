@@ -8,10 +8,24 @@ var login = document.getElementById("center");
 var logbutton = document.getElementById("logbtn");
 var image = document.querySelectorAll('img');
 var footer = document.getElementsByClassName('footer');
+
+//hides when scroll
+window.onscroll=function(){
+    if(this){
+
+        var scroll = window.scrollY;
+        mouseCursor.style.top = scroll+400 + "px";
+        midcur.style.top = scroll+400 + "px";
+         mouseCursor.classList.remove("changecursor");
+          midcur.classList.remove("midcursor");
+    
+    }
+    ScrollHide();
+};
 //main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
-
+    console.log(e.pageY);
     mouseCursor.style.top = e.pageY + "px";
     mouseCursor.style.left = e.pageX + "px";
     midcur.style.top = e.pageY + "px";
@@ -66,8 +80,9 @@ body.forEach(item => {
         mouseCursor.classList.remove("changecursor");
         midcur.classList.remove("midcursor");
     });
+
 });
-footer.addEventListener("mouseover",function(){
-    midcur.classList.remove("midcursor");
-    mouseCursor.classList.remove("changecursor");
-})
+// footer.addEventListener("mouseover",function(){
+//     midcur.classList.remove("midcursor");
+//     mouseCursor.classList.remove("changecursor");
+// });

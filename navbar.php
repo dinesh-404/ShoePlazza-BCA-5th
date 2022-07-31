@@ -1,8 +1,6 @@
 <ul class="navbar" id="navbar">
-    <li><a href="products.html">products</a></li>
-    <li><a href="aboutus.html">about us</a></li>
-    <li><a href="contactus.html">Contact us</a></li>
     <li><a href="index.php">Home</a></li>
+    <li><a href="products.html">products</a></li>
     <li class="dropdown">
         <?php
         session_start();
@@ -18,5 +16,7 @@
 <?php } else { ?>
     <a href="/loginstuff/signin.php">login</a>
 <?php } ?>
+    <li><a href="aboutus.html">about us</a></li>
+    <li><a href="contactus.html">Contact us</a></li>
 </ul>
 

@@ -9,9 +9,14 @@
   --text-color:black;
 }
 .navbar {
-  background-color: #4b4b4b;
+
   padding: 0px;
-  margin: 0px;
+  margin: 0;
+  transform: translateX(50%);
+  height: 50px;
+  width: 50%;
+  position: sticky;
+  
 }
 
 li {
@@ -21,12 +26,7 @@ li {
   font-size: 30px;
   font-family: 'Titillium Web', sans-serif;
   font-style: bold;
-  float: right;
   /* cursor: none; */
-}
-
-ul {
-  background-color: black;
 }
 
 a:hover {
@@ -35,7 +35,7 @@ a:hover {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--background-black);
   cursor: none;
 }
 
@@ -46,11 +46,13 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: white;
 }
 .body {
   margin: 0%;
   padding: 0%;
   font-family: 'Titillium Web', sans-serif;
+  overflow-x: scroll;
   
 }
 
