@@ -6,16 +6,15 @@
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="cursor.css">
     <link rel="stylesheet" href="testdesign.css">
+    <style>
+       
+    </style>
 </head>
-
 <body class="body" id="body">
     
 
     <?php include('navbar.php'); ?>
-    <div class="ProductScroll">
-        <img src="" alt="" srcset="">
-        <img src="" alt="" srcset="">
-    </div>
+    <div class="content"></div>
     <?php include('footer.php'); ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>

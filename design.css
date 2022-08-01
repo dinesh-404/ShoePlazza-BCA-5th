@@ -11,8 +11,8 @@
 .navbar {
 
   padding: 0px;
-  margin: 0;
-  transform: translateX(50%);
+  margin: auto;
+  
   height: 50px;
   width: 50%;
   position: sticky;
@@ -21,7 +21,7 @@
 
 li {
   display: inline;
-  margin-inline-start: 50px;
+  margin: 20px;
   padding-top: 10px;
   font-size: 30px;
   font-family: 'Titillium Web', sans-serif;
@@ -45,14 +45,13 @@ body {
   cursor: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background: white;
 }
 .body {
   margin: 0%;
   padding: 0%;
   font-family: 'Titillium Web', sans-serif;
-  overflow-x: scroll;
+  overflow: scroll;
   
 }
 
@@ -310,4 +309,10 @@ input.invalid {
   border: 2px solid black;
   border-radius: 5px;
   background: white;
+}
+.content{
+  height: 1000px;
+  
+  position: relative;
+  
 }
