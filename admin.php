@@ -1,3 +1,8 @@
+<?php
+	include('loginstuff\connect.php');
+    $query = mysqli_query($connect,"SELECT * FROM `login`;");
+    
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +15,15 @@
 <body class = 'body'>
 <div class="cursor"></div>
     <div class="innercursor"></div>
-    <?php
-	$host = 'localhost';
-	$user = 'root';
-	$pass = '';
-	$database = 'project';
-	$connect = mysqli_connect($host, $user, $pass, $database) or die("PHP & MySQL Connection Error");
-    $query = mysqli_query($connect,"SELECT * FROM `login`;");
     
-    ?>
 
     <table class='admintable'>
         <tr>
+            <th class='tableheading' colspan="9">Login Data</th>
+            
+        </tr>
+       
+        <tr class='ok'>
             <th>id</th>
             <th>fullname</th>
             <th>age</th>
@@ -34,7 +36,7 @@
         </tr>
         <?php
         while($row = mysqli_fetch_row($query)) { 
-        ?><tr><?php
+        ?><tr class="tablecontent"><?php
             for ($i=0; $i <=8 ; $i++) { ?>
                 <td><?php echo ($row[$i]);?></td>
                 <?php

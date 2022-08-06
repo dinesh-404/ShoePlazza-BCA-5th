@@ -295,24 +295,38 @@ input.invalid {
   position: relative;
   display: block;
 }
-
+/* admin table */
 .admintable tr td {
-  border: 2px solid black;
-  background: gray;
-  border-radius: 5px;
   border-collapse: collapse;
+  border: 0;
+  padding:0;
 }
 
 .body .admintable {
-  width: 90%;
+  width: 80%;
+  margin:auto;
   box-sizing: border-box;
-  border: 2px solid black;
+  font-family: 'Titillium Web', sans-serif;
+  border-spacing: 0;
   border-radius: 5px;
+  background: white; 
+}
+.admintable .tableheading{
+  text-align: center;
+  font-size: 40px;
   background: white;
+  color:black;
+}
+.admintable th{
+  border-top: 3px solid black;
+  margin:0;
+  padding:0;
+}
+.admintable td,tr{
+  text-align: center;
+  
+  border: 1px solid black;
 }
 .content{
-  height: 1000px;
-  
-  position: relative;
-  
+  height: 1000px;     
 }

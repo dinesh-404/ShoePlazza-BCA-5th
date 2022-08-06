@@ -43,6 +43,7 @@
     color: var(--textcolor);
     display: block;
     text-decoration: none;
+    margin:10px;
 }
 .FooterMid a:hover{
     color: var(--txthover);
