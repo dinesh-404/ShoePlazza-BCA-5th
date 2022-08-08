@@ -7,7 +7,6 @@ $jsonarray = json_decode($f);
 $val = 1;
 print_r($jsonarray);
 
-
 $mydir = 'products\productimg\airjordan7';
 
 
