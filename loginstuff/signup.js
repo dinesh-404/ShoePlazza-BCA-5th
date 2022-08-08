@@ -24,8 +24,7 @@ function current_tab(n) {
     if (currpage>=x.length) {
             document.getElementById("signupform").submit();
             console.log("submitted");
-            return false;
-        
+            return false;  
     }
     show_tab(currpage);
 }
@@ -83,7 +82,7 @@ function validation() {
             validate++;
         }
 
-        //pass
+        //passwrd
         var pass = document.getElementById('pass').value;
         if (pass.length > 7 || !/[0-9]/.test(pass) || !/[a-z]/.test(pass)) {
             console.log('password bitchheshshshshsh');
