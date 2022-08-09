@@ -14,10 +14,6 @@ if ($n == 1) {
 	$_SESSION['uname'] = $data['username'];
 	header("location:\index.php");
 } else {
-?>
-	<script>
-		alert('nahhhhh')
-	</script>
-<?php
+	header('location:signin.php');
 }
 ?>

@@ -12,7 +12,7 @@
   <title>Sign up</title>
 </head>
 
-<body class="body" >
+<body class="body">
   <div class="cursor"></div>
   <div class="innercursor"></div>
 

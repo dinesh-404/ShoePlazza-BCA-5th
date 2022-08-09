@@ -7,9 +7,9 @@ if (isset($_SESSION['uid'])) {
     $command = "SELECT * FROM `login` WHERE id ='" . $uid . "';";
     $result = mysqli_query($connect, $command);
     $row = mysqli_fetch_array($result, MYSQLI_BOTH);
-    $count =count($row)/2;
+    $count = count($row) / 2;
 } else {
-    echo "username not set";
+    header('location:/loginstuff/signin.php');
 }
 ?>
 <!DOCTYPE html>
@@ -25,21 +25,24 @@ if (isset($_SESSION['uid'])) {
 
 <body>
 
-    <?php 
+    <?php
 
     $lbl = ['', 'fullname', 'age', 'gender', 'username', 'password', 'address', 'email', 'mobile'];
     echo $lbl[1];
     ?>
-    <form action="updatescript.php" method="post" id = "updateform">
+    <form action="updatescript.php" method="post" id="updateform" enctype="multipart/form-data">
+        <div class="container">
+            <label for="avatar">Profile picture</label>
+            <input type="file" name="avatar" accept="image/*" id=""><br>
 
-        <?php
-        for ($i = 1; $i < $count; $i++) {
-            echo "<div class='container' >";
-            echo "<label for='" . $lbl[$i] . "'>" . $lbl[$i] . "</label>";
-            echo "<input type='text' class='fields' name='" . $lbl[$i] . "' value='" . $row[$i] . "' id = '".$lbl[$i]."' disabled required >";
-            echo "</div>";
-        }
-        ?>
+            <?php
+            for ($i = 1; $i < 9; $i++) {
+
+                echo "<label for='" . $lbl[$i] . "'>" . $lbl[$i] . "</label>";
+                echo "<input type='text' class='fields' name='" . $lbl[$i] . "' value='" . $row[$i] . "' id = '" . $lbl[$i] . "' disabled required ><br>";
+            }
+            ?>
+        </div>
     </form>
 
     <div class="crudbtn">

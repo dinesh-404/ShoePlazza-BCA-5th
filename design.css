@@ -42,7 +42,7 @@ a {
 html,
 body {
   height: 100%;
-  cursor: none;
+  cursor: auto;
   margin: 0;
   padding: 0;
   background: white;
@@ -232,43 +232,6 @@ body {
 
 /* dropdown */
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content a {
-  cursor: none;
-  color: black;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.optcol {
-  color: black;
-}
-
-.txtarea {
-  position: absolute;
-  padding: 5px 5px 0 0;
-  background: none;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-bottom: 1px dotted white;
-  resize: none;
-}
 
 input.invalid {
   background-color: red;
@@ -284,17 +247,16 @@ input.invalid {
 }
 
 .radio {
-  color: white;
+  color: black;
 }
 
 .radio input[type="radio"] {
   accent-color: black;
 }
 
-.signup {
-  position: relative;
-  display: block;
-}
+
+
+
 /* admin table */
 .admintable tr td {
   border-collapse: collapse;
@@ -324,7 +286,6 @@ input.invalid {
 }
 .admintable td,tr{
   text-align: center;
-  
   border: 1px solid black;
 }
 .content{
@@ -341,4 +302,4 @@ input.invalid {
 }
 .container input[type='text']{
   height: 30px;
-}
+} 

@@ -8,7 +8,7 @@ update.addEventListener('click', function () {
     console.log(fields);
 })
 function validate() {
-    validate=0;
+    validate = 0;
     for (let i = 0; i < fields.length; i++) {
         if (fields[i].value == "") {
             fields[i].style.background = "red";
@@ -31,20 +31,20 @@ function validate() {
     var pass = document.getElementById('password').value;
     if (!pass.length > 7 || !/[0-9]/.test(pass) || !/[a-z]/.test(pass)) {
         console.log('password bitchheshshshshsh');
-        document.getElementById('password').style.background="red";
+        document.getElementById('password').style.background = "red";
         validate++;
     }
-    var gender = document.getElementById('gender').value;
-    gender = gender.toLowerCase();
-    if(gender != "male"||gender != "female"){
+    var gender = document.getElementById('gender');
+    var lower = gender.value.toLowerCase();
+    if (lower != "male" && lower != "female") {
         document.getElementById('gender').style.background = 'red';
         validate++;
     }
 
-    if(validate==0){
+    if (validate == 0) {
         form.submit();
     }
-    else{
+    else {
         return;
     }
 }
