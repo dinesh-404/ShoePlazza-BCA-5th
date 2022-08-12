@@ -12,7 +12,7 @@ if ($n == 1) {
 	session_start();
 	$_SESSION['uid'] = $data['id'];
 	$_SESSION['uname'] = $data['username'];
-	header("location:\index.php");
+	header("location:\ShoePlazza\index.php");
 } else {
 	header('location:signin.php');
 }

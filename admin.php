@@ -1,5 +1,5 @@
 <?php
-	include('loginstuff\connect.php');
+	include('Login/connect.php');
     $query = mysqli_query($connect,"SELECT * FROM `login`;");
     
     ?>

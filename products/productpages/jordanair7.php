@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="\cursor.css">
+    <link rel="stylesheet" href="\ShoePlazza\cursor.css">
     <title>jordanair4</title>
 </head>
 
@@ -92,7 +92,7 @@
         </div>
     </div><br>
 
-    <script src="\cursor.js"></script>
+    <script src="\ShoePlazza\cursor.js"></script>
     <script src="products.js"></script>
     <script src="scroll.js"></script>
 
