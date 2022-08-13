@@ -44,7 +44,7 @@ $files = array_slice(scandir($mydir), 2);
                     <h1><?php echo $jsonarray->$headobj->$i; ?></h1>
                     <p><?php echo $jsonarray->$paraobj->$i; ?></p>
                 </div>
-                <?php echo "<img src='products\productimg\airjordan7\/".$files[$i]."'>";
+                <?php echo "<img src='products/productimg/airjordan7/".$files[$i]."'>";
                 $i++;?>
                 
             </div>

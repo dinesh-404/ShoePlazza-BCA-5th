@@ -294,12 +294,29 @@ input.invalid {
 /* profile */
 .container {
   display: block;
-  height: 50px;
   width: 50%;
   margin: auto;
   font-size: 30px;
   font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
 }
 .container input[type='text']{
   height: 30px;
 } 
+.button{
+  color: white;
+  background: black;
+  width: 100%;
+  height: 50px;
+  display: inline;
+}
+.button:hover{
+  color:black;
+  background: white;
+}
+.container .fields{
+  margin: 10px;
+  border: 3px solid red;
+}

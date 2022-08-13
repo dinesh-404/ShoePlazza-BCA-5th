@@ -11,8 +11,6 @@
     </style>
 </head>
 <body class="body" id="body">
-    
-
     <?php include('navbar.php'); ?>
     <div class="content"></div>
     <?php include('footer.php'); ?>
