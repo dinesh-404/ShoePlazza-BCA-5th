@@ -1,16 +1,21 @@
 <?php
-include("loginstuff\connect.php");
-echo "ok";
+include("Login/connect.php");
 print_r($_REQUEST);
 session_start();
 $id = $_SESSION['uid'];
-var_dump($_FILES);
 // profile photo
 $src = $_FILES['avatar']['tmp_name'];
-$despath= $_SERVER['DOCUMENT_ROOT']."/loginstuff/pfp/";
-$dest = $despath.$_FILES['avatar']['name'];
-copy($src,$dest);
-var_dump($dest);
+//destination path
+$despath = $_SERVER['DOCUMENT_ROOT'] . "/ShoePlazza/Login/pfp/";
+// relative path for copy
+$dest = $despath . $_FILES['avatar']['name'];
+$imgpath = $_FILES['avatar']['name'];
+if (strlen($imgpath) != 0){
+copy($src, $dest);
+
+echo strlen($imgpath);
+}
+var_dump($_FILES);
 
 
 if (isset($_REQUEST['username'])) {
@@ -24,23 +29,22 @@ if (isset($_REQUEST['username'])) {
     $address = $_REQUEST['address'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['mobile'];
-    $image =  $_REQUEST['avatar'];
-    $updatecmd = "UPDATE `login` SET `fullname`='" . $uname . "',`age`='" . $age . "',`gender`='" . $gender . "',`username`='" . $username . "',`password`='" . $password . "',`address`='" . $address . "',`email`='" . $email . "',`mobile`='" . $mobile . "',`image`='".$image."' WHERE `id`=$id";
-    $updatedata = mysqli_query($connect, $updatecmd,$result = MYSQLI_STORE_RESULT);
-    
+    $image =  $imgpath;
+    if (strlen($imgpath) == 0) {
+        $updatecmd = "UPDATE `login` SET `fullname`='" . $uname . "',`age`='" . $age . "',`gender`='" . $gender . "',`username`='" . $username . "',`password`='" . $password . "',`address`='" . $address . "',`email`='" . $email . "',`mobile`='" . $mobile . "', WHERE `id`=$id";
+    } 
+    else {
+        $updatecmd = "UPDATE `login` SET `fullname`='" . $uname . "',`age`='" . $age . "',`gender`='" . $gender . "',`username`='" . $username . "',`password`='" . $password . "',`address`='" . $address . "',`email`='" . $email . "',`mobile`='" . $mobile . "',`image`='" . $image . "' WHERE `id`=$id";
+    }
+    $updatedata = mysqli_query($connect, $updatecmd, $result = MYSQLI_STORE_RESULT);
+
     var_dump($_FILES);
 
-    // $src = $_FILES['temp_name'];
-    // $des = "";
-    // copy($src,$des);
-    if($result == 0){
-       // header('location:profile.php');
-    }
-    else{
+    if ($result == 0) {
+        // header('location:profile.php');
+    } else {
         echo "error";
     }
-
-}
-else {
+} else {
     //header("location:profile.php");
 }

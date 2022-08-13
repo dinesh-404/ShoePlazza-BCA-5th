@@ -1,6 +1,6 @@
 <ul class="navbar" id="navbar">
     <li><a href="index.php">Home</a></li>
-    <li><a href="products.html">products</a></li>
+    <li><a href="products/shop.php">products</a></li>
     <li class="dropdown">
         <?php
         session_start();
