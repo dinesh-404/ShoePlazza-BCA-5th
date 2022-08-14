@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
-:root{
-  --background-white:white;
-  --background-black:black;
-  --text-color:black;
+@font-face {
+  font-family: "regular";
+  src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
+    url("fonts/titilliumweb-regular-webfont.woff") format("woff"),
+    url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
+}
+
+:root {
+  --background-white: white;
+  --background-black: black;
+  --text-color: black;
 }
 .navbar {
-
   padding: 0px;
   margin: auto;
-  
+
   height: 50px;
   width: 50%;
   position: sticky;
-  
 }
 
 li {
@@ -24,8 +24,7 @@ li {
   margin: 20px;
   padding-top: 10px;
   font-size: 30px;
-  font-family: 'Titillium Web', sans-serif;
-  font-style: bold;
+  font-family: "regular", sans-serif;
   /* cursor: none; */
 }
 
@@ -50,9 +49,8 @@ body {
 .body {
   margin: 0%;
   padding: 0%;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "regular", sans-serif;
   overflow: scroll;
-  
 }
 
 /* login form css */
@@ -82,24 +80,25 @@ body {
   margin: 30px;
   font-size: 10vh;
   text-align: left;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-weight: 500;
 }
 
 .center .left h2 {
   margin: 30px;
   font-size: 20px;
-  font-family: 'Liu Jian Mao Cao', cursive;
+  font-family: "Liu Jian Mao Cao", cursive;
   font-weight: 100;
 }
 
-.txtfield input[type=text] {
-  width: 100%;
+.txtfield .idpassinput {
+  width: 90%;
   padding: 0 0 0 10px;
   height: 100%;
   font-size: 16px;
-  border: none;
+  border: 1px solid gray;
   background: none;
+  border: none;
   outline: none;
 }
 
@@ -108,7 +107,7 @@ body {
   font-size: 10vh;
   text-align: right;
   padding: 0 30px 40px 0;
-  font-family: 'roboto', cursive;
+  font-family: "roboto", cursive;
 }
 
 .right form .txtfield {
@@ -142,8 +141,6 @@ body {
   height: 20px;
   color: #1d1d1dc7;
   font-size: 16px;
-  background: none;
-  outline: none;
 }
 
 .center .txtfield label {
@@ -153,7 +150,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .signupradio {
@@ -166,16 +163,16 @@ body {
   margin: 10px;
 }
 
-.txtfield .idpassinput:focus~label,
-.txtfield #age:focus~label,
-.txtfield #age:valid~label,
-.txtfield .idpassinput:valid~label {
+.txtfield .idpassinput:focus ~ label,
+.txtfield #age:focus ~ label,
+.txtfield #age:valid ~ label,
+.txtfield .idpassinput:valid ~ label {
   top: -1px;
   color: black;
 }
 
-.txtfield .txtarea:focus~label,
-.txtfield .txtarea:valid~label {
+.txtfield .txtarea:focus ~ label,
+.txtfield .txtarea:valid ~ label {
   color: black;
 }
 
@@ -192,9 +189,6 @@ body {
   padding-top: 30px;
   margin-right: 10px;
   border-bottom: 1px dotted white;
-}
-.right input {
-  border: none;
 }
 
 /* signup page */
@@ -227,69 +221,47 @@ body {
   font-size: 16px;
   font-weight: 500;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-
-/* dropdown */
-
-
-input.invalid {
-  background-color: red;
-  color: red;
-  border: 2x solid red;
+.invalid {
+  border: 3px solid red;
+  background: red;
 }
-
-.tab .radio input[type="radio"] {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  color: red;
-}
-
-.radio {
-  color: black;
-}
-
-.radio input[type="radio"] {
-  accent-color: black;
-}
-
-
-
 
 /* admin table */
 .admintable tr td {
   border-collapse: collapse;
   border: 0;
-  padding:0;
+  padding: 0;
 }
 
 .body .admintable {
   width: 80%;
-  margin:auto;
+  margin: auto;
   box-sizing: border-box;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "regular", sans-serif;
   border-spacing: 0;
   border-radius: 5px;
-  background: white; 
+  background: white;
 }
-.admintable .tableheading{
+.admintable .tableheading {
   text-align: center;
   font-size: 40px;
   background: white;
-  color:black;
+  color: black;
 }
-.admintable th{
+.admintable th {
   border-top: 3px solid black;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
-.admintable td,tr{
+.admintable td,
+tr {
   text-align: center;
   border: 1px solid black;
 }
-.content{
-  height: 1000px;     
+.content {
+  height: 1000px;
 }
 /* profile */
 .container {
@@ -297,26 +269,25 @@ input.invalid {
   width: 50%;
   margin: auto;
   font-size: 30px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "regular", sans-serif;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-
 }
-.container input[type='text']{
+.container input[type="text"] {
   height: 30px;
-} 
-.button{
+}
+.button {
   color: white;
   background: black;
   width: 100%;
   height: 50px;
   display: inline;
 }
-.button:hover{
-  color:black;
+.button:hover {
+  color: black;
   background: white;
 }
-.container .fields{
+.container .fields {
   margin: 10px;
   border: 3px solid red;
 }
@@ -324,7 +295,7 @@ input.invalid {
   margin: 10px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;   
+  border-radius: 50%;
   float: right;
   cursor: auto;
 }
@@ -340,27 +311,27 @@ input.invalid {
   color: var(--textcolor);
   grid-template-rows: 1fr 30px;
   grid-template-columns: 1fr 1fr;
-  margin:0;
+  margin: 0;
   padding: 0;
   cursor: auto;
 }
-.footer .FooterLeft{
+.footer .FooterLeft {
   display: block;
   cursor: auto;
   grid-row: 1;
 }
-.footer .FooterRight{
+.footer .FooterRight {
   grid-row: 1;
 }
 
-.FooterMid a{
+.FooterMid a {
   cursor: auto;
   color: var(--textcolor);
   display: block;
   text-decoration: none;
-  margin:10px;
+  margin: 10px;
 }
-.FooterMid a:hover{
+.FooterMid a:hover {
   color: var(--txthover);
 }
 .FooterCopy {

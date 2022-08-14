@@ -33,7 +33,7 @@
         <h1>signup</h1>
         <div class="tab">
           <div class="txtfield">
-            <input type="text" required name="fullname" class="idpassinput" oninput="input(0)" />
+            <input type="text" required name="fullname" class="idpassinput" oninput="input(0)" autofocus/>
             <label class="idpasslbl">Full Name</label>
           </div>
           <div class='radio' onchange="radioval()">

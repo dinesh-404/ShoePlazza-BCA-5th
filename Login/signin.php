@@ -42,7 +42,7 @@
       </div>
     </form>
   </div>
-  <script src="loginthings.js"></script>
+  <script src="login.js"></script>
   <script src="../cursor.js"></script>
 </body>
 </html>

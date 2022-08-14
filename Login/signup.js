@@ -15,16 +15,17 @@ function show_tab(n) {
 
 }
 function current_tab(n) {
-    console.log("val of n" + n);
     let x = document.getElementsByClassName("tab");
-    if (n == 1 && !validation()) return false;
+    if (n == 1 && !validation()) {
+        alert("kindly enter fields marked with red border correctly");
+        return false;
+    }
     x[currpage].style.display = "none";
     currpage = currpage + n;
-    console.log('currpage '+currpage);
-    if (currpage>=x.length) {
-            document.getElementById("signupform").submit();
-            console.log("submitted");
-            return false;  
+    if (currpage >= x.length) {
+        document.getElementById("signupform").submit();
+        console.log("submitted");
+        return false;
     }
     show_tab(currpage);
 }
@@ -38,15 +39,15 @@ function validation() {
     y = x[currpage].getElementsByClassName("idpassinput");
     for (i = 0; i < y.length; i++) {
         if (y[i].value == "") {
-            y[i].style.background = "red";
+            y[i].style.border = "2px solid red";
             validate++;
         }
     }
     //age validation
     var age = document.getElementById('age');
     if (isNaN(age.value) || age.value < 1 || age.value > 100) {
-        console.log("ok");
-        age.style.background = "red";
+        console.log("age error");
+        age.style.border = "2px solid red";
         validate++;
 
     }
@@ -58,17 +59,14 @@ function validation() {
     for (let i = 0; i < r.length; i++) {
         if (r[i].checked) {
             console.log('got ' + r[i].value);
-            
         }
         else {
             a++;
         }
     }
-
     if (a == r.length) {
         for (let i = 0; i < lbl.length; i++) {
-            lbl[i].style.background = "red";
-            
+            lbl[i].style.color = "red";
         }
         validate++;
         console.log('red value error' + validate);
@@ -78,14 +76,14 @@ function validation() {
         var mobile = document.getElementById('mobileno');
         var mval = document.getElementById('mobileno').value;
         if (!isNaN(mobile) || !mval.length == 10 || mval == "" || !/[6-9]/.test(mval)) {
-            mobile.style.background = "red";
+            mobile.style.border = "2px solid red";
             validate++;
         }
 
         //passwrd
         var pass = document.getElementById('pass').value;
         if (pass.length > 7 || !/[0-9]/.test(pass) || !/[a-z]/.test(pass)) {
-            console.log('password bitchheshshshshsh');
+            console.log('password');
             validate++;
         }
 
@@ -96,11 +94,11 @@ function validation() {
         var at = mail.search('@');
         var dot = mail.search(/\./);
         if (at < 2 || dot < 2 || mail == "") {
-            document.getElementById('mail').style.background = "red";
+            document.getElementById('mail').classList.add("invalid");
             validate++;
         }
     }
-    if(currpage == 1 && validate==1){
+    if (currpage == 1 && validate == 1) {
         return true;
     }
     if (validate > 0) {
@@ -110,7 +108,7 @@ function validation() {
 
 }
 function input(n) {//onclick html
-    txtfield[n].style.background = "none";
+    txtfield[n].style.border = "none";
 }
 
 function radioval() {//onclick html

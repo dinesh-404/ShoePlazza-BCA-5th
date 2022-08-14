@@ -25,7 +25,7 @@ window.onscroll=function(){
 //main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
-    console.log(e.pageY);
+    //console.log(e.pageY);
     mouseCursor.style.top = e.pageY + "px";
     mouseCursor.style.left = e.pageX + "px";
     midcur.style.top = e.pageY + "px";
