@@ -12,10 +12,13 @@
   <title>Login</title>
 </head>
 
-<body class="body">
+<body class="body login">
+  <?php include('../navbar.php') ?>
   <div class="cursor"></div>
   <div class="innercursor"></div>
+  
   <div class="center">
+  
     <div class="left">
       <h1>Hello there !</h1>
       <h2>login here to get access to your account and more...</h2>
@@ -25,7 +28,7 @@
       <div class="right">
         <h1>Login</h1> 
         <div class="txtfield">
-          <input type="text" required name="username" class="idpassinput" />
+          <input type="text" required name="username" class="idpassinput" autofocus/>
           <label class="idpasslbl">Username</label>
         </div>
         <div class="txtfield">
@@ -42,6 +45,7 @@
       </div>
     </form>
   </div>
+  <?php include('../footer.php'); ?>
   <script src="login.js"></script>
   <script src="../cursor.js"></script>
 </body>

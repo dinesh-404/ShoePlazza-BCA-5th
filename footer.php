@@ -15,10 +15,10 @@
 
     <div class="FooterRight">
 
-        <img src="NavbarIcons\fbicon.png" alt="" srcset="">
-        <img src="NavbarIcons\linkedinicon.png" alt="" srcset="">
-        <img src="NavbarIcons\twittericon.png" alt="" srcset="">
-        <img src="NavbarIcons\instaicon.png" alt="" srcset="">
+        <img src="/ShoePlazza/NavbarIcons/fbicon.png" alt="" srcset="">
+        <img src="/ShoePlazza/NavbarIcons/linkedinicon.png" alt="" srcset="">
+        <img src="/ShoePlazza/NavbarIcons/twittericon.png" alt="" srcset="">
+        <img src="/ShoePlazza/NavbarIcons/instaicon.png" alt="" srcset="">
     </div>
     <div class="FooterCopy">
 

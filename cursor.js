@@ -20,7 +20,10 @@ window.onscroll=function(){
           midcur.classList.remove("midcursor");
     
     }
-    ScrollHide();
+    else{
+        mouseCursor.classList.add("changecursor");
+        midcur.classList.add("midcursor");
+    }
 };
 //main cursor movements
 window.addEventListener("mousemove", cursor);
