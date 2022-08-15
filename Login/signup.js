@@ -1,5 +1,4 @@
 var currpage = 0;
-
 show_tab(currpage);
 let len = document.getElementsByClassName("tab").length;
 var txtfield = document.getElementsByClassName("idpassinput");
@@ -9,8 +8,10 @@ function show_tab(n) {
     x[n].style.display = "block";
     if (n == 0) {
         document.getElementById("prevbtn").style.display = "none";
+        document.getElementById("signupbtn").innerHTML ="next";
     } else {
-        document.getElementById("prevbtn").style.display = "inline";
+        document.getElementById("prevbtn").style.display = "block";
+        document.getElementById("signupbtn").innerHTML ="submit";
     }
 
 }

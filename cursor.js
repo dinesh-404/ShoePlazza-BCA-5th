@@ -85,6 +85,17 @@ body.forEach(item => {
     });
 
 });
+var prevScroll = window.scrollY;
+window.onscroll = function(){
+    var currentScroll = window.scrollY;
+    if(prevScroll>currentScroll){
+        document.getElementById('navbar').style.top="0";
+    }
+    else{
+        document.getElementById('navbar').style.top="-50px";
+    }
+    prevScroll=currentScroll;
+}
 // footer.addEventListener("mouseover",function(){
 //     midcur.classList.remove("midcursor");
 //     mouseCursor.classList.remove("changecursor");

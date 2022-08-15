@@ -22,6 +22,8 @@
     <div class="left">
       <h1>Hello there !</h1>
       <h2>login here to get access to your account and more...</h2>
+      
+      <h2>not a member ?<a href="signup.php">sign up</a></h2>
     </div>
 
     <form method="post" name="loginform" action="chklogin.php" id="form">
@@ -34,13 +36,10 @@
         <div class="txtfield">
           <input type="password" required name="password" class="idpassinput" id="pass" />
           <label class="idpasslbl">password</label>
+        <button type="button" class="showpwd" onclick="showpass()"><img src="/ShoePlazza/images/eyeclosed.png" alt="eyeclosed" id="pwdimg"></button>
         </div>
         <div class="signup">
-          <br><br>
-          <input type="checkbox" id="showpass">
-          <label class="showpassword" for="showpass">Show password</label>
-          <br><br>not a member ?<a href="signup.php">sign up</a>
-          <input type="submit" value="Login" class="button">
+          <input type="submit" value="Login" class="button loginbtns">
         </div>
       </div>
     </form>

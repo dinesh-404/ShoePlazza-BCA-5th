@@ -12,7 +12,8 @@ $dest = $despath . $_FILES['avatar']['name'];
 $imgpath = $_FILES['avatar']['name'];
 if (strlen($imgpath) != 0){
 copy($src, $dest);
-
+$err = $_FILES['avatar']['error'];
+echo $err ,"ok";
 echo strlen($imgpath);
 }
 var_dump($_FILES);

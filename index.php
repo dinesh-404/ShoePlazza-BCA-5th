@@ -5,9 +5,6 @@
 <head>
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="cursor.css">
-    <style>
-       
-    </style>
 </head>
 <body class="body" id="body">
     <?php include('navbar.php'); ?>

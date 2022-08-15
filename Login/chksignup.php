@@ -1,8 +1,8 @@
 
 <?php
- print_r($_REQUEST);
- $errorMsg = "";
-	if (isset($_REQUEST['username'])) {
+print_r($_REQUEST);
+$errorMsg = "";
+if (isset($_REQUEST['username'])) {
 	include("connect.php");
 	$fullname = $_REQUEST['fullname'];
 	$username = $_REQUEST['username'];
@@ -13,29 +13,24 @@
 	$email = $_REQUEST['email'];
 	$password = $_REQUEST['password'];
 	$unamecheck = mysqli_query($connect, "SELECT * FROM `login` WHERE username = '" . $username . "';");
-	$mobilechk = mysqli_query($connect,"SELECT * FROM `login` WHERE mobile = '".$mobileno."';");
-	$emailchk = mysqli_query($connect,"SELECT * FROM `login` WHERE email = '".$email."';");
+	$mobilechk = mysqli_query($connect, "SELECT * FROM `login` WHERE mobile = '" . $mobileno . "';");
+	$emailchk = mysqli_query($connect, "SELECT * FROM `login` WHERE email = '" . $email . "';");
 	session_start();
 	if ($unamecheck->num_rows == 1) {
 		$_SESSION['signuperror'] .= 'username already exists<br>';
 		header("location:signup.php");
-		
 	}
 	if ($emailchk->num_rows == 1) {
-			$_SESSION['signuperror'] .= 'email already exists<br>';
-		}
-	if ($mobilechk->num_rows == 1) {
-			$_SESSION['signuperror'] .= 'mobile already exists<br>';
-		}	
-	else {
-		print_r($_REQUEST);
-		 $q_sql =  "INSERT INTO `login`( `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`) VALUES ('".$fullname."','".$age."','".$gender."','".$username."','".$password."','".$address."','".$email."','".$mobileno."');";
-		 mysqli_query($connect, $q_sql);		
+		$_SESSION['signuperror'] .= 'email already exists<br>';
 	}
-}
-else{
+	if ($mobilechk->num_rows == 1) {
+		$_SESSION['signuperror'] .= 'mobile already exists<br>';
+	} else {
+		print_r($_REQUEST);
+		$q_sql =  "INSERT INTO `login`( `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`) VALUES ('" . $fullname . "','" . $age . "','" . $gender . "','" . $username . "','" . $password . "','" . $address . "','" . $email . "','" . $mobileno . "');";
+		mysqli_query($connect, $q_sql);
+	}
+} else {
 	echo "error";
 }
-
-
 ?>
