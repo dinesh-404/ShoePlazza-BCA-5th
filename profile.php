@@ -10,7 +10,6 @@ if (isset($_SESSION['uid'])) {
     $count = count($row) / 2;
     $imgpath = '/ShoePlazza/Login/pfp/' . $row['image'];
     $lbl = ['', 'fullname', 'age', 'gender', 'username', 'password', 'address', 'email', 'mobile'];
-    echo $imgpath;
 } else {
     header('location:Login/signin.php');
 }
@@ -22,32 +21,112 @@ if (isset($_SESSION['uid'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="/ShoePlazza/design.css">
+    <style>
+        * {
+            cursor: auto;
+        }
+    </style>
     <title>Profile</title>
 </head>
 
 <body>
-    <?php include('navbar.php'); ?>
     <form action="updatescript.php" method="post" id="updateform" enctype="multipart/form-data">
+        <div class="profile">
+            <h1 id="profilehead">User Profile</h1>
+            <div class="profiletext">
+                <h1>Hello <?php echo $row['username']; ?></h1>
+                This is your profile page.<br>
+                Here you can edit your personal information<br>
+            </div>
+            <button type="button" class="button" onclick='scrollupdate()'>View Profile</button>
+        </div>
+        <fieldset id="fieldset">
+            <legend id="legend">Profile</legend>
+            <div class="ProfileWrapper">
+                <div class="left">
+
+                    <label for='fullname'>Full Name</label>
+                    <input type='text' class='fields' name='fullname' value='<?php echo $row['fullname']; ?>' id='fullname' disabled required><br>
+
+                    <label for='age'>Age</label>
+                    <input type='text' class='fields' name='age' value='<?php echo $row['age']; ?>' id='age' disabled required><br>
+
+                    <label for='gender'>Gender</label>
+                    <input type='text' class='fields' name='gender' value='<?php echo $row['gender']; ?>' id='gender' disabled required><br>
+
+                    <label for='address'>address</label>
+                    <input type='text' class='fields' name='address' value='<?php echo $row['address']; ?>' id='address' disabled required><br>
+
+                    <label for='username'>Username</label>
+                    <input type='text' class='fields' name='username' value='<?php echo $row['username']; ?>' id='username' disabled required><br>
+
+                    <label for='password'>Password</label>
+                    <input type='text' class='fields' name='password' value='<?php echo $row['password']; ?>' id='password' disabled required><br>
+
+                    <label for='email'>Email</label>
+                    <input type='text' class='fields' name='email' value='<?php echo $row['email']; ?>' id='email' disabled required><br>
+
+                    <label for='mobileno'>Mobile No</label>
+                    <input type='text' class='fields' name='mobileno' value='<?php echo $row['mobile']; ?>' id='mobileno' disabled required><br>
+
+                    <input type="button" value="update" id="updatebtn" class="button">
+                    <input type="button" value="submit" onclick="validate()" class="button">
+                </div>
+                <div class="right">
+                    <?php
+
+                    if (strlen($row['image']) == 0) {
+                    ?>
+                        <input type="file" name="avatar" class='fields' accept="image/*" disabled id=""><br>
+                    <?php
+                    } else {
+                        echo "<img src='$imgpath' alt='profilepic' class='profilepic'><br>";
+                    }
+                    ?>
+                </div>
+            </div>
+        </fieldset>
+
         <div class="container">
-            <label for="profilepic">Profile Picture</label>
-            <?php
-            
-            if (strlen($row['image'])==0) {
-            ?>
-                <input type="file" name="avatar" class='fields' accept="image/*" disabled id=""><br>
-            <?php
-            }
-            else{
-                echo "<img src='$imgpath' alt='profilepic' class='profilepic'><br>";
-            }
-            for ($i = 1; $i < 9; $i++) {
-                echo "<label for='" . $lbl[$i] . "'>" . $lbl[$i] . "</label>";
-                echo "<input type='text' class='fields' name='" . $lbl[$i] . "' value='" . $row[$i] . "' id = '" . $lbl[$i] . "' disabled required ><br>";
-            }
-            ?>
-            <input type="button" value="update" id="updatebtn" class="button">
-            <input type="button" value="submit" onclick="validate()" class="button">
+            <labfullnameel for="profilepic">Profile Picture</label>
+                <?php
+
+                if (strlen($row['image']) == 0) {
+                ?>
+                    <input type="file" name="avatar" class='fields' accept="image/*" disabled id=""><br>
+                <?php
+                } else {
+                    echo "<img src='$imgpath' alt='profilepic' class='profilepic'><br>";
+                }
+                ?>
+
+                <label for='fullname'>Full Name</label>
+                <input type='text' class='fields' name='fullname' value='<?php echo $row['fullname']; ?>' id='fullname' disabled required><br>
+
+                <label for='age'>Age</label>
+                <input type='text' class='fields' name='age' value='<?php echo $row['age']; ?>' id='age' disabled required><br>
+
+                <label for='gender'>Gender</label>
+                <input type='text' class='fields' name='gender' value='<?php echo $row['gender']; ?>' id='gender' disabled required><br>
+
+                <label for='address'>address</label>
+                <input type='text' class='fields' name='address' value='<?php echo $row['address']; ?>' id='address' disabled required><br>
+
+                <label for='username'>Username</label>
+                <input type='text' class='fields' name='username' value='<?php echo $row['username']; ?>' id='username' disabled required><br>
+
+                <label for='password'>Password</label>
+                <input type='text' class='fields' name='password' value='<?php echo $row['password']; ?>' id='password' disabled required><br>
+
+                <label for='email'>Email</label>
+                <input type='text' class='fields' name='email' value='<?php echo $row['email']; ?>' id='email' disabled required><br>
+
+                <label for='mobileno'>Mobile No</label>
+                <input type='text' class='fields' name='mobileno' value='<?php echo $row['mobile']; ?>' id='mobileno' disabled required><br>
+
+                <input type="button" value="update" id="updatebtn" class="button">
+                <input type="button" value="submit" onclick="validate()" class="button">
         </div>
     </form>
     <div class="crudbtn">

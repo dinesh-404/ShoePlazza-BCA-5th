@@ -48,3 +48,10 @@ function validate() {
         return;
     }
 }
+function scrollupdate(){
+    window.scrollTo({
+        behavior:'smooth',
+        top:760,
+        left:0
+    });
+}

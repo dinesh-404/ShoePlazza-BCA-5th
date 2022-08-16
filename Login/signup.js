@@ -52,7 +52,6 @@ function validation() {
         validate++;
 
     }
-    else console.log("workedddddddddddddddd");
     //    radio gender validation
     var r = document.getElementsByClassName('ok');
     var lbl = document.getElementsByClassName('radio');
