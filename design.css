@@ -320,37 +320,40 @@ a {
 .container input[type="text"] {
   height: 30px;
 }
-.button {
-  color: white;
-  background: black;
+.profile .button {
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  width: 150px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 20px;
+  height: 40px;
+
+}
+.ProfileWrapper .button{
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
   width: 150px;
   font-size: 15px;
   border: 0;
   border-radius: 20px;
   height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 .button:hover {
   transition: all .3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  color: black;
-  background: white;
+  color: white;
+  background:black;
+  
 }
-.ProfileWrapper .fields {
-  margin: 10px;
-}
-.profilepic{
-  height: 500px;
-  width: 500px;  
-  border-radius: 10px;
-  border: 2px solid black;
-  margin-top: 20px;
-}
+
 .profile{
   padding-top: 40px;
   width: auto;
   height: 700px;
-  background: url("/ShoePlazza/images/5.jpg");
+  background: url("/ShoePlazza/images/5.jpg") center;
   /* background-blend-mode: overlay; */
   font-family: "Oxygen",sans-serif;
   padding: 30px;
@@ -372,39 +375,67 @@ a {
   font-size: 15px;
   font-weight: 100;
 }
+.right .profilepic{
+  margin-bottom: 30px;
+  height: 500px;
+  width: 500px;  
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-top: 20px;
+}
 .ProfileWrapper{
   font-family: "regular";
   font-weight: 300;
   width: 100%;
-  height: 560px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
-.left{
+.ProfileWrapper .left{
   height: 100%;
-  background-color: lightgreen;
+  padding: 30px;
+  /* background-color: lightgreen; */
+  position: relative;
 }
-.right{
+.ProfileWrapper .fields {
+  margin: 10px;
+  height: 30px;
+  border: none; 
+  width: 300px;
+  padding-left: 100px;
+  background: none;
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+ .txtfieldwrapper label{
+  position: absolute;
+  top:15px;
+  left: 20px;
+
+}
+
+.ProfileWrapper .txtfieldwrapper{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 10px;
+  width: 400px;
+  text-align: right;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  position: relative;
+  overflow:hidden;
+  transition: all .1s;
+}
+
+.ProfileWrapper .right{
+  padding: 30px;
   height: 100%;
   background: lightseagreen;
+  position: relative;
   text-align: center;
 }
 
-#fieldset{
-  border: 3px solid rgba(0, 0, 255, 0.288);;
-  border-radius: 10px;
-  padding: 30px;
-  margin: 20px;
-  height: 100%;
-}
-#legend{
-  font-size: 50px;
-  background: none;
-  font-family: sans-serif;
-  font-weight: 300;
-  
-}
 /* footer */
 .FooterRight img {
   margin: 10px;
