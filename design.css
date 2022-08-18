@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap");
 @font-face {
   font-family: "regular";
   src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
@@ -10,7 +10,12 @@
   --background-white: white;
   --background-black: black;
   --text-color: black;
+  --wrappershadowbfr:rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  --wrappershadowaftr:  rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  --wrappershadowfocus: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
+    
+
 html,
 body {
   cursor: none;
@@ -19,10 +24,8 @@ body {
   background: white;
   height: 100%;
   width: 100%;
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
-
-
 }
 .navbar {
   padding: 0px;
@@ -34,9 +37,8 @@ body {
   backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.329);
   text-align: center;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
 
 .navbar li {
   display: inline;
@@ -45,7 +47,7 @@ body {
   font-family: "regular", sans-serif;
   /* cursor: none; */
 }
-.navbar a{
+.navbar a {
   position: relative;
   margin: 10px;
 }
@@ -79,21 +81,19 @@ a {
   overflow: hidden;
   align-content: stretch;
   justify-content: space-between;
-  background: url('/ShoePlazza/images/2.jpg') no-repeat;
+  background: url("/ShoePlazza/images/2.jpg") no-repeat;
   background-size: 100%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
   color: var(--text-color);
   animation: bg forwards ease-in-out 3s;
 }
 @keyframes bg {
-  0%{
+  0% {
     background-position: bottom;
   }
-  100%{
+  100% {
     background-position: 0;
   }
-  
-  
 }
 /* @keyframes bg {
   0% {
@@ -134,12 +134,12 @@ a {
     background-position: center;
   }
 } */
-.loginbtns{
+.loginbtns {
   position: absolute;
   bottom: 100px;
   transform: translateX(50%);
 }
-.showpwd{
+.showpwd {
   top: 50px;
   border: none;
   background: none;
@@ -147,13 +147,13 @@ a {
   right: 5px;
   top: 50%;
 }
-.showpwd img{
+.showpwd img {
   height: 20px;
   opacity: 80%;
   width: 20px;
 }
-.txtfield{
-  margin:10px;
+.txtfield {
+  margin: 10px;
   margin-top: 20px;
 }
 .center .left {
@@ -209,7 +209,6 @@ a {
   color: white;
   border-radius: 10px;
   border: none;
- 
 }
 
 .center .right {
@@ -301,7 +300,8 @@ a {
   margin: 0;
   padding: 0;
 }
-.admintable td,tr {
+.admintable td,
+tr {
   text-align: center;
   border: 1px solid black;
 }
@@ -309,17 +309,6 @@ a {
   height: 1000px;
 }
 /* profile */
-.container {
-  display: none;
-  width: 50%;
-  margin: auto;
-  font-size: 30px;
-  font-family: "regular", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-}
-.container input[type="text"] {
-  height: 30px;
-}
 .profile .button {
   color: black;
   background: rgba(255, 255, 255, 0.8);
@@ -328,9 +317,8 @@ a {
   border: 0;
   border-radius: 20px;
   height: 40px;
-
 }
-.ProfileWrapper .button{
+.ProfileWrapper .button {
   color: black;
   background: rgba(255, 255, 255, 0.8);
   width: 150px;
@@ -339,23 +327,21 @@ a {
   border-radius: 20px;
   height: 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
 }
 .button:hover {
-  transition: all .3s;
+  transition: all 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: white;
-  background:black;
-  
+  background: black;
 }
 
-.profile{
+.profile {
   padding-top: 40px;
   width: auto;
   height: 700px;
   background: url("/ShoePlazza/images/5.jpg") center;
   /* background-blend-mode: overlay; */
-  font-family: "Oxygen",sans-serif;
+  font-family: "Oxygen", sans-serif;
   padding: 30px;
   position: relative;
   color: white;
@@ -363,44 +349,73 @@ a {
   background-size: cover;
   background-color: rgba(0, 0, 255, 0.288);
 }
-.profiletext{
+.profiletext {
   position: absolute;
   bottom: 50%;
 }
-.profile button{
+.profile button {
   bottom: 30%;
   position: absolute;
 }
-#profilehead{
+#profilehead {
   font-size: 15px;
   font-weight: 100;
 }
-.right .profilepic{
+.ProfileWrapper .right .profilepic {
   margin-bottom: 30px;
   height: 500px;
-  width: 500px;  
+  width: 500px;
   border-radius: 10px;
-  border: 2px solid black;
   margin-top: 20px;
+  position: relative;
+  padding: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
-.ProfileWrapper{
+/* for js */
+.nodisplay {
+  transition: all 1s;
+  display: none;
+}
+
+.ProfileWrapper .right .pfpLabel {
+  position: absolute;
+  top: 50px;
+  left: 133px;
+  color: gray;
+}
+.ProfileWrapper {
   font-family: "regular";
-  font-weight: 300;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  height: 700px;
 }
-.ProfileWrapper .left{
+.ProfileWrapper .left {
   height: 100%;
-  padding: 30px;
+  margin: 30px;
+
   /* background-color: lightgreen; */
   position: relative;
 }
+.leftWrapper {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  padding: 20px 40px 0 40px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 25%;
+}
 .ProfileWrapper .fields {
   margin: 10px;
+  color: rgb(0, 0, 0, 0.6);
   height: 30px;
-  border: none; 
+  border: none;
   width: 300px;
   padding-left: 100px;
   background: none;
@@ -409,29 +424,30 @@ a {
   outline: none;
 }
 
- .txtfieldwrapper label{
+.ProfileWrapper .txtfieldwrapper label {
   position: absolute;
-  top:15px;
+  top: 15px;
+  font-family: "Regular";
+  font-weight: 400;
   left: 20px;
-
 }
 
-.ProfileWrapper .txtfieldwrapper{
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+.ProfileWrapper .txtfieldwrapper {
   margin: 10px;
+  box-shadow: var(--wrappershadowbfr);
+
   width: 400px;
   text-align: right;
   margin-bottom: 30px;
   border-radius: 10px;
   position: relative;
-  overflow:hidden;
-  transition: all .1s;
+  overflow: hidden;
+  transition: all .5s;
 }
 
-.ProfileWrapper .right{
+.ProfileWrapper .right {
   padding: 30px;
   height: 100%;
-  background: lightseagreen;
   position: relative;
   text-align: center;
 }

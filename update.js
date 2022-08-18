@@ -1,23 +1,38 @@
 let update = document.getElementById('updatebtn');
 let fields = document.getElementsByClassName('fields');
 let form = document.getElementById('updateform');
+let wrapper = document.getElementsByClassName("txtfieldwrapper");
+let pfplabel = document.getElementsByClassName('pfpLabel');
 var en = 0;
 function enable() {
-    
+
     if (en == 0) {
         for (let i = 0; i < fields.length; i++) {
             fields[i].disabled = false;
+            // wrapper[i].style.animation = "inputshadow .6s  1 ease-in-out";
+            wrapper[i].style.boxShadow = "var(--wrappershadowaftr)";
+
+            // wrapper[i].classList.add('shadowinput');
         }
+        pfplabel[0].classList.add('nodisplay');
+        pfplabel[1].classList.remove('nodisplay');
         en++;
     }
-    else{
+    else {
         for (let i = 0; i < fields.length; i++) {
             fields[i].disabled = true;
-        }
-        en=0;
-    }
+            // wrapper[i].style.animation = "noinputshadow .6s ease-in-out";
+            wrapper[i].style.boxShadow = "var(--wrappershadowbfr)";
 
-    console.log(en);
+        }
+       
+        pfplabel[0].classList.remove('nodisplay');
+        pfplabel[1].classList.add('nodisplay');
+
+
+
+        en = 0;
+    }
 }
 function validate() {
     let validate = 0;
@@ -68,16 +83,20 @@ function scrollupdate() {
     });
 }
 function filebrowse() {
-    document.getElementById('filebrowse').click();
+    if (en > 0) {
+        document.getElementById('filebrowse').click();
+    }
 }
 
-let wrapper = document.getElementsByClassName("txtfieldwrapper");
 for (let i = 0; i < fields.length; i++) {
-    fields[i].addEventListener("focusin",function(){
-        wrapper[i].style.boxShadow="rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px";
+    fields[i].addEventListener("focus", function () {
+            // wrapper[i].style.animation = "focus .6s  1 ease-in-out";
+        wrapper[i].style.boxShadow = "var(--wrappershadowfocus)";
+           
+        
     })
-    fields[i].addEventListener("focusout",function(){
-        wrapper[i].style.boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px";
+    fields[i].addEventListener("focusout", function () {
+        wrapper[i].style.boxShadow = "var(--wrappershadowaftr)";
+
     })
-   
 }
