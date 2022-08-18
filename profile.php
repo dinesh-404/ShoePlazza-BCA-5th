@@ -43,7 +43,9 @@ if (isset($_SESSION['uid'])) {
         </div>
         <div class="ProfileWrapper">
             <div class="left">
-                <div class="leftWrapper">
+                <fieldset class="leftWrapper">
+                    <legend>Profile</legend>
+                <!-- <div class="leftWrapper"> -->
                     <div class="txtfieldwrapper">
                         <label for='fullname'>Full Name</label>
                         <input type='text' class='fields' name='fullname' value='<?php echo $row['fullname']; ?>' id='fullname' disabled required><br>
@@ -83,8 +85,8 @@ if (isset($_SESSION['uid'])) {
                         <label for='mobileno'>Mobile No</label>
                         <input type='text' class='fields' name='mobileno' value='<?php echo $row['mobile']; ?>' id='mobileno' disabled required><br>
                     </div>
-                </div>
-
+                <!-- </div> -->
+                </fieldset>
                 <!-- <input type="button" value="update" id="updatebtn" onclick="enable()" class="button">
                     <input type="button" value="submit" onclick="validate()" class="button"> -->
 
@@ -94,9 +96,11 @@ if (isset($_SESSION['uid'])) {
                 <label for="profilepic" class='pfpLabel nodisplay'>double click on image to change profile picture</label>
                 <?php
                 
-                    echo "<img src='$imgpath' alt='cant load profile' name='profilepic'  class='profilepic' ondblclick='filebrowse()'><br>";
+                    echo "<img src='$imgpath' alt='cant load profile' name='profilepic'  class='profilepic' id='pfp' ondblclick='filebrowse()'><br>";
                 ?>
-                <input type="file" name="file" id="filebrowse" style="display: none;">
+                <input type="file" name="avatar" id="filebrowse" onchange="readfile()" style="display: none;">
+                <input type="hidden" name="nofileupdate" value="<?php echo $row['image'] ?>">
+
                 <input type="button" value="Edit Profile" id="updatebtn" onclick="enable()" class="button">
                 <input type="button" value="submit" onclick="validate()" class="button">
             </div>

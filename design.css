@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
   font-family: "regular";
   src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
     url("fonts/titilliumweb-regular-webfont.woff") format("woff"),
     url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
+
 
 :root {
   --background-white: white;
@@ -308,7 +310,14 @@ tr {
 .content {
   height: 1000px;
 }
+
+
+
 /* profile */
+
+
+
+
 .profile .button {
   color: black;
   background: rgba(255, 255, 255, 0.8);
@@ -357,6 +366,9 @@ tr {
   bottom: 30%;
   position: absolute;
 }
+.ProfileWrapper .right button{
+  width: 100%;
+}
 #profilehead {
   font-size: 15px;
   font-weight: 100;
@@ -373,10 +385,17 @@ tr {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  transition: all .5s;
 }
+.ProfileWrapper .left legend{
+  color:rgba(0, 0, 0, 0.7);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+}
+
 /* for js */
 .nodisplay {
-  transition: all 1s;
   display: none;
 }
 
@@ -387,7 +406,7 @@ tr {
   color: gray;
 }
 .ProfileWrapper {
-  font-family: "regular";
+  font-family: "Poppins";
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,19 +416,16 @@ tr {
 .ProfileWrapper .left {
   height: 100%;
   margin: 30px;
-
-  /* background-color: lightgreen; */
   position: relative;
 }
 .leftWrapper {
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-  padding: 20px 40px 0 40px;
+  border: none;
+  padding: 0px 40px 0 40px;
   margin-bottom: 20px;
   position: absolute;
   left: 25%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; 
 }
 .ProfileWrapper .fields {
   margin: 10px;
@@ -422,20 +438,20 @@ tr {
   position: relative;
   border: none;
   outline: none;
+  font-family: "Poppins";
 }
 
 .ProfileWrapper .txtfieldwrapper label {
   position: absolute;
-  top: 15px;
-  font-family: "Regular";
-  font-weight: 400;
+  top: 14px;
+  font-family: "Poppins";
+  font-weight: 600;
   left: 20px;
+  color: rgba(0, 0, 0, 0.829);
 }
-
 .ProfileWrapper .txtfieldwrapper {
-  margin: 10px;
+  margin: 7px;
   box-shadow: var(--wrappershadowbfr);
-
   width: 400px;
   text-align: right;
   margin-bottom: 30px;

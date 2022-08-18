@@ -2,7 +2,9 @@ let update = document.getElementById('updatebtn');
 let fields = document.getElementsByClassName('fields');
 let form = document.getElementById('updateform');
 let wrapper = document.getElementsByClassName("txtfieldwrapper");
+let pfp = document.getElementById('pfp');
 let pfplabel = document.getElementsByClassName('pfpLabel');
+let fileinput = document.getElementById('filebrowse');
 var en = 0;
 function enable() {
 
@@ -11,9 +13,11 @@ function enable() {
             fields[i].disabled = false;
             // wrapper[i].style.animation = "inputshadow .6s  1 ease-in-out";
             wrapper[i].style.boxShadow = "var(--wrappershadowaftr)";
-
             // wrapper[i].classList.add('shadowinput');
         }
+pfp.style.boxShadow="rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset";
+
+
         pfplabel[0].classList.add('nodisplay');
         pfplabel[1].classList.remove('nodisplay');
         en++;
@@ -23,14 +27,10 @@ function enable() {
             fields[i].disabled = true;
             // wrapper[i].style.animation = "noinputshadow .6s ease-in-out";
             wrapper[i].style.boxShadow = "var(--wrappershadowbfr)";
-
         }
-       
+        pfp.style.boxShadow="rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px";
         pfplabel[0].classList.remove('nodisplay');
         pfplabel[1].classList.add('nodisplay');
-
-
-
         en = 0;
     }
 }
@@ -78,9 +78,12 @@ function validate() {
 function scrollupdate() {
     window.scrollTo({
         behavior: 'smooth',
-        top: 760,
+        top: 780,
         left: 0
     });
+}
+function readfile(){
+    pfp.src=URL.createObjectURL(fileinput.files[0]);
 }
 function filebrowse() {
     if (en > 0) {
@@ -92,11 +95,8 @@ for (let i = 0; i < fields.length; i++) {
     fields[i].addEventListener("focus", function () {
             // wrapper[i].style.animation = "focus .6s  1 ease-in-out";
         wrapper[i].style.boxShadow = "var(--wrappershadowfocus)";
-           
-        
     })
     fields[i].addEventListener("focusout", function () {
         wrapper[i].style.boxShadow = "var(--wrappershadowaftr)";
-
     })
 }
