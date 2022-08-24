@@ -36,22 +36,23 @@ body {
   z-index: 5;
   top: 0;
   position: fixed;
-  backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.329);
+  /* background: rgba(255, 255, 255, 0.1); */
   text-align: center;
-  transition: all 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(100px);
+  /* transition: all 0.1s; */
 }
 
 .navbar li {
   display: inline;
   position: relative;
   font-size: 30px;
-  font-family: "regular", sans-serif;
+  font-family: "Poppins";
   /* cursor: none; */
 }
 .navbar a {
-  position: relative;
   margin: 10px;
+  color: black;
 }
 
 a:hover {
@@ -337,6 +338,10 @@ tr {
   height: 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.ProfileWrapper .right .button{
+  width: 100%;
+}
+
 .button:hover {
   transition: all 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -378,32 +383,26 @@ tr {
   height: 500px;
   width: 500px;
   border-radius: 10px;
-  margin-top: 20px;
-  position: relative;
-  padding: 30px;
+  /* margin:30px; */
+  /* padding: 30px; */
   /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   transition: all .5s;
 }
-.ProfileWrapper .left legend{
+
+.ProfileWrapper  legend{
   color:rgba(0, 0, 0, 0.7);
   font-family: "Poppins";
   font-weight: 400;
   font-size: 25px;
 }
 
+
 /* for js */
 .nodisplay {
   display: none;
-}
-
-.ProfileWrapper .right .pfpLabel {
-  position: absolute;
-  top: 50px;
-  left: 133px;
-  color: gray;
 }
 .ProfileWrapper {
   font-family: "Poppins";
@@ -418,14 +417,20 @@ tr {
   margin: 30px;
   position: relative;
 }
-.leftWrapper {
+.leftWrapper,.right fieldset{
   border-radius: 5px;
   border: none;
   padding: 0px 40px 0 40px;
   margin-bottom: 20px;
   position: absolute;
-  left: 25%;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; 
+  left: 10%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.ProfileWrapper .right fieldset{
+  padding: 35px;
+  border: none;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .ProfileWrapper .fields {
   margin: 10px;
@@ -463,19 +468,20 @@ tr {
 
 .ProfileWrapper .right {
   padding: 30px;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   text-align: center;
 }
 
 /* footer */
 .FooterRight img {
-  margin: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  float: right;
   cursor: auto;
+}
+.ProfileWrapper .right .imgwrapper{
+  width: 100px;
 }
 .FooterRight img:hover {
   background: rgba(255, 255, 255, 0.74);

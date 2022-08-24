@@ -15,6 +15,7 @@ if (isset($_REQUEST['username'])) {
 	$unamecheck = mysqli_query($connect, "SELECT * FROM `login` WHERE username = '" . $username . "';");
 	$mobilechk = mysqli_query($connect, "SELECT * FROM `login` WHERE mobile = '" . $mobileno . "';");
 	$emailchk = mysqli_query($connect, "SELECT * FROM `login` WHERE email = '" . $email . "';");
+	$pfp = 'noprofile.png';
 	session_start();
 	if ($unamecheck->num_rows == 1) {
 		$_SESSION['signuperror'] .= 'username already exists<br>';
@@ -27,7 +28,7 @@ if (isset($_REQUEST['username'])) {
 		$_SESSION['signuperror'] .= 'mobile already exists<br>';
 	} else {
 		print_r($_REQUEST);
-		$q_sql =  "INSERT INTO `login`( `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`) VALUES ('" . $fullname . "','" . $age . "','" . $gender . "','" . $username . "','" . $password . "','" . $address . "','" . $email . "','" . $mobileno . "');";
+		$q_sql =  "INSERT INTO `login`( `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`,`image`) VALUES ('" . $fullname . "','" . $age . "','" . $gender . "','" . $username . "','" . $password . "','" . $address . "','" . $email . "','" . $mobileno . "','".$pfp."');";
 		mysqli_query($connect, $q_sql);
 	}
 } else {
