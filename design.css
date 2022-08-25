@@ -480,11 +480,16 @@ tr {
   border-radius: 50%;
   cursor: auto;
 }
+.FooterRight .img{
+  position:absolute;
+  right:3px;
+  top:3px;
+}
 .ProfileWrapper .right .imgwrapper{
   width: 100px;
 }
 .FooterRight img:hover {
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(0, 0, 0, 0.74);
 }
 .footer {
   width: 100%;
@@ -507,6 +512,7 @@ tr {
 }
 .footer .FooterRight {
   grid-row: 1;
+  position: relative;
 }
 
 .FooterMid a {
