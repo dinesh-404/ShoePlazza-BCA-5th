@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shop.css">
-    <link rel="stylesheet" href="\ShoePlazza\cursor.css">
+    <link rel="stylesheet" href="/ShoePlazza/cursor.css">
+    <link rel="stylesheet" href="/ShoePlazza/design.css">
+
     <title>shop</title>
 </head>
 
 <body>
+    <?php include("../navbar.php"); ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>
     <div class="cardrow">
@@ -68,6 +71,7 @@
             </div>
         </div>
     </div>
+    <?php include('../footer.php') ?>
     <script src="/ShoePlazza/cursor.js"></script>
 </body>
 

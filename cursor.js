@@ -96,6 +96,10 @@ window.onscroll = function(){
     }
     prevScroll=currentScroll;
 }
+
+function explore(){
+    document.getElementById('explore').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
+}
 // footer.addEventListener("mouseover",function(){
 //     midcur.classList.remove("midcursor");
 //     mouseCursor.classList.remove("changecursor");

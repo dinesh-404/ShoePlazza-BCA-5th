@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "regular";
   src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
@@ -7,52 +7,62 @@
     url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
-
 :root {
   --background-white: white;
   --background-black: black;
   --text-color: black;
-  --wrappershadowbfr:rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-  --wrappershadowaftr:  rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  --wrappershadowfocus: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  --wrappershadowbfr: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  --wrappershadowaftr: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  --wrappershadowfocus: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
-    
 
 html,
 body {
   cursor: none;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+
   background: white;
   height: 100%;
   width: 100%;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar {
   padding: 0px;
   margin: auto;
   width: 100%;
   z-index: 5;
   top: 0;
+  height: 50px;
   position: fixed;
   /* background: rgba(255, 255, 255, 0.1); */
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.062);
   backdrop-filter: blur(100px);
-  /* transition: all 0.1s; */
+  transition: all 0.1s;
 }
 
 .navbar li {
   display: inline;
   position: relative;
-  font-size: 30px;
-  font-family: "Poppins";
+  font-size: 40px;
+  /* font-family: "Regular"; */
+  font-family: sans-serif;
+  font-weight: 600;
   /* cursor: none; */
 }
 .navbar a {
   margin: 10px;
-  color: black;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 a:hover {
@@ -71,7 +81,80 @@ a {
   font-family: "regular", sans-serif;
   overflow: scroll;
 }
+/* home page */
+.content {
+  height: 800px;
+  background: url("indeximg/3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.explore{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 155px;
+}
+.explore .cards{
+  /* height: 100%;
+  margin:0;
+  width: 100%; */
+  margin-bottom: 20px;
+}
 
+#explore{
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.cardinfo img{
+  position: relative;
+  width:100%;
+  height: 100%;
+  transition: all .5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cardinfo{
+  width:540px;
+  transition: all .5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  height: 680px;
+}
+.txt{
+  position: absolute;
+  width: 100%;
+  transition: all 1s;
+  overflow: hidden;
+  bottom: -30%;
+}
+.txt button{
+  width: 100%;
+  background: none;
+  border: none;
+  height: 50px;
+}
+.cardinfo h1{
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  font-family: sans-serif;
+  margin: 0;
+  z-index: 5;
+}
+.cardinfo{
+  overflow: hidden;
+  position: relative;
+}
+.cards .cardinfo:hover{
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 50px 100px -7px;
+}
+.cards .cardinfo:hover>.txt{
+  bottom: 0;
+}
+.cards .cardinfo:hover>h1{
+  margin: 30px;
+}
 /* login form */
 .center {
   width: 90%;
@@ -308,16 +391,8 @@ tr {
   text-align: center;
   border: 1px solid black;
 }
-.content {
-  height: 1000px;
-}
-
-
 
 /* profile */
-
-
-
 
 .profile .button {
   color: black;
@@ -338,13 +413,14 @@ tr {
   height: 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.ProfileWrapper .right .button{
+.ProfileWrapper .right .button {
   width: 100%;
 }
 
 .button:hover {
   transition: all 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
   color: white;
   background: black;
 }
@@ -371,7 +447,7 @@ tr {
   bottom: 30%;
   position: absolute;
 }
-.ProfileWrapper .right button{
+.ProfileWrapper .right button {
   width: 100%;
 }
 #profilehead {
@@ -389,16 +465,15 @@ tr {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.ProfileWrapper  legend{
-  color:rgba(0, 0, 0, 0.7);
+.ProfileWrapper legend {
+  color: rgba(0, 0, 0, 0.7);
   font-family: "Poppins";
   font-weight: 400;
   font-size: 25px;
 }
-
 
 /* for js */
 .nodisplay {
@@ -417,7 +492,8 @@ tr {
   margin: 30px;
   position: relative;
 }
-.leftWrapper,.right fieldset{
+.leftWrapper,
+.right fieldset {
   border-radius: 5px;
   border: none;
   padding: 0px 40px 0 40px;
@@ -426,7 +502,7 @@ tr {
   left: 10%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.ProfileWrapper .right fieldset{
+.ProfileWrapper .right fieldset {
   padding: 35px;
   border: none;
   position: relative;
@@ -463,7 +539,7 @@ tr {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .ProfileWrapper .right {
@@ -480,12 +556,12 @@ tr {
   border-radius: 50%;
   cursor: auto;
 }
-.FooterRight .img{
-  position:absolute;
-  right:3px;
-  top:3px;
+.FooterRight .img {
+  position: absolute;
+  right: 3px;
+  top: 3px;
 }
-.ProfileWrapper .right .imgwrapper{
+.ProfileWrapper .right .imgwrapper {
   width: 100px;
 }
 .FooterRight img:hover {
