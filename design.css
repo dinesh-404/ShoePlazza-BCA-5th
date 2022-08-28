@@ -105,14 +105,16 @@ a {
   margin-bottom: 0;
 }
 
-.cardinfo img{
+.cardinfo .pimage{
   position: relative;
   width:100%;
   height: 100%;
+  overflow: hidden;
   transition: all .5s;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .cardinfo{
+  color:rgb(0, 0, 0, 0.9);
+  overflow: hidden;
   width:540px;
   transition: all .5s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -144,6 +146,39 @@ a {
   overflow: hidden;
   position: relative;
 }
+.panel{
+  height: 900px;
+  background: url("images/6.jpg") center;
+  background-color: red;
+  background-size: cover;
+  position: relative;
+}
+.cardlogo{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 5;
+  transition: all 1s;
+  
+}
+.nike{
+  
+  height: 100px;
+  width: 100px;
+  margin: 30px;
+}
+.panel button{
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  background: white;
+  right: 0;
+  height: 80px;
+  font-size: 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 50px;
+}
 .cards .cardinfo:hover{
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
   /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
@@ -152,7 +187,7 @@ a {
 .cards .cardinfo:hover>.txt{
   bottom: 0;
 }
-.cards .cardinfo:hover>h1{
+.cards .cardinfo:hover>.cardlogo{
   margin: 30px;
 }
 /* login form */
