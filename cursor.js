@@ -104,3 +104,4 @@ function explore(){
 //     midcur.classList.remove("midcursor");
 //     mouseCursor.classList.remove("changecursor");
 // });
+

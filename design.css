@@ -22,10 +22,9 @@
 html,
 body {
   cursor: none;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   margin: 0;
   padding: 0;
-
   background: white;
   height: 100%;
   width: 100%;
@@ -88,70 +87,43 @@ a {
   background-size: cover;
   background-position: center;
 }
-.explore{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 155px;
-}
-.explore .cards{
-  /* height: 100%;
-  margin:0;
-  width: 100%; */
-  margin-bottom: 20px;
-}
+
 
 #explore{
   margin: 30px;
   margin-bottom: 0;
 }
+.card{
+  display: inline;
+  margin: auto;
+  background: red;
+}
+.cardimg{
+  width: 650px;
+  margin: 20px;
+  height: 800px;
+}
 
-.cardinfo .pimage{
-  position: relative;
-  width:100%;
-  height: 100%;
-  overflow: hidden;
-  transition: all .5s;
-}
-.cardinfo{
-  color:rgb(0, 0, 0, 0.9);
-  overflow: hidden;
-  width:540px;
-  transition: all .5s;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 10px;
-  height: 680px;
-}
-.txt{
-  position: absolute;
-  width: 100%;
-  transition: all 1s;
-  overflow: hidden;
-  bottom: -30%;
-}
-.txt button{
-  width: 100%;
-  background: none;
-  border: none;
-  height: 50px;
-}
-.cardinfo h1{
-  position: absolute;
-  top: 0;
-  transition: all .3s;
-  font-family: sans-serif;
-  margin: 0;
-  z-index: 5;
-}
-.cardinfo{
-  overflow: hidden;
-  position: relative;
-}
+/* after featured */
+
 .panel{
-  height: 900px;
-  background: url("images/6.jpg") center;
-  background-color: red;
-  background-size: cover;
+  height: 750px;
+  margin:20px;
+  border-radius: 10px;
   position: relative;
+  background:none;
+}
+#pannike{
+  background: url("images/6.jpg") center;
+  background-size: cover;
+}
+#panaddidas{
+  background:url("images/ultraboostaddidas.jpg") center;
+  background-size: cover;
+}
+#panaddidas button{
+  left:0;
+  right: auto;
 }
 .cardlogo{
   width: 50px;
@@ -159,22 +131,19 @@ a {
   position: absolute;
   z-index: 5;
   transition: all 1s;
-  
 }
-.nike{
-  
+.brand{
   height: 100px;
-  width: 100px;
   margin: 30px;
 }
 .panel button{
   position: absolute;
-  width: 300px;
+  width: 200px;
+  height: 50px;
   bottom: 0;
   background: white;
   right: 0;
-  height: 80px;
-  font-size: 20px;
+  font-size: 15px;
   margin: 20px;
   border: none;
   border-radius: 50px;
