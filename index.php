@@ -16,8 +16,11 @@
     // include('navbar.php'); 
     ?>
     <div class="content"><br><br>
-        Hello !! <br>
-        Welcome to ShoePlazza<br>
+        <h2>
+
+            Hello !! <br>
+            Welcome to ShoePlazza<br>
+        </h2>
         <button type="button" class="button" id="button" onclick="explore()">Explore</button>
     </div>
     <h1 id="explore">Featured</h1><br>
@@ -32,9 +35,9 @@
             </div>
         </div>
         <div class="card">
-        <img src="images/jordan.png" class="logo" alt="jordan logo">
+            <img src="images/jordan.png" class="logo" alt="jordan logo">
 
-            <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg"alt="">
+            <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg" alt="">
             <div class="cardtxt">
                 <h2>Jordan Air 4 </h2>
                 <button>See More</button>
