@@ -21,15 +21,27 @@
         <button type="button" class="button" id="button" onclick="explore()">Explore</button>
     </div>
     <h1 id="explore">Featured</h1><br>
+
     <div class="explore">
         <div class="card">
-            <img src="products/productimg/adistarshoes-1.jpg" class="cardimg" alt="">
+            <img src="images/jordan.png" class="logo" alt="jordan logo">
+            <img src="products/productimg/jordan4-1.jpg" class="cardimg" alt="">
+            <div class="cardtxt">
+                <h2>Jordan Air 4 </h2>
+                <button>See More</button>
+            </div>
         </div>
         <div class="card">
-            <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg"alt="">
-        </div>
+        <img src="images/jordan.png" class="logo" alt="jordan logo">
 
+            <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg"alt="">
+            <div class="cardtxt">
+                <h2>Jordan Air 4 </h2>
+                <button>See More</button>
+            </div>
+        </div>
     </div>
+
     <div class="panel" id="pannike">
         <img src="images/nikenobg.png" class="brand" alt="" srcset="">
         <button class="button">Shop now</button>
