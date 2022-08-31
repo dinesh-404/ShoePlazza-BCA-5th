@@ -16,7 +16,7 @@
     <?php include("../navbar.php"); ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>
-    <div class="cardrow">
+    <div class="cardrow" id="nike">
         <div class="card">
             <div class="cardimage">
                 <div class="imgtxt">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="cardrow">
+    <div class="cardrow" id="addidas">
         <div class="card">
             <div class="cardimage">
                 <div class="imgtxt">

@@ -39,7 +39,7 @@
 
             <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg" alt="">
             <div class="cardtxt">
-                <h2>Jordan Air 4 </h2>
+                <h2>Jordan Air Retro</h2>
                 <button>See More</button>
             </div>
         </div>
@@ -47,7 +47,8 @@
 
     <div class="panel" id="pannike">
         <img src="images/nikenobg.png" class="brand" alt="" srcset="">
-        <button class="button">Shop now</button>
+        <button class="button" onclick="header('location:/ShoePlazza/index.php');
+">Shop now</button>
     </div><br>
     <div class="panel" id="panaddidas">
         <img src="images/k.png" class="brand" alt="" srcset="">
