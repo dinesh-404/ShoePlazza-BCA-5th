@@ -1,8 +1,10 @@
 <?php
 
 include('../Login/connect.php');
+session_start();
 // $cmd = "select it.id, it.name, it.price, from items from user_cart uc inner joins items it on it.id=uc.item_id where uc.id = 1";
-$user_id = '1';
+if(!isset($_SESSION['uid'])) header('location: ../Login/signin.php');
+$user_id = $_SESSION['uid'];
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' . +$user_id;
 echo "<br>";
 $q = mysqli_query($connect, $cmd);
