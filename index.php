@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -10,6 +13,13 @@
 </head>
 
 <body class="body" id="body">
+    
+    <?php 
+    include('navbar.php');
+    include('top.php');
+
+    
+    ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>
     <?php

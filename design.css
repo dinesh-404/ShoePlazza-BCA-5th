@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 @font-face {
   font-family: "regular";
   src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
@@ -34,40 +35,66 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+/* navbar */
 
-.navbar {
-  padding: 0px;
-  margin: auto;
-  width: 100%;
-  z-index: 5;
-  top: 0;
-  height: 50px;
-  position: fixed;
-  /* background: rgba(255, 255, 255, 0.1); */
-  text-align: center;
-  background: rgba(0, 0, 0, 0.062);
-  backdrop-filter: blur(100px);
-  transition: all 0.1s;
-}
-
-.navbar li {
-  display: inline;
+li{
   position: relative;
-  font-size: 40px;
-  /* font-family: "Regular"; */
-  font-family: sans-serif;
-  font-weight: 600;
-  /* cursor: none; */
 }
-.navbar a {
-  margin: 10px;
-  color: rgba(0, 0, 0, 0.9);
+.navbarDiv{
+  padding: 0 20px 0 20px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  position: fixed;
+  overflow: hidden;
+  background:darkgray;
+  background: white;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  padding-top:0 ;
+  position: relative;
 }
 
-a:hover {
-  color: grey;
+.NavCenter a{
+  margin: 20px;
+}
+.NavCenter .NavContent{
+  font-size: 20px;
+  transform: translateY(50%);
+
 }
 
+.navbarDiv .NavCenter{
+  height: 100%;
+  text-align: center;
+}
+.navbarDiv .NavLeft{
+  text-align: keft;
+}
+.navbarDiv .NavRight{
+  text-align: right;
+}
+.NavPfp{
+  margin-top: 10px;
+  width: 35px;
+  margin-left: 150px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.Pfp{
+  width: 100%;
+  height: 100%;
+}
+ 
+.brandlogo{
+  width: 50px;
+  height: 50px;
+}
+.NavContent{
+  transform: translateY(50%);
+  font-size: 20px;
+}
 a {
   text-decoration: none;
   color: var(--background-black);
@@ -80,115 +107,131 @@ a {
   font-family: "regular", sans-serif;
   overflow: scroll;
 }
+/* go to top */
+.gototop{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+  position: fixed;
+  z-index: 5;
+  bottom: -50px;
+  background: url("/ShoePlazza/images/gototop.png") center;
+  right: 30px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.257);
+}
 /* home page */
 .content {
   height: 670px;
   background: url("indeximg/3.jpg");
   background-size: cover;
-  padding:20px;
+  padding: 20px;
   background-position: center;
 }
-.content button{
+.content button {
   width: 270px;
   height: 30px;
   font-size: 15px;
   border-radius: 10px;
   border: none;
 }
-button{
+button {
   font-family: sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-#explore{
+#explore {
   margin: 30px;
   margin-bottom: 0;
 }
-.card{
+.card {
   margin: auto;
   width: 400px;
   height: 500px;
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  box-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
   transition: all 1s;
 }
-.cardtxt{
+.cardtxt {
   position: absolute;
   bottom: -100px;
-  transition: all .6s;
+  transition: all 0.6s;
   width: 100%;
 }
-.cardimg{
+.cardimg {
   width: 100%;
   height: 100%;
 }
-.explore{
+.explore {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.card:hover > .cardtxt{
-  bottom:0;
-  
+.card:hover > .cardtxt {
+  bottom: 0;
 }
-.card:hover{
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
-.card:hover > .logo{
+.card:hover > .logo {
   margin: 10px;
 }
-.card .logo{
+.card .logo {
   width: 50px;
   height: 50px;
-  transition: all .5s;
+  transition: all 0.5s;
   position: absolute;
 }
-.card .cardtxt button{
+.card .cardtxt button {
   width: 100%;
   border: none;
   background: black;
-  color:white;
+  color: white;
   height: 50px;
 }
 
 /* after featured */
 
-.panel{
-height: 600px;
+.panel {
+  height: 600px;
 
-  margin:20px;
+  margin: 20px;
   border-radius: 10px;
   position: relative;
-  background:none;
+  background: none;
 }
-#pannike{
+#pannike {
   background: url("images/6.jpg") center;
   background-size: cover;
 }
-#panaddidas{
-  background:url("images/ultraboostaddidas.jpg") center;
+#panaddidas {
+  background: url("images/ultraboostaddidas.jpg") center;
   background-size: cover;
 }
-#panaddidas button{
-  left:0;
+#panaddidas button {
+  left: 0;
   right: auto;
 }
-.cardlogo{
+.cardlogo {
   width: 50px;
   height: 50px;
   position: absolute;
   z-index: 5;
   transition: all 1s;
 }
-.brand{
+.brand {
   height: 100px;
   margin: 30px;
 }
-.panel button{
+.panel button {
   position: absolute;
   width: 200px;
   height: 50px;
@@ -200,15 +243,15 @@ height: 600px;
   border: none;
   border-radius: 50px;
 }
-.cards .cardinfo:hover{
+.cards .cardinfo:hover {
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
   /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 50px 100px -7px;
 }
-.cards .cardinfo:hover>.txt{
+.cards .cardinfo:hover > .txt {
   bottom: 0;
 }
-.cards .cardinfo:hover>.cardlogo{
+.cards .cardinfo:hover > .cardlogo {
   margin: 30px;
 }
 /* login form */

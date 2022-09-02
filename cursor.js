@@ -89,14 +89,21 @@ var prevScroll = window.scrollY;
 window.onscroll = function(){
     var currentScroll = window.scrollY;
     if(prevScroll>currentScroll){
-        document.getElementById('navbar').style.top="0";
+        document.getElementById('gototop').style.bottom="30px";
     }
     else{
-        document.getElementById('navbar').style.top="-50px";
+        document.getElementById('gototop').style.bottom="-50px";
     }
     prevScroll=currentScroll;
 }
+function scolltop(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    }
 
+    )
+}
 function explore(){
     document.getElementById('explore').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
 }

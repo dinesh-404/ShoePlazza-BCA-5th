@@ -11,6 +11,7 @@ if ($n > 0) {
 	session_start();
 	$_SESSION['uid'] = $data['id'];
 	$_SESSION['uname'] = $data['username'];
+	$_SESSION['pfp'] = $data['image'];	
 	header("location:\ShoePlazza\index.php");
 } 
 else {
