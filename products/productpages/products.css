@@ -57,20 +57,19 @@ body::-webkit-scrollbar {
     position: fixed;
     text-align: center;
     overflow: scroll;
-    margin: 5px;
     display: block;
     height: 100%;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
 }
 
 .noscroll h1 {
     font-size: 40px;
+    
 }
 
 .noscroll p {
-    margin: 50px;
+    margin: 10px 50px 10px 50px;
     font-weight: 500;
     font-size: 20px;
     height: 50%;
@@ -80,13 +79,6 @@ body::-webkit-scrollbar {
     font-weight: lighter;
     width: 100%;
 }
-
-
-.noscroll h6 {
-    font-size: large;
-    font-weight: normal;
-}
-
 .down {
     background: white;
     width: 100%;

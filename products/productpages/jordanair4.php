@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("../../Login/connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +15,9 @@
 
     <title>jordanair4</title>
 </head>
+
 <body>
-    
+
     <!-- product one -->
     <div class="cursor"></div>
     <div class="innercursor"></div>
@@ -38,18 +43,28 @@
         <div class="pright" id="right">
             <div class="noscroll" id="noscroll">
                 <h1>Air Jordan 4</h1>
-                <h6>black and white</h6>
                 <p>
                     The Air Jordan 4 first took flight in 1989 as a more lightweight, breathable model compared to previous Air Jordan designs from Tinker Hatfield. Famously featuring its unique "wings" to allow for customised lace setups, the AJ4 is now back with all its special trimmings and an OG colour-blocked make-up for the summer. Similar to the classic blue style from decades ago, this 'White and Black' Air Jordan 4 goes for a more neutral white, black and Neutral Grey palette that's ready for any outfit.
-                </p>                
-              <a href="../add_to_cart.php?id=1" role="button">click this bith</a>
+                </p>
+                <div class="rate">
+                    rs.
+                    <?php
+                        $q = "SELECT price FROM `items` WHERE id = 1";
+                        $cmd = mysqli_query($connect,$q);
+                        $r = mysqli_fetch_array($cmd);
+                        echo $r['price'];
+                    ?>
+                    only
+                </div>
+
+                <a href="../add_to_cart.php?id=1" role="button">Add to Cart</a>
             </div>
         </div>
     </div><br>
     <script src="/ShoePlazza/cursor.js"></script>
     <script src="products.js"></script>
     <script src="scroll.js"></script>
-   
+
 </body>
 
 </html>
