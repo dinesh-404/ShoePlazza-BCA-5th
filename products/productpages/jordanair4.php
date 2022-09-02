@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="\ShoePlazza\cursor.css">
+    <link rel="stylesheet" href="/ShoePlazza/cursor.css">
+    <link rel="stylesheet" href="/ShoePlazza/design.css">
+
     <title>jordanair4</title>
 </head>
 <body>
+    
     <!-- product one -->
     <div class="cursor"></div>
     <div class="innercursor"></div>
-    <div class="center">
-        <div class="left" id="left">
+    <?php include('../../navbar.php'); ?>
+    <div class="pcenter">
+        <div class="pleft" id="left">
             <div class="imgmain">
                 <img src="\ShoePlazza\products\productimg\jordan4-1.jpg" alt="" srcset="" class="image">
                 <img src="\ShoePlazza\products\productimg\jordan4-2.jpg" alt="" srcset="" class="image">
@@ -31,7 +35,7 @@
                 <img src="\ShoePlazza\products\productimg\jordan4-7.jpg" alt="" class="wideimage">
             </div>
         </div>
-        <div class="right" id="right">
+        <div class="pright" id="right">
             <div class="noscroll" id="noscroll">
                 <h1>Air Jordan 4</h1>
                 <h6>black and white</h6>
