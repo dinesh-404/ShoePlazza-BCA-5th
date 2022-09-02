@@ -26,7 +26,7 @@
                 <img src="productimg\jordan4-1.jpg" alt="" srcset="">
 
             </div>
-            <a class="linkbtn" href="/products/productpages/jordanair4.php">see more</a>
+            <a class="linkbtn" href="/ShoePlazza/products/productpages/jordanair4.php">see more</a>
         </div>
         <div class="card">
             <div class="cardimage">
