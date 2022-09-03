@@ -60,7 +60,7 @@ else{
                     <?php
                     echo $r['information'];
                     ?>
-                    <!-- The Air Jordan 4 first took flight in 1989 as a more lightweight, breathable model compared to previous Air Jordan designs from Tinker Hatfield. Famously featuring its unique "wings" to allow for customised lace setups, the AJ4 is now back with all its special trimmings and an OG colour-blocked make-up for the summer. Similar to the classic blue style from decades ago, this 'White and Black' Air Jordan 4 goes for a more neutral white, black and Neutral Grey palette that's ready for any outfit. -->
+                   
                 </p>
                 <div class="rate">
                     rs.
