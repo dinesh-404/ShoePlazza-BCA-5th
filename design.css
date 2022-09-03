@@ -124,8 +124,8 @@ a {
 }
 /* home page */
 .content {
-  height: 670px;
-  background: url("indeximg/3.jpg");
+  height: 650px;
+  background: url("images/homepagebg.jpg");
   background-size: cover;
   padding: 20px;
   background-position: center;
@@ -518,11 +518,10 @@ tr {
 }
 
 .button:hover {
-  transition: all 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: none;
-  color: white;
   background: black;
+  color: white;
 }
 
 .profile {
