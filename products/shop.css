@@ -19,6 +19,7 @@ body::-webkit-scrollbar{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     transition: all .5s;
+    margin-bottom: 50px;
 }
 .cardimage img {
     width: 100%;
@@ -29,7 +30,6 @@ body::-webkit-scrollbar{
     padding:10px;
     margin: 10px;
     display: grid;
-    height: 400px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
 }
