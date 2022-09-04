@@ -210,11 +210,11 @@ button {
   background: none;
 }
 #pannike {
-  background: url("../images/6.jpg") center;
+  background: url("../images/nikepanel.jpg") center;
   background-size: cover;
 }
 #panaddidas {
-  background: url("../images/ultraboostaddidas.jpg") center;
+  background: url("../images/addidaspanel.jpg") center;
   background-size: cover;
 }
 #panaddidas button {
@@ -267,7 +267,7 @@ button {
   overflow: hidden;
   align-content: stretch;
   justify-content: space-between;
-  background: url("../images/2.jpg") no-repeat;
+  background: url("../images/loginbg.jpg") no-repeat;
   background-size: 100%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
   color: var(--text-color);
@@ -281,45 +281,7 @@ button {
     background-position: 0;
   }
 }
-/* @keyframes bg {
-  0% {
-    background: url("background/1.jpg");
-    background-position: center;
-    background-size: cover;
-  }
-  12.5% {
-    background: url("background/2.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  25% {
-    background: url("background/3.jpg");
-    background-size: cover;
-  }
-  37.5% {
-    background: url("background/4.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  50% {
-    background: url("background/5.jpg");
-    background-size: cover;
-  }
-  62.5% {
-    background: url("background/6.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  75% {
-    background: url("background/7.jpg");
-    background-size: cover;
-  }
-  
-  100% {
-    background: url("background/8.jpg");
-    background-position: center;
-  }
-} */
+
 .loginbtns {
   position: absolute;
   bottom: 100px;
@@ -528,7 +490,7 @@ tr {
   padding-top: 40px;
   width: auto;
   height: 700px;
-  background: url("../images/5.jpg") center;
+  background: url("../images/profilebg.jpg") center;
   /* background-blend-mode: overlay; */
   font-family: "Oxygen", sans-serif;
   padding: 30px;
