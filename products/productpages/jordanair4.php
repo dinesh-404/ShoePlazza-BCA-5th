@@ -62,16 +62,20 @@ else{
                     ?>
                    
                 </p>
+                <br>
                 <div class="rate">
-                    rs.
+                    <h2>₹
+
                     <?php
 
                     echo $r['price'];
                     ?>
                     only
+                    </h2>
+
                 </div>
 
-                <a href="../add_to_cart.php?id=<?php echo $r['id']; ?>" role="button">Add to Cart</a>
+               <button class="cartbtn" onclick="location.href='../add_to_cart.php?id=<?php echo $r['id'];  ?>'">Add to Cart</button>
             </div>
         </div>
     </div><br>

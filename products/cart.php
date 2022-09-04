@@ -5,8 +5,9 @@ session_start();
 // $cmd = "select it.id, it.name, it.price, from items from user_cart uc inner joins items it on it.id=uc.item_id where uc.id = 1";
 if (!isset($_SESSION['uid'])) header('location: ../Login/signin.php');
 $user_id = $_SESSION['uid'];
+echo $user_id;
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' . +$user_id;
-echo "<br>";
+
 $q = mysqli_query($connect, $cmd);
 $count = 0;
 ?>
@@ -25,7 +26,6 @@ $count = 0;
 			margin: 0;
 			font-family: sans-serif;
 			text-decoration: none;
-
 		}
 		*{
 			cursor:auto;
@@ -108,7 +108,12 @@ $count = 0;
 	<?php include('../navbar.php'); ?>
 	<?php
 	$sum = 0;
+	
 	$userp = mysqli_query($connect, $cmd);
+
+	
+
+	echo mysqli_num_rows($userp);
 	if (mysqli_num_rows($userp) == 0) { ?>
 
 
@@ -133,7 +138,7 @@ $count = 0;
 				$sum = $sum + $row['price'];
 			?>
 				<tr class="CartRow">
-					<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>" alt="" srcset=""></td>
+					<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
 					<td class="CartColumns"><?php echo $row['name']; ?></td>
 					<td class="CartColumns">₹<?php echo $row['price']; ?></td>
 					<td class="CartColumns"><a href="delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
