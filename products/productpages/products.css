@@ -37,23 +37,25 @@ body::-webkit-scrollbar {
 
 .pcenter {
     width: 100%;
-    height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
 }
 
 .pleft {
     width: 930px;
-    float: left;
 }
 
 .pright {
-    height: 100%;
+    position: sticky;
     width: 500px;
-    float: right;
     display: block;
+    background: white;
+    right: 0;
 }
 
 .noscroll {
-    position: fixed;
+    position: sticky;
     text-align: center;
     overflow: scroll;
     display: block;
@@ -71,7 +73,8 @@ body::-webkit-scrollbar {
     margin: 10px 50px 10px 50px;
     font-weight: 500;
     font-size: 20px;
-    height: 50%;
+    padding: 20px;
+    
 }
 
 .noscroll h1 {

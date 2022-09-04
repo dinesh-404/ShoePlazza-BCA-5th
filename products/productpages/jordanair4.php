@@ -10,7 +10,7 @@ else{
     $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
     $cmd = mysqli_query($connect, $q);
     $pcmd = mysqli_query($connect,$qc);
-    var_dump(mysqli_fetch_array($pcmd));
+    // var_dump(mysqli_fetch_array($pcmd));
     $r = mysqli_fetch_array($cmd);
     
 }
@@ -52,9 +52,9 @@ else{
                 <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-5.jpg" alt="" srcset="" class="image">
                 <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-6.jpg" alt="" srcset="" class="image">
             </div>
-            <div class="imgwide">
+            <!-- <div class="imgwide">
                 <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-7.jpg" alt="" class="wideimage">
-            </div>
+            </div> -->
         </div>
         <div class="pright" id="right">
             <div class="noscroll" id="noscroll">
@@ -82,6 +82,7 @@ else{
             </div>
         </div>
     </div><br>
+    <?php include('../../footer.php'); ?>
     <script src="/ShoePlazza/cursor.js"></script>
     <script src="products.js"></script>
     <script src="scroll.js"></script>
