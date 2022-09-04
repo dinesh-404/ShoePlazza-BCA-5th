@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="design.css">
-<link rel="stylesheet" href="cursor.css">
+<link rel="stylesheet" href="/ShoePlazza/resources/css/design.css">
+<link rel="stylesheet" href="/ShoePlazza/resources/css/cursor.css">
 <title>Home Page</title>
 
 </head>
@@ -15,8 +15,8 @@
 <body class="body" id="body">
     
     <?php 
-    include('navbar.php');
-    include('top.php');
+    include('resources/imports/navbar.php');
+    include('resources/imports/top.php');
 
     
     ?>
@@ -37,8 +37,8 @@
 
     <div class="explore">
         <div class="card">
-            <img src="images/jordan.png" class="logo" alt="jordan logo">
-            <img src="products/productimg/jordan4-1.jpg" class="cardimg" alt="">
+            <img src="resources/images/jordan.png" class="logo" alt="jordan logo">
+            <img src="" class="cardimg" alt="">
             <div class="cardtxt">
                 <h2>Jordan Air 4 </h2>
                 <button>See More</button>
@@ -64,9 +64,9 @@
         <img src="images/k.png" class="brand" alt="" srcset="">
         <button class="button">Shop now</button>
     </div>
-    <?php include('footer.php'); ?>
+    <?php include('resources/imports/footer.php'); ?>
 
-    <script src="cursor.js"></script>
+    <script src="resources/js/cursor.js"></script>
     <div id="ok">okok</div>
 </body>
 
