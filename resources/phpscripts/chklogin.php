@@ -12,9 +12,9 @@ if ($n > 0) {
 	$_SESSION['uid'] = $data['id'];
 	$_SESSION['uname'] = $data['username'];
 	$_SESSION['pfp'] = $data['image'];	
-	header("location:\ShoePlazza\index.php");
+	header("location:../../index.php");
 } 
 else {
-	header('location:signin.php');
+	header('location:../../signin.php');
 }
 ?>

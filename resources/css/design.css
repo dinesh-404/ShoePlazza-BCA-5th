@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 @font-face {
   font-family: "regular";
-  src: url("fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
-    url("fonts/titilliumweb-regular-webfont.woff") format("woff"),
-    url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  src: url("../fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
+    url("../fonts/titilliumweb-regular-webfont.woff") format("woff"),
+    url("../fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
 :root {
@@ -118,7 +118,7 @@ a {
   position: fixed;
   z-index: 5;
   bottom: -50px;
-  background: url("/ShoePlazza/images/gototop.png") center;
+  background: url("../images/gototop.png") center;
   right: 30px;
   background-color: white;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.257);
@@ -126,7 +126,7 @@ a {
 /* home page */
 .content {
   height: 650px;
-  background: url("images/homepagebg.jpg");
+  background: url("../images/homepagebg.jpg");
   background-size: cover;
   padding: 20px;
   background-position: center;
@@ -204,18 +204,17 @@ button {
 
 .panel {
   height: 600px;
-
   margin: 20px;
   border-radius: 10px;
   position: relative;
   background: none;
 }
 #pannike {
-  background: url("images/6.jpg") center;
+  background: url("../images/6.jpg") center;
   background-size: cover;
 }
 #panaddidas {
-  background: url("images/ultraboostaddidas.jpg") center;
+  background: url("../images/ultraboostaddidas.jpg") center;
   background-size: cover;
 }
 #panaddidas button {
@@ -268,7 +267,7 @@ button {
   overflow: hidden;
   align-content: stretch;
   justify-content: space-between;
-  background: url("/ShoePlazza/images/2.jpg") no-repeat;
+  background: url("../images/2.jpg") no-repeat;
   background-size: 100%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
   color: var(--text-color);
@@ -529,7 +528,7 @@ tr {
   padding-top: 40px;
   width: auto;
   height: 700px;
-  background: url("/ShoePlazza/images/5.jpg") center;
+  background: url("../images/5.jpg") center;
   /* background-blend-mode: overlay; */
   font-family: "Oxygen", sans-serif;
   padding: 30px;

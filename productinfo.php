@@ -1,7 +1,8 @@
 <?php
 session_start();
-include("../../Login/connect.php");
-if(!isset($_REQUEST['pid'])) header('location:/ShoePlazza/products/shop.php');
+include("resources/phpscripts/connect.php");
+if(!isset($_SESSION['uid'])) header('location:login.php');
+if(!isset($_GET['pid'])) header('location:shop.php');
 else{
 
     $pid = $_REQUEST['pid'];
@@ -23,9 +24,9 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="/ShoePlazza/cursor.css">
-    <link rel="stylesheet" href="/ShoePlazza/design.css">
+    <link rel="stylesheet" href="resources/css/products.css" />
+    <link rel="stylesheet" href="resources/css/cursor.css">
+    <link rel="stylesheet" href="resources/css/design.css">
 
     <title>jordanair4</title>
 </head>
@@ -35,22 +36,22 @@ else{
     <!-- product one -->
     <div class="cursor"></div>
     <div class="innercursor"></div>
-    <?php include('../../navbar.php'); ?>
+    <?php include('resources/imports/navbar.php'); ?>
     <div class="pcenter">
        
         <div class="pleft" id="left">
 
             <div class="imgmain">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-1.jpg" alt="" srcset="" class="image">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-2.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-1.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-2.jpg" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-3.jpg" alt="" srcset="" class="image">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-4.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-3.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-4.jpg" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-5.jpg" alt="" srcset="" class="image">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-6.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-5.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-6.jpg" alt="" srcset="" class="image">
             </div>
             <!-- <div class="imgwide">
                 <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-7.jpg" alt="" class="wideimage">
@@ -78,14 +79,14 @@ else{
 
                 </div>
 
-               <button class="cartbtn" onclick="location.href='../add_to_cart.php?id=<?php echo $r['id'];  ?>'">Add to Cart</button>
+               <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?id=<?php echo $r['id'];  ?>'">Add to Cart</button>
             </div>
         </div>
     </div><br>
-    <?php include('../../footer.php'); ?>
-    <script src="/ShoePlazza/cursor.js"></script>
-    <script src="products.js"></script>
-    <script src="scroll.js"></script>
+    <?php include('resources/imports/footer.php'); ?>
+    <script src="resources/js/cursor.js"></script>
+    <script src="resources/js/products.js"></script>
+    <script src="resources/js/scroll.js"></script>
 
 </body>
 

@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/ShoePlazza/resources/css/design.css">
-<link rel="stylesheet" href="/ShoePlazza/resources/css/cursor.css">
+<link rel="stylesheet" href="resources/css/design.css">
+<link rel="stylesheet" href="resources/css/cursor.css">
 <title>Home Page</title>
 
 </head>
@@ -56,12 +56,12 @@
     </div>
 
     <div class="panel" id="pannike">
-        <img src="images/nikenobg.png" class="brand" alt="" srcset="">
+        <img src="resources/images/nikenobg.png" class="brand" alt="" srcset="">
         <button class="button" onclick="header('location:/ShoePlazza/index.php');
 ">Shop now</button>
     </div><br>
     <div class="panel" id="panaddidas">
-        <img src="images/k.png" class="brand" alt="" srcset="">
+        <img src="resources/images/addidashome.png" class="brand" alt="" srcset="">
         <button class="button">Shop now</button>
     </div>
     <?php include('resources/imports/footer.php'); ?>

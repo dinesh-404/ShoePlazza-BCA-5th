@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../Login/connect.php');
+    include('connect.php');
     $cart_id = $_GET['id'];
     if (!isset($_SESSION['uid'])) header('location:../Login/singin.php');
     $user_id = $_SESSION['uid'];

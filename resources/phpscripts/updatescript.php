@@ -1,5 +1,5 @@
 <?php
-include("Login/connect.php");
+include("connect.php");
 print_r($_REQUEST);
 session_start();
 $id = $_SESSION['uid'];
@@ -7,7 +7,7 @@ if (!strlen($_FILES['avatar']['name']) == 0) {
     // profile photo
     $src = $_FILES['avatar']['tmp_name'];
     //destination path
-    $despath = $_SERVER['DOCUMENT_ROOT'] . "/ShoePlazza/Login/pfp/";
+    $despath = $_SERVER['DOCUMENT_ROOT'] . "ShoePlazza/resources/pfp/";
     // relative path for copy
     $dest = $despath . $_FILES['avatar']['name'];
     $imgpath = $_FILES['avatar']['name'];
@@ -39,10 +39,10 @@ if (isset($_REQUEST['username'])) {
     var_dump($_FILES);
 
     // if ($result == 0) {
-    //     // header('location:profile.php');
+    //     // header('location:../../profile.php');
     // } else {
     //     echo "error";
     // }
 } else {
-    //header("location:profile.php");
+    //header("location:../../profile.php");
 }

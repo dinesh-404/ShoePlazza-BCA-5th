@@ -1,9 +1,9 @@
 <?php
 
-include('../Login/connect.php');
+include('resources/phpscripts/connect.php');
 session_start();
 // $cmd = "select it.id, it.name, it.price, from items from user_cart uc inner joins items it on it.id=uc.item_id where uc.id = 1";
-if (!isset($_SESSION['uid'])) header('location: ../Login/signin.php');
+if (!isset($_SESSION['uid'])) header('location:signin.php');
 $user_id = $_SESSION['uid'];
 echo $user_id;
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' . +$user_id;
@@ -18,7 +18,7 @@ $count = 0;
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../design.css">
+	<link rel="stylesheet" href="resources/css/design.css">
 	<title>Document</title>
 	<style>
 		body {
@@ -106,24 +106,17 @@ $count = 0;
 </head>
 
 <body>
-	<?php include('../navbar.php'); ?>
+	<?php include('resources/imports/navbar.php'); ?>
 	<?php
 	$sum = 0;
-
 	$userp = mysqli_query($connect, $cmd);
-
-
-
 	echo mysqli_num_rows($userp);
 	if (mysqli_num_rows($userp) == 0) { ?>
-
-
 		<div class="noItem">
 			<h1>There are no items in your cart :(</h1><br><br>
-			<h3><a href="../products/shop.php">click me to buy some ;)</a>
+			<h3><a href="shop.php">click me to buy some ;)</a>
 			</h3>
 		</div>
-
 	<?php
 	} else {
 	?>
@@ -134,16 +127,15 @@ $count = 0;
 				</th>
 			</tr>
 			<?php
-
 			while ($row = mysqli_fetch_array($userp)) {
 				$sum = $sum + $row['price'];
 				// var_dump($row);
 			?>
-					<tr class="CartRow" onclick="location.href='productpages/jordanair4?id=<?php echo $row['id']; ?>'">
-						<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
+					<tr class="CartRow" onclick="location.href='productinfo?id=<?php echo $row['id']; ?>'">
+						<td class="cartimg"><img src="resources/productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
 						<td class="CartColumns"><?php echo $row['name']; ?></td>
 						<td class="CartColumns">₹<?php echo $row['price']; ?></td>
-						<td class="CartColumns"><a href="delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
+						<td class="CartColumns"><a href="resources/phpscripts/delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
 					</tr>
 				</a>
 
@@ -158,7 +150,7 @@ $count = 0;
 		</table>
 	<?php
 	}
-	include("../footer.php");
+	include("resources/imports/footer.php");
 	?>
 
 </body>

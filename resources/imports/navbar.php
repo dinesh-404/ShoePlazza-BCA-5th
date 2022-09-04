@@ -9,8 +9,8 @@
         <li class="NavOpt"><a href="http://">Login</a></li> -->
     <div class="NavLeft">
         <div class="Branding">
-<a href="/ShoePlazza/index.php">
-    <img class="brandlogo"src="/ShoePlazza/images/logo.png" alt="" srcset="">
+<a href="index.php">
+    <img class="brandlogo"src="resources/images/logo.png" alt="" srcset="">
 
 </a>
             <!-- <a class="NavOpt" href="http://">ShoePlazza</a> -->
@@ -19,17 +19,17 @@
     <div class="NavCenter">
         <div class="NavContent">
 
-            <a class="NavOpt" href="/ShoePlazza/index.php">Home</a>
-            <a class="NavOpt" href="/ShoePlazza/about.php">About</a>
-            <a class="NavOpt" href="/ShoePlazza/contact.php">Contact</a>
-            <a class="NavOpt" href="/ShoePlazza/products/shop.php">Shop</a>
+            <a class="NavOpt" href="index.php">Home</a>
+            <a class="NavOpt" href="about.php">About</a>
+            <a class="NavOpt" href="contact.php">Contact</a>
+            <a class="NavOpt" href="shop.php">Shop</a>
         </div>
     </div>
     <div class="NavRight">
     <?php if(!isset($_SESSION['uid'])){ ?>
 
         <div class="NavContent"> 
-          <a href="/ShoePlazza/Login/signin.php">Login</a>
+          <a href="signin.php">Login</a>
         </div>
           <?php  
         } 
@@ -38,8 +38,8 @@
             
             ?>
             <div class="NavPfp">
-                <a href="/ShoePlazza/profile.php">
-                    <img class="Pfp" src="/ShoePlazza/Login/pfp/<?php echo $image; ?>" alt="">
+                <a href="profile.php">
+                    <img class="Pfp" src="resources/pfp/<?php echo $image; ?>" alt="">
                 </a>
 
             </div>

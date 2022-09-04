@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ShoePlazza/design.css">
+    <link rel="stylesheet" href="resources/css/design.css">
     <style>
         * {
             cursor: auto;
@@ -13,7 +13,7 @@
         .abg{
             height: 100%;
             width: 100%;
-            background: url('/ShoePlazza/images/aboutbg.jpg');
+            background: url('resources/images/aboutbg.jpg');
             background-position: center;
             background-size: cover;
         }
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <?php include('navbar.php') ?>
+    <?php include('resources/imports/navbar.php') ?>
     <div class="abg">
 
 
@@ -60,12 +60,12 @@
                 ShoePlazza is a main family footwear goal for the popular brands you know and love.
                 For each one of those shoe sweethearts out there, ‘ShoePlazza’ offer the one-stop goal to pick the correct match of footwear. To satisfy the affection for shoes, we offer heaps of alternatives from driving footwear marks, all under one rooftop. Gone are the days when you needed to go from store to store to locate the correct style and size for yourself. <br> <br>
                 So What are you waiting for
-                <button class="button" onclick="location.href='products/shop.php'">Shop Now</button>
+                <button class="button" onclick="location.href='shop.php'">Shop Now</button>
             </p><br>
 
         </div>
     </div>
-    <?php include('footer.php') ?>
+    <?php include('resources/imports/footer.php') ?>
 </body>
 
 </html>

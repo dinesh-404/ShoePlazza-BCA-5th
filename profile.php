@@ -1,5 +1,5 @@
 <?php
-include('Login/connect.php');
+include('resources/phpscripts/connect.php');
 
 session_start();
 if (isset($_SESSION['uid'])) {
@@ -8,7 +8,7 @@ if (isset($_SESSION['uid'])) {
     $result = mysqli_query($connect, $command);
     $row = mysqli_fetch_array($result, MYSQLI_BOTH);
     $count = count($row) / 2;
-    $imgpath = '/ShoePlazza/Login/pfp/' . $row['image'];
+    $imgpath = 'resources/pfp/' . $row['image'];
     $lbl = ['', 'fullname', 'age', 'gender', 'username', 'password', 'address', 'email', 'mobile'];
 } else {
     header('location:Login/signin.php');
@@ -21,7 +21,7 @@ if (isset($_SESSION['uid'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ShoePlazza/design.css">
+    <link rel="stylesheet" href="resources/css/design.css">
     <style>
         * {
             cursor: auto;
@@ -32,8 +32,8 @@ if (isset($_SESSION['uid'])) {
 
 <body onbeforeunload=" return reload()">
 
-<?php include('navbar.php'); ?>
-    <form action="updatescript.php" method="post" id="updateform" enctype="multipart/form-data">
+<?php include('resources/imports/navbar.php'); ?>
+    <form action="resources/phpscripts/updatescript.php" method="post" id="updateform" enctype="multipart/form-data">
         <div class="profile">
             <h1 id="profilehead">User Profile</h1>
             <div class="profiletext">
@@ -87,19 +87,15 @@ if (isset($_SESSION['uid'])) {
                         <label for='mobileno'>Mobile No</label>
                         <input type='text' class='fields' name='mobileno' value='<?php echo $row['mobile']; ?>' id='mobileno' disabled required><br>
                     </div>
-                    <!-- </div> -->
                 </fieldset>
-                <!-- <input type="button" value="update" id="updatebtn" onclick="enable()" class="button">
-                    <input type="button" value="submit" onclick="validate()" class="button"> -->
 
             </div>
             <div class="right">
                 <fieldset class="imgwrapper">
                     <legend id="pfplegend">profile pic</legend>
                     <?php
-
-                    echo "<img src='$imgpath' alt='cant load profile' name='profilepic'  class='profilepic' id='pfp' ondblclick='filebrowse()'><br>";
-                    ?>
+?>
+                    <img src='<?php echo $imgpath; ?>' alt='cant load profile' name='profilepic'  class='profilepic' id='pfp' ondblclick='filebrowse()'>
                     <input type="file" name="avatar" id="filebrowse" onchange="readfile()" style="display: none;">
                     <input type="hidden" name="nofileupdate" value="<?php echo $row['image'] ?>">
 
@@ -110,7 +106,8 @@ if (isset($_SESSION['uid'])) {
             </div>
         </div>
     </form>
-    <script src="update.js"></script>
+    <?php include('resources/imports/footer.php'); ?>
+    <script src="resources/js/update.js"></script>
 </body>
 
 </html>

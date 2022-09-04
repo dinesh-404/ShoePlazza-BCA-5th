@@ -7,5 +7,5 @@
     $cmd = "DELETE FROM `user_cart` WHERE item_id = $id AND user_id = $uid"; 
     $r = mysqli_query($connect,$cmd);
     echo $cmd;
-    header('location:cart.php');
+    header('location:../../cart.php');
 ?>

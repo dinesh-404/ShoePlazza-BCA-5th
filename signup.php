@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../design.css" />
-  <link rel="stylesheet" href="../cursor.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="resources/css/design.css" />
+  <link rel="stylesheet" href="resources/css/cursor.css">
   <title>Sign up</title>
 </head>
 
@@ -28,7 +27,7 @@
       }
       ?>
     </div>
-    <form method="post" name="loginform" action="chksignup.php" id="signupform">
+    <form method="post" name="loginform" action="resources/phpscripts/chksignup.php" id="signupform">
       <div class="right">
         <h1>signup</h1>
         <div class="tab">
@@ -68,7 +67,7 @@
           <div class="txtfield">
             <input type="password" required name="password" class="idpassinput" id="pass" oninput="input(4)" />
             <label class="idpasslbl">password</label>
-            <button type="button" class="showpwd" onclick="showpass()"><img src="/ShoePlazza/images/eyeclosed.png" alt="eyeclosed" id="pwdimg"></button>
+            <button type="button" class="showpwd" onclick="showpass()"><img src="resources/images/eyeclosed.png" alt="eyeclosed" id="pwdimg"></button>
 
           </div>
           <div class="txtfield">
@@ -88,10 +87,10 @@
       </div>
     </form>
   </div>
-  <?php include('../footer.php'); ?>
-  <script src="Login.js"></script>
-  <script src="../cursor.js"></script>
-  <script src="signup.js"></script>
+  <?php include('resources/imports/footer.php'); ?>
+  <script src="resources/js/Login.js"></script>
+  <script src="resources/js/cursor.js"></script>
+  <script src="resources/js/signup.js"></script>
 </body>
 
 </html>
