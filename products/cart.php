@@ -27,8 +27,9 @@ $count = 0;
 			font-family: sans-serif;
 			text-decoration: none;
 		}
-		*{
-			cursor:auto;
+
+		* {
+			cursor: auto;
 		}
 
 		.CartRow {
@@ -36,7 +37,7 @@ $count = 0;
 			overflow: hidden;
 			/* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
 			box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-			transition: all .7s;
+			transition: all .3s;
 		}
 
 		.CartTable {
@@ -108,10 +109,10 @@ $count = 0;
 	<?php include('../navbar.php'); ?>
 	<?php
 	$sum = 0;
-	
+
 	$userp = mysqli_query($connect, $cmd);
 
-	
+
 
 	echo mysqli_num_rows($userp);
 	if (mysqli_num_rows($userp) == 0) { ?>
@@ -136,13 +137,15 @@ $count = 0;
 
 			while ($row = mysqli_fetch_array($userp)) {
 				$sum = $sum + $row['price'];
+				// var_dump($row);
 			?>
-				<tr class="CartRow">
-					<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
-					<td class="CartColumns"><?php echo $row['name']; ?></td>
-					<td class="CartColumns">₹<?php echo $row['price']; ?></td>
-					<td class="CartColumns"><a href="delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
-				</tr>
+					<tr class="CartRow" onclick="location.href='productpages/jordanair4?id=<?php echo $row['id']; ?>'">
+						<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
+						<td class="CartColumns"><?php echo $row['name']; ?></td>
+						<td class="CartColumns">₹<?php echo $row['price']; ?></td>
+						<td class="CartColumns"><a href="delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
+					</tr>
+				</a>
 
 			<?php
 			}

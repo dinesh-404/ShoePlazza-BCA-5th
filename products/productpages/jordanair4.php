@@ -1,13 +1,16 @@
 <?php
 session_start();
 include("../../Login/connect.php");
-if(!isset($_REQUEST['id'])) header('location:/ShoePlazza/products/shop.php');
+if(!isset($_REQUEST['pid'])) header('location:/ShoePlazza/products/shop.php');
 else{
 
-    $id = $_REQUEST['id'];
-
-    $q = "SELECT * FROM `items` WHERE id = " . +$id;
+    $pid = $_REQUEST['pid'];
+    $q = "SELECT * FROM `items` WHERE id = '".$pid."'";
+    $usr = $_SESSION['uid'];
+    $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
     $cmd = mysqli_query($connect, $q);
+    $pcmd = mysqli_query($connect,$qc);
+    var_dump(mysqli_fetch_array($pcmd));
     $r = mysqli_fetch_array($cmd);
     
 }
