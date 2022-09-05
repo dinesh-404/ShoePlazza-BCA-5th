@@ -1,5 +1,10 @@
 <?php
     session_start();
+    include('resources/phpscripts/connect.php');
+    $cmd = "SELECT * FROM `items`";
+    $q = mysqli_query($connect,$cmd);
+    var_dump($q);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
