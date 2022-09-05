@@ -36,13 +36,13 @@ if (isset($_REQUEST['username'])) {
 
      $updatedata = mysqli_query($connect, $updatecmd, $result = MYSQLI_STORE_RESULT);
 
-    var_dump($_FILES);
+    
 
-    // if ($result == 0) {
-    //     // header('location:../../profile.php');
-    // } else {
-    //     echo "error";
-    // }
+    if ($result == 0) {
+        header('location:../../profile.php');
+    } else {
+        echo "error";
+    }
 } else {
-    //header("location:../../profile.php");
+    header("location:../../profile.php");
 }

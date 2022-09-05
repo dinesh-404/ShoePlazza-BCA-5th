@@ -30,7 +30,9 @@ if (isset($_REQUEST['username'])) {
 		print_r($_REQUEST);
 		$q_sql =  "INSERT INTO `login`( `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`,`image`) VALUES ('" . $fullname . "','" . $age . "','" . $gender . "','" . $username . "','" . $password . "','" . $address . "','" . $email . "','" . $mobileno . "','".$pfp."');";
 		mysqli_query($connect, $q_sql);
+		header('location:../../signin.php');
 	}
+
 } else {
 	echo "error";
 }
