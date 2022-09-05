@@ -11,9 +11,8 @@ else{
     $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
     $cmd = mysqli_query($connect, $q);
     $pcmd = mysqli_query($connect,$qc);
-    // var_dump(mysqli_fetch_array($pcmd));
+    $status = mysqli_fetch_array($pcmd);
     $r = mysqli_fetch_array($cmd);
-    
 }
 
 ?>
@@ -78,8 +77,17 @@ else{
                     </h2>
 
                 </div>
-
+                <?php 
+                
+                if($status['0'] == 'added to cart'){
+                    ?>
+               <button class="cartbtn" disabled >added to cart</button>
+<?php
+                }
+                else{?>
+                
                <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?id=<?php echo $r['id'];  ?>'">Add to Cart</button>
+                <?php } ?>
             </div>
         </div>
     </div><br>

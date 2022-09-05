@@ -1,9 +1,24 @@
 <?php
-    session_start();
-    include('resources/phpscripts/connect.php');
-    $cmd = "SELECT * FROM `items`";
-    $q = mysqli_query($connect,$cmd);
-    var_dump($q);
+session_start();
+include('resources/phpscripts/connect.php');
+$cmd = "SELECT * FROM `items`";
+$q = mysqli_query($connect, $cmd);
+var_dump($q);
+$max = mysqli_num_rows($q) - 1;
+$min = 0;
+$row =  mysqli_fetch_all($q, MYSQLI_ASSOC);
+$random1 =   rand($min, $max);
+$random2 =   rand($min, $max);
+if ($random1 == $random2) {
+    if ($random1 >= 0 && $random1 < $max) {
+        $random1++;
+    } else {
+        $random1--;
+    }
+}
+$r1 = $row[$random1];
+$r2 = $row[$random2];
+
 
 ?>
 <!DOCTYPE html>
@@ -18,12 +33,12 @@
 </head>
 
 <body class="body" id="body">
-    
-    <?php 
+
+    <?php
     include('resources/imports/navbar.php');
     include('resources/imports/top.php');
 
-    
+
     ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>
@@ -42,20 +57,20 @@
 
     <div class="explore">
         <div class="card">
-            <img src="resources/images/jordan.png" class="logo" alt="jordan logo">
-            <img src="" class="cardimg" alt="">
+        <img src="resources/brandlogo/<?php echo $r1['brand'];?>" class="logo" alt="jordan logo">
+            <img src="resources/productimg/<?php echo $r1['image']; ?>-1.jpg" class="cardimg" alt="">
             <div class="cardtxt">
-                <h2>Jordan Air 4 </h2>
-                <button>See More</button>
+                <h2><?php echo $r1['name']; ?> </h2>
+                <button onclick="location.href='productinfo.php?pid=<?php echo $r1['id']; ?>'">See More</button>
             </div>
         </div>
         <div class="card">
-            <img src="images/jordan.png" class="logo" alt="jordan logo">
+            <img src="resources/brandlogo/<?php echo $r2['brand'];?>" class="logo" alt="jordan logo">
 
-            <img src="products/productimg/airjordan7/airjordan7-1.jpg" class="cardimg" alt="">
+            <img src="resources/productimg/<?php echo $r2['image']; ?>-1.jpg" class="cardimg" alt="">
             <div class="cardtxt">
-                <h2>Jordan Air Retro</h2>
-                <button>See More</button>
+                <h2><?php echo $r2['name']; ?> </h2>
+                <button onclick="location.href='productinfo.php?pid=<?php echo $r2['id']; ?>'">See More</button>
             </div>
         </div>
     </div>

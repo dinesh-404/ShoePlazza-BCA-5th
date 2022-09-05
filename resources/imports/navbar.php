@@ -1,3 +1,9 @@
+<?php 
+    include('resources/phpscripts/connect.php');
+    $cmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
+    $q = mysqli_query($connect,$cmd);
+    $items = mysqli_num_rows($q);
+?>
 <div class="navbarDiv">
 
 
@@ -20,9 +26,9 @@
         <div class="NavContent">
 
             <a class="NavOpt" href="index.php">Home</a>
-            <a class="NavOpt" href="about.php">About</a>
-            <a class="NavOpt" href="contact.php">Contact</a>
             <a class="NavOpt" href="shop.php">Shop</a>
+            <a class="NavOpt" href="cart.php">My cart (<?php echo $items; ?>)</a>
+            <a class="NavOpt" href="about.php">About</a>
         </div>
     </div>
     <div class="NavRight">
