@@ -11,7 +11,8 @@ else{
     $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
     $cmd = mysqli_query($connect, $q);
     $pcmd = mysqli_query($connect,$qc);
-    $status = mysqli_fetch_array($pcmd);
+    $status =mysqli_num_rows($pcmd);
+    var_dump($status);
     $r = mysqli_fetch_array($cmd);
 }
 
@@ -25,7 +26,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/products.css" />
     <link rel="stylesheet" href="resources/css/cursor.css">
-    <link rel="stylesheet" href="resources/css/design.css">
+    <link rel="stylesheet" href="resources/css/imports.css">
 
     <title>jordanair4</title>
 </head>
@@ -79,7 +80,7 @@ else{
                 </div>
                 <?php 
                 
-                if($status['0'] == 'added to cart'){
+                if($status==0){
                     ?>
                <button class="cartbtn" disabled >added to cart</button>
 <?php

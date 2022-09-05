@@ -1,5 +1,6 @@
 <?php
 include("resources/phpscripts/connect.php");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,6 @@ include("resources/phpscripts/connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/shop.css">
     <link rel="stylesheet" href="resources/css/cursor.css">
-    <link rel="stylesheet" href="resources/css/design.css">
     <link rel="stylesheet" href="resorces/css/products.css">
 
     <title>shop</title>

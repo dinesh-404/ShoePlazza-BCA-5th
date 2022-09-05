@@ -8,7 +8,9 @@ $user_id = $_SESSION['uid'];
 echo $user_id;
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' . +$user_id;
 
+
 $q = mysqli_query($connect, $cmd);
+var_dump($cmd);	
 $count = 0;
 ?>
 <!DOCTYPE html>
@@ -19,6 +21,7 @@ $count = 0;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="resources/css/design.css">
+	<link rel="stylesheet" href="resources/css/imports.css">
 	<title>Document</title>
 	<style>
 		body {
@@ -110,7 +113,6 @@ $count = 0;
 	<?php
 	$sum = 0;
 	$userp = mysqli_query($connect, $cmd);
-	echo mysqli_num_rows($userp);
 	if (mysqli_num_rows($userp) == 0) { ?>
 		<div class="noItem">
 			<h1>There are no items in your cart :(</h1><br><br>
@@ -127,6 +129,10 @@ $count = 0;
 				</th>
 			</tr>
 			<?php
+		var_dump($userp);
+
+			$row = mysqli_fetch_array($userp);
+			var_dump($row);
 			while ($row = mysqli_fetch_array($userp)) {
 				$sum = $sum + $row['price'];
 				// var_dump($row);

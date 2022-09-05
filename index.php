@@ -3,7 +3,6 @@ session_start();
 include('resources/phpscripts/connect.php');
 $cmd = "SELECT * FROM `items`";
 $q = mysqli_query($connect, $cmd);
-var_dump($q);
 $max = mysqli_num_rows($q) - 1;
 $min = 0;
 $row =  mysqli_fetch_all($q, MYSQLI_ASSOC);
@@ -85,9 +84,7 @@ $r2 = $row[$random2];
         <button class="button">Shop now</button>
     </div>
     <?php include('resources/imports/footer.php'); ?>
-
     <script src="resources/js/cursor.js"></script>
-    <div id="ok">okok</div>
 </body>
 
 </html>
