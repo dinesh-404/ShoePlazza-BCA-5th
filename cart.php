@@ -135,7 +135,7 @@ $count = 0;
 						<td class="cartimg"><img src="resources/productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
 						<td class="CartColumns"><?php echo $row['name']; ?></td>
 						<td class="CartColumns">₹<?php echo $row['price']; ?></td>
-						<td class="CartColumns"><a href="resources/phpscripts/delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
+						<td class="CartColumns"><a href="resources/phpscripts/delete_cart.php?pid=<?php echo $row['id']; ?>">Remove</a></td>
 					</tr>
 				</a>
 

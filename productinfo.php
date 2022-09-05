@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("resources/phpscripts/connect.php");
-if(!isset($_SESSION['uid'])) header('location:login.php');
+if(!isset($_SESSION['uid'])) header('location:signin.php');
 if(!isset($_GET['pid'])) header('location:shop.php');
 else{
 

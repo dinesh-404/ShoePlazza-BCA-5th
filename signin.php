@@ -32,7 +32,7 @@ session_start();
       <h2>not a member ?<a href="signup.php">sign up</a></h2>
     </div>
 
-    <form method="post" name="loginform" action="chklogin.php" id="form">
+    <form method="post" name="loginform" action="resources/phpscripts/chklogin.php" id="form">
       <div class="right">
         <h1>Login</h1> 
         <div class="txtfield">
