@@ -1,16 +1,22 @@
 <?php 
     include('resources/phpscripts/connect.php');
-    $cmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
-    $q = mysqli_query($connect,$cmd);
-    $items = mysqli_num_rows($q);
+    if(isset($_SESSION['uid'])){
+
+        $cmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
+        $q = mysqli_query($connect,$cmd);
+        $items = mysqli_num_rows($q);
+    }
+    else{
+        $items = 0;
+    }
 ?>
 <div class="navbarDiv">
+    <div class="NavLeft">
         <div class="Branding">
 <a href="index.php">
     <img class="brandlogo"src="resources/images/logo.png" alt="" srcset="">
 
 </a>
-            <!-- <a class="NavOpt" href="http://">ShoePlazza</a> -->
         </div>
     </div>
     <div class="NavCenter">

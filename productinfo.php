@@ -1,21 +1,24 @@
 <?php
 session_start();
 include("resources/phpscripts/connect.php");
-if(!isset($_SESSION['uid'])) header('location:signin.php');
-if(!isset($_GET['pid'])) header('location:shop.php');
-else{
+$status = 1;
 
-    $pid = $_REQUEST['pid'];
-    $q = "SELECT * FROM `items` WHERE id = '".$pid."'";
+if(!isset($_GET['pid'])) header('location:shop.php');
+else if(isset($_SESSION['uid'])){
+    
+    
     $usr = $_SESSION['uid'];
     $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
-    $cmd = mysqli_query($connect, $q);
+    
     $pcmd = mysqli_query($connect,$qc);
     $status =mysqli_num_rows($pcmd);
     var_dump($status);
-    $r = mysqli_fetch_array($cmd);
+   
 }
-
+$pid = $_REQUEST['pid'];
+$q = "SELECT * FROM `items` WHERE id = '".$pid."'";
+$cmd = mysqli_query($connect, $q);
+$r = mysqli_fetch_array($cmd);
 ?>
 <!DOCTYPE html>
 <html lang="en">
