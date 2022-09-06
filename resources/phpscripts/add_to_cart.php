@@ -2,7 +2,7 @@
     session_start();
     include('connect.php');
     $cart_id = $_GET['pid'];
-    if (!isset($_SESSION['uid'])) header('location:../../singin.php');
+    if (!isset($_SESSION['uid'])) header('location:../../signin.php');
     else{
 
         $user_id = $_SESSION['uid'];

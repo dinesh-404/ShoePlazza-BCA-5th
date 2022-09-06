@@ -4,12 +4,15 @@ var click = 0;
 function showpass() {
   if (click == 0) {
     document.getElementById('pass').type = "text";
-    showpwd.src="/ShoePlazza/images/eyeopen.png";
+    showpwd.src="resources/images/eyeopen.png";
     click++;
   }
   else {
     document.getElementById('pass').type = "password";
-    showpwd.src="/ShoePlazza/images/eyeclosed.png";
+    showpwd.src="resources/images/eyeclosed.png";
     click = 0;
   }
 }
+window.addEventListener('DOMContentLoaded',function(){
+  console.log('loaded');
+})

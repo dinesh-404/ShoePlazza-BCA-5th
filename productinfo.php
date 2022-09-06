@@ -56,9 +56,7 @@ $r = mysqli_fetch_array($cmd);
                 <img src="resources/productimg/<?php echo $r['image']; ?>-5.jpg" alt="" srcset="" class="image">
                 <img src="resources/productimg/<?php echo $r['image']; ?>-6.jpg" alt="" srcset="" class="image">
             </div>
-            <!-- <div class="imgwide">
-                <img src="\ShoePlazza\products\productimg\<?php echo $r['image']; ?>-7.jpg" alt="" class="wideimage">
-            </div> -->
+           
         </div>
         <div class="pright" id="right">
             <div class="noscroll" id="noscroll">

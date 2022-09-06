@@ -156,172 +156,7 @@ button {
 .cards .cardinfo:hover > .cardlogo {
   margin: 30px;
 }
-/* login form */
-.center {
-  width: 90%;
-  height: 90%;
-  margin: 0px auto;
-  margin-top: 50px;
-  display: flex;
-  flex: 1 1 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  align-content: stretch;
-  justify-content: space-between;
-  background: url("../images/loginbg.jpg") no-repeat;
-  background-size: 100%;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
-  color: var(--text-color);
-  animation: bg forwards ease-in-out 3s;
-}
-@keyframes bg {
-  0% {
-    background-position: bottom;
-  }
-  100% {
-    background-position: 0;
-  }
-}
 
-.loginbtns {
-  position: absolute;
-  bottom: 100px;
-  transform: translateX(50%);
-}
-.showpwd {
-  top: 50px;
-  border: none;
-  background: none;
-  position: absolute;
-  right: 5px;
-  top: 50%;
-}
-.showpwd img {
-  height: 20px;
-  opacity: 80%;
-  width: 20px;
-}
-.txtfield {
-  margin: 10px;
-  margin-top: 20px;
-}
-.center .left {
-  width: 100%;
-  height: 100%;
-}
-
-.center .left h1 {
-  margin: 30px;
-  font-size: 10vh;
-  text-align: left;
-  font-family: "regular", sans-serif;
-  font-weight: 500;
-}
-
-.center .left h2 {
-  margin: 30px;
-  font-size: 20px;
-  font-family: "regular", sans-serif;
-  font-weight: 100;
-}
-
-.txtfield .idpassinput {
-  width: 90%;
-  padding: 0 0 0 10px;
-  height: 100%;
-  font-size: 16px;
-  border: 1px solid gray;
-  background: none;
-  border: none;
-  outline: none;
-}
-
-.center .right h1 {
-  margin: 0;
-  font-size: 10vh;
-  text-align: right;
-  padding: 0 30px 40px 0;
-}
-
-.center .right form .txtfield {
-  position: relative;
-}
-
-.tab {
-  display: none;
-}
-
-.center .right .button {
-  width: 50%;
-  height: 50px;
-  background-color: #313131;
-  color: white;
-  border-radius: 10px;
-  border: none;
-}
-
-.center .right {
-  padding-top: 0%;
-  padding-left: 10px;
-  overflow: hidden;
-  cursor: auto;
-}
-
-.center .txtfield .idpassinput {
-  width: 100%;
-  padding: 0 5px;
-  height: 20px;
-  color: #1d1d1dc7;
-  font-size: 16px;
-}
-
-.center .txtfield label {
-  position: absolute;
-  top: 50%;
-  color: var(--text-color);
-  font-size: 16px;
-  font-weight: 500;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.signupradio {
-  color: white;
-  border-bottom: 1px dotted white;
-}
-
-.signupradio .radiolbl {
-  height: 100px;
-  margin: 10px;
-}
-
-.txtfield .idpassinput:focus ~ label,
-.txtfield #age:focus ~ label,
-.txtfield #age:valid ~ label,
-.txtfield .idpassinput:valid ~ label {
-  top: -1px;
-  color: black;
-}
-
-.txtfield .txtarea:focus ~ label,
-.txtfield .txtarea:valid ~ label {
-  color: black;
-}
-
-.center .right {
-  width: max-content;
-  background: rgba(255, 255, 255, 0.119);
-  backdrop-filter: blur(10px);
-  height: 100%;
-  width: 400px;
-}
-
-.center .right .txtfield {
-  position: relative;
-  padding-top: 30px;
-  margin-right: 10px;
-  border-bottom: 1px dotted white;
-}
 /* admin table */
 .admintable tr td {
   border-collapse: collapse;
@@ -421,9 +256,6 @@ tr {
   height: 500px;
   width: 500px;
   border-radius: 10px;
-  /* margin:30px; */
-  /* padding: 30px; */
-  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -441,6 +273,7 @@ tr {
 .nodisplay {
   display: none;
 }
+
 .ProfileWrapper {
   font-family: "Poppins";
   width: 100%;
@@ -506,72 +339,6 @@ tr {
 
 .ProfileWrapper .right {
   padding: 30px;
-  /* height: 100%; */
   position: relative;
   text-align: center;
-}
-
-/* footer */
-.FooterRight img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: auto;
-}
-.FooterRight .img {
-  position: absolute;
-  right: 3px;
-  top: 3px;
-}
-.ProfileWrapper .right .imgwrapper {
-  width: 100px;
-}
-.FooterRight img:hover {
-  background: rgba(0, 0, 0, 0.74);
-}
-.footer {
-  width: 100%;
-  height: max-content;
-  position: relative;
-  display: grid;
-  background: var(--background-white);
-  color: var(--textcolor);
-  grid-template-rows: 1fr 30px;
-  grid-template-columns: 1fr 1fr;
-  margin: 0;
-  margin-top: 20px;
-  padding: 0;
-  cursor: auto;
-}
-.footer .FooterLeft {
-  display: block;
-  cursor: auto;
-  grid-row: 1;
-}
-.footer .FooterRight {
-  grid-row: 1;
-  position: relative;
-}
-
-.FooterMid a {
-  cursor: auto;
-  color: var(--textcolor);
-  display: block;
-  text-decoration: none;
-  margin: 10px;
-}
-.FooterMid a:hover {
-  color: var(--txthover);
-}
-.FooterCopy {
-  text-align: center;
-  height: 10px;
-  bottom: 0;
-  grid-row: 2;
-  height: 0;
-  margin: 0;
-  transform: translateX(50%);
-  padding: 0;
-  color: var(--textcolor);
-  background: var(--footerbg);
 }
