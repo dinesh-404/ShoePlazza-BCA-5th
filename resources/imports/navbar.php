@@ -5,15 +5,6 @@
     $items = mysqli_num_rows($q);
 ?>
 <div class="navbarDiv">
-
-
-    <!-- <li class="brand">ShoePlazza</li>
-        <li class="NavOpt"><a href="index.php">Home</a></li>
-        <li class="NavOpt"><a href="products/shop.php">Products</a></li>
-        <li class="NavOpt"> <a href="aboutus.html">About us</a></li>
-        <li class="NavOpt"><a href="contactus.html">Contact us</a></li>
-        <li class="NavOpt"><a href="http://">Login</a></li> -->
-    <div class="NavLeft">
         <div class="Branding">
 <a href="index.php">
     <img class="brandlogo"src="resources/images/logo.png" alt="" srcset="">

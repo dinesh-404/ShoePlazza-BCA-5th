@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" href="resources/css/shop.css">
     <link rel="stylesheet" href="resources/css/cursor.css">
     <link rel="stylesheet" href="resorces/css/products.css">
+    <link rel="stylesheet" href="resources/css/imports.css">
+
 
     <title>shop</title>
 </head>
