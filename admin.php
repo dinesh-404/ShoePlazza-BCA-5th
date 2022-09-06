@@ -45,8 +45,6 @@
             width: 300px;
             height: 300px;
         }
-
-        .add-products .input {}
     </style>
 </head>
 
@@ -111,7 +109,6 @@
 <img src="" alt="nah" id="showimg" class="showimage">
 <img src="" alt="nah" id="showimg" class="showimage">
 <img src="" alt="nah" id="showimg" class="showimage">
-
         </div>
     </div>
     <script src="resources/js/admin.js"></script>
