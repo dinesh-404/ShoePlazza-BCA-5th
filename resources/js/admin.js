@@ -35,4 +35,13 @@ function validate() {
         console.log('cant do');
     }
 
-}
+};
+function adidas() {
+    document.getElementById('adidas').click();
+};
+function puma() {
+    document.getElementById('puma').click();
+};
+function nike() {
+    document.getElementById('nike').click();
+};

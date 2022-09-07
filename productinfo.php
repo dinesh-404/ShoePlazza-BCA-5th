@@ -4,7 +4,9 @@ include("resources/phpscripts/connect.php");
 $status = 1;
 
 if(!isset($_GET['pid'])) header('location:shop.php');
-else if(isset($_SESSION['uid'])){
+$pid = $_REQUEST['pid'];
+
+if(isset($_SESSION['uid'])){
     
     
     $usr = $_SESSION['uid'];
@@ -15,10 +17,10 @@ else if(isset($_SESSION['uid'])){
     var_dump($status);
    
 }
-$pid = $_REQUEST['pid'];
 $q = "SELECT * FROM `items` WHERE id = '".$pid."'";
 $cmd = mysqli_query($connect, $q);
 $r = mysqli_fetch_array($cmd);
+var_dump($r);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,14 +83,17 @@ $r = mysqli_fetch_array($cmd);
                 </div>
                 <?php 
                 
-                if($status==0){
+                if($status>0){
                     ?>
                <button class="cartbtn" disabled >added to cart</button>
 <?php
                 }
-                else{?>
-                
-               <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?id=<?php echo $r['id'];  ?>'">Add to Cart</button>
+                else{
+                    
+                    echo $r['id'];
+                    ?>
+
+               <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?pid=<?php echo $r['id'];  ?>'" >Add to Cart</button>
                 <?php } ?>
             </div>
         </div>

@@ -6,19 +6,23 @@ $pinfo = $_REQUEST['information'];
 $price = $_REQUEST['price'];
 $pbrand = $_REQUEST['brand'];
 
-$totfiles = count($_FILES['image']['name']);
+$totfiles = count($_FILES['image']['name'])-1;
 $tempname = $_FILES['image']['tmp_name'];
 
 $dir = $pname;
 
-if ($totfiles > 1) {
-    $val = 1;
-} else {
-    $val = 0;
+
+var_dump($_FILES);
+if(!is_dir('../productimg/'.$dir))
+{
+
+    mkdir('../productimg/'.$dir);
 }
-for ($i = $val; $i < $totfiles; $i++) {
-    $path =  '../productimg/' . $dir . '/' . $dir . '-' . $i . '.jpg';
-    copy($tempname[$i], $path);
+$v = 1;
+for ($i =  $totfiles; $i >= 0; $i--) {
+    $path =  '../productimg/' . $dir . '/' . $dir . '-' . $v. '.jpg';
+    $v=$v+1; 
+    $a = copy($tempname[$i], $path);
 }
 $pimg = $dir.'/'.$dir;
 echo $pimg;
@@ -27,13 +31,14 @@ echo $selcmd;
 $selq = mysqli_query($connect,$selcmd);
 var_dump($selq);
 if(mysqli_num_rows($selq)>0){
-    $_SESSION['perror']='product already exists';
     header('location:../../admin.php');
 }
 else{
 
-    $cmd = "INSERT INTO `items`(`name`, `brand`, `image`, `information`, `price`) VALUES ('" . $pname . "','" . $pbrand . "','" . $pimg . "','" . $pinfo . "','" . $price . "')";
+    $cmd = "INSERT INTO `items`(`name`, `brand`, `image`, `information`, `price`) VALUES ('" . $pname . "','" . $pbrand . "','" . $pimg . "','" . $pinfo . "'," . $price . ")";
+    echo $cmd;
     $q  = mysqli_query($connect,$cmd); 
-    
+    var_dump($q);
+    echo "else";
 }
     ?>

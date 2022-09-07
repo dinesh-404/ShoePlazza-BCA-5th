@@ -35,7 +35,7 @@ var validate = 0;
 function validation() {
     //other remaining
     validate = 0;
-    var x, y, i, valid = true;
+    var x, y, i;
     x = document.getElementsByClassName("tab");
     y = x[currpage].getElementsByClassName("idpassinput");
     for (i = 0; i < y.length; i++) {
