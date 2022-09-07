@@ -39,7 +39,7 @@
         }
 
         .add-products .lbl {
-            position: absolute;
+            /* position: absolute; */
         }
         .showimage{
             width: 300px;
@@ -61,7 +61,7 @@
     <div class="add-products">
         <div class="addLeft">
 
-            <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data" id='add-products'>
+            <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data" id="products">
                 <div class="adminTxtfield">
 
                     <label for="name" class="lbl">Name</label>
@@ -96,7 +96,7 @@
                     <input type="radio" name="brand" id="puma" value="puma" >
                 </div>
                 <br>
-                <button id="submit" type="button" onclick="validate()">Submit</button>
+                <button id="sbtn" type="button" onclick="validate()">Submit</button>
 
 
 
