@@ -1,3 +1,6 @@
+<?php
+include('resources/phpscripts/connect.php');
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,88 +9,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/design.css">
     <title>Admin Page</title>
-    <style>
-        @font-face {
-            font-family: "regular";
-            src: url("resources/fonts/titilliumweb-regular-webfont.woff2") format("woff2"),
-                url("resources/fonts/titilliumweb-regular-webfont.woff") format("woff"),
-                url("resources/fonts/TitilliumWeb-Regular.ttf") format("truetype");
-        }
-        body,html{
-            margin: 0;
-            padding: 0;
-        }
-*{
-    font-family: "regular";
-}
-        .admin-wrapper {
-           
-            width: 100%;
-            height: 750px;
-            margin: 0;
-            padding: 0;
-            background: url('resources/images/adminbg.jpg');
-            background-position: center;
-            background-size: cover;
-            padding: 30px;
-        }
 
-        .add-products {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            margin: auto;
-        }
-
-        .add-products .adminTxtfield {
-            position: relative;
-            margin: 20px;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-        }
-
-        .addRight {
-            /* display: none; */
-            padding: 20px;
-        }
-
-
-        .add-products .lbl {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            transition: all .5s;
-        }
-
-        .showimage {
-            width: 300px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-            margin: 2px;
-        }
-
-        .input:focus~.lbl {
-            top: -20px;
-        }
-
-        .input:valid~.lbl {
-            top: -20px;
-        }
-
-        .input {
-            width: 100%;
-            position: relative;
-
-            background: none;
-            outline: none;
-            border: none;
-        }
-
-        .rbtn {
-            transform: translate(50px,-22px);
-        }
-    </style>
 </head>
 
 <body>
@@ -121,28 +45,28 @@
                 </div>
                 <div class="adminTxtfield">
 
-                    <label for="image">image</label>
+                    <button type="button" id="browse">Click here to Import images</button>
                     <input type="file" name="image[]" onchange="showImg();" id="image" required class="input" accept=".jpg" multiple>
                 </div>
 
                 <div class="adminTxtfield">
                     brand:
                     <div class="rbtn">
-                        <button type="button" onclick="document.getElementById('adidas').click();">adidas</button>
-                        <button type="button" onclick="document.getElementById('puma').click();">Puma</button>
-                        <button type="button" onclick="document.getElementById('nike').click();gi">Nike</button>
-
-                       
-                        <input type="radio" name="brand" id="adidas" class="brandbtn" value="adidas"><br>
-                      
-                        <input type="radio" name="brand" id="nike" value="nike" class="brandbtn"><br>
+                        <button class="radiowrap" type="button" onclick="document.getElementById('adidas').click();">adidas</button><br>
+                        <button type="button" class="radiowrap" onclick="document.getElementById('puma').click();">Puma</button><br>
+                        <button type="button" class="radiowrap" onclick="document.getElementById('nike').click();">Nike</button>
 
 
-                        <input type="radio" name="brand" id="puma" value="puma" class="brandbtn"><br>
+                        <input type="radio" name="brand" id="adidas" class="brandbtn" value="adidas">
+
+                        <input type="radio" name="brand" id="nike" value="nike" class="brandbtn">
+
+
+                        <input type="radio" name="brand" id="puma" value="puma" class="brandbtn">
                     </div>
                 </div>
                 <br>
-                <button id="sbtn" type="button" onclick="validate()">Submit</button>
+                <button id="sbtn" class="adminSubmit" type="button" onclick="validate()">Submit</button>
 
 
 
@@ -158,6 +82,41 @@
             <img src="resources/productimg/nmd_v3/nmd_v3-1.jpg" alt="" id="showimg" class="showimage">
             <img src="resources/productimg/nmd_v3/nmd_v3-1.jpg" alt="" id="showimg" class="showimage">
         </div>
+    </div>
+    <div class="ShowProducts">
+        <?php
+        $cmd = "SELECT uc.user_id, uc.status , it.name, it.price ,l.username FROM `user_cart` uc INNER JOIN items it ON uc.item_id = it.id INNER JOIN `login` l ON uc.user_id = l.id ";
+        $q = mysqli_query($connect, $cmd);
+        $r = mysqli_fetch_all($q, MYSQLI_ASSOC);
+        var_dump($r);
+        ?>
+        <table class="admintable">
+            <tr class="adminrow">
+                <td class="column">No.</td>
+                <td class="column">User id</td>
+                <td class="column">Username</td>
+                <td class="column">Product Name</td>
+                <td class="column">Price</td>
+                <td class="column">Status</td>
+            </tr>
+            <?php
+            $n=1;
+             for ($i=0; $i < count($r); $i++) { 
+                # code...
+              
+            ?>
+                <tr class="adminrow">
+                    <td class="column"><?php echo $n; $n++; ?></td>
+                    <td class="column"><?php echo $r[$i]['user_id']; ?></td>
+                    <td class="column"><?php echo $r[$i]['username']; ?></td>
+                    <td class="column"><?php echo $r[$i]['name']; ?></td>
+                    <td class="column"><?php echo $r[$i]['price']; ?></td>
+                    <td class="column"><?php echo $r[$i]['status']; ?></td>
+
+            <?php
+            }
+            ?>
+        </table>
     </div>
     <script src="resources/js/admin.js"></script>
 </body>

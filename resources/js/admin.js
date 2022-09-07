@@ -26,7 +26,7 @@ function validate() {
             val++;
             break;
         }
-        
+
     }
     if (val == 0) {
         document.getElementById('products').submit();
@@ -45,3 +45,27 @@ function puma() {
 function nike() {
     document.getElementById('nike').click();
 };
+let rbtn = document.getElementsByClassName('radiowrap');
+for (let i = 0; i < rbtn.length; i++) {
+    rbtn[i].addEventListener('click', () => {
+        for (let i = 0; i < rbtn.length; i++) {
+            rbtn[i].style.background = "none";
+        }
+        rbtn[i].style.background = "red";
+    })
+}
+let browsebtn = document.getElementById('browse');
+browsebtn.addEventListener('click',()=>{
+    fileinput.click();
+})
+
+let field = document.getElementsByClassName('adminTxtfield');
+for (let i = 0; i < field.length; i++) {
+    txtinput[i].addEventListener("focus", function () {
+        // wrapper[i].style.animation = "focus .6s  1 ease-in-out";
+        field[i].style.boxShadow = "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px";
+    })
+    txtinput[i].addEventListener("focusout", function () {
+        field[i].style.boxShadow = "";
+    })
+}

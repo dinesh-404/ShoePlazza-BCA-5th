@@ -10,7 +10,7 @@
 
 html,
 body {
-  cursor: none;
+  /* cursor: none; */
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -39,11 +39,7 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   border: none;
 }
-button {
-  font-family: sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
+
 
 #explore {
   margin: 30px;
@@ -157,38 +153,7 @@ button {
   margin: 30px;
 }
 
-/* admin table */
-.admintable tr td {
-  border-collapse: collapse;
-  border: 0;
-  padding: 0;
-}
 
-.body .admintable {
-  width: 80%;
-  margin: auto;
-  box-sizing: border-box;
-  font-family: "regular", sans-serif;
-  border-spacing: 0;
-  border-radius: 5px;
-  background: white;
-}
-.admintable .tableheading {
-  text-align: center;
-  font-size: 40px;
-  background: white;
-  color: black;
-}
-.admintable th {
-  border-top: 3px solid black;
-  margin: 0;
-  padding: 0;
-}
-.admintable td,
-tr {
-  text-align: center;
-  border: 1px solid black;
-}
 
 /* profile */
 
@@ -341,4 +306,118 @@ tr {
   padding: 30px;
   position: relative;
   text-align: center;
+}
+
+/* admin */
+.admin-wrapper {
+           
+  height: 750px;
+  margin: 0;
+  padding: 0;
+  background: url('../images/adminbg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+}
+
+.add-products {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  margin: auto;
+}
+
+.add-products .adminTxtfield {
+  position: relative;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.addRight {
+  /* display: none; */
+  text-align: center;
+  padding: 20px;
+}
+
+.add-products .lbl {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: all .5s;
+}
+
+.showimage {
+  width: 300px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 2px;
+}
+
+.input:focus~.lbl {
+  top: -20px;
+}
+
+.input:valid~.lbl {
+  top: -20px;
+}
+
+.input {
+  width: 100%;
+  position: relative;
+
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.rbtn {
+  transform: translate(50px,-22px);
+}
+.brandbtn{
+  display: none;
+}
+#image {
+  display: none;
+}
+#browse{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+}
+.radiowrap{
+  background:none;
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: all .3s;
+  margin:10px;
+}
+.radiowrap:hover{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.adminSubmit{
+  width: 90%;
+  margin: auto;
+  background: none;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all .2s;
+}
+.adminSubmit:hover{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.admintable{
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid black;
+  
 }
