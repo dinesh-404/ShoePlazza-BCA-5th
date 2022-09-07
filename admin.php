@@ -17,33 +17,48 @@
         }
 
         .add-products {
-            height: 500px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 400px 1fr;
             margin: auto;
-            background: red;
         }
 
         .add-products .adminTxtfield {
-            background: red;
             position: relative;
-            margin: 20px;
-            background: gray;
+            margin:20px;
+            background:gray;
+            padding:10px;
 
         }
-
+        
         .addRight {
             background: yellow;
             display: none;
             transition: all 3s;
         }
+        
 
         .add-products .lbl {
-            /* position: absolute; */
+            position: absolute;
+            left: 10px;
+            top:0;
+            transition: all .5s;
         }
         .showimage{
             width: 300px;
             height: 300px;
+        }
+        .input:focus ~ .lbl{
+            top:-20px;
+        }
+        .input:valid ~ .lbl{
+            top:-20px;
+        }
+        .input{
+            width: 100%;
+            position: relative;
+            background:none;
+            outline: none;
+            border:none;
         }
     </style>
 </head>
@@ -64,23 +79,23 @@
             <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data" id="products">
                 <div class="adminTxtfield">
 
+                    <input type="text" name="name" id="name" class="input" required >
                     <label for="name" class="lbl">Name</label>
-                    <input type="text" name="name" id="name" class="input" >
                 </div>
                 <div class="adminTxtfield">
 
+                    <input type="text" name="information" class="input" id="information" required >
                     <label for="information" class="lbl">info</label>
-                    <input type="text" name="information" class="input" id="information" >
                 </div>
                 <div class="adminTxtfield">
 
+                    <input type="text" name="price" class="input" id="price" required>
                     <label for="price" class="lbl">rate</label>
-                    <input type="text" name="price" class="input" id="price" >
                 </div>
                 <div class="adminTxtfield">
 
-                    <label for="image" class="lbl">image</label>
-                    <input type="file" name="image[]" onchange = "showImg();"id="image" class="input" accept=".jpg" multiple >
+                    <input type="file" name="image[]" onchange = "showImg();"id="image" required class="input" accept=".jpg" multiple >
+                    <label for="image">image</label>
                 </div>
 
                 <div class="rbtn">
@@ -103,14 +118,14 @@
             </form>
         </div>
         <div class="addRight">
-<img src="" alt="nah" id="showimg" class="showimage">
-<img src="" alt="nah" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
 
-<img src="" alt="nah" id="showimg" class="showimage">
-<img src="" alt="nah" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
 
-<img src="" alt="nah" id="showimg" class="showimage">
-<img src="" alt="nah" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
+<img src="" alt="" id="showimg" class="showimage">
         </div>
     </div>
     <script src="resources/js/admin.js"></script>
