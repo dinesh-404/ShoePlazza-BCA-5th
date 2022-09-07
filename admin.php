@@ -61,42 +61,42 @@
     <div class="add-products">
         <div class="addLeft">
 
-            <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data">
+            <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data" id='add-products'>
                 <div class="adminTxtfield">
 
                     <label for="name" class="lbl">Name</label>
-                    <input type="text" name="name" id="name" class="input" required>
+                    <input type="text" name="name" id="name" class="input" >
                 </div>
                 <div class="adminTxtfield">
 
                     <label for="information" class="lbl">info</label>
-                    <input type="text" name="information" class="input" id="information" required>
+                    <input type="text" name="information" class="input" id="information" >
                 </div>
                 <div class="adminTxtfield">
 
                     <label for="price" class="lbl">rate</label>
-                    <input type="text" name="price" class="input" id="price" required>
+                    <input type="text" name="price" class="input" id="price" >
                 </div>
                 <div class="adminTxtfield">
 
                     <label for="image" class="lbl">image</label>
-                    <input type="file" name="image[]" onchange = "showImg();"id="image" class="input" accept=".jpg" multiple required>
+                    <input type="file" name="image[]" onchange = "showImg();"id="image" class="input" accept=".jpg" multiple >
                 </div>
 
                 <div class="rbtn">
-                    <label for="addidas">addidas</label>
-                    <input type="radio" name="brand" id="addidas" value="addidas" required>
+                    <label for="adidas">adidas</label>
+                    <input type="radio" name="brand" id="adidas" value="adidas" >
                     <label for="nike">nike</label>
-                    <input type="radio" name="brand" id="nike" value="nike" required>
+                    <input type="radio" name="brand" id="nike" value="nike" >
 
                     <label for="jordans">jordans</label>
-                    <input type="radio" name="brand" id="jordans" value="jordans" required>
+                    <input type="radio" name="brand" id="jordans" value="jordans" >
                     <label for="puma">puma</label>
 
-                    <input type="radio" name="brand" id="puma" value="puma" required>
+                    <input type="radio" name="brand" id="puma" value="puma" >
                 </div>
                 <br>
-                <input type="submit" value="submit">
+                <button id="submit" type="button" onclick="validate()">Submit</button>
 
 
 
@@ -107,6 +107,8 @@
 <img src="" alt="nah" id="showimg" class="showimage">
 
 <img src="" alt="nah" id="showimg" class="showimage">
+<img src="" alt="nah" id="showimg" class="showimage">
+
 <img src="" alt="nah" id="showimg" class="showimage">
 <img src="" alt="nah" id="showimg" class="showimage">
         </div>
