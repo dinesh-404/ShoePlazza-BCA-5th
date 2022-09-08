@@ -59,12 +59,12 @@ include('resources/phpscripts/connect.php');
                         <button type="button" class="radiowrap" onclick="document.getElementById('nike').click();">Nike</button>
 
 
-                        <input type="radio" name="brand" id="adidas" class="brandbtn" value="adidas">
+                        <input type="radio" name="brand" id="adidas" class="brandbtn" hidden value="adidas">
 
-                        <input type="radio" name="brand" id="nike" value="nike" class="brandbtn">
+                        <input type="radio" name="brand" id="nike" value="nike" hidden class="brandbtn">
 
 
-                        <input type="radio" name="brand" id="puma" value="puma" class="brandbtn">
+                        <input type="radio" name="brand" id="puma" value="puma" hidden class="brandbtn">
                     </div>
                 </div>
                 <br>

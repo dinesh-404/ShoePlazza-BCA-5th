@@ -11,14 +11,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/design.css" />
   <link rel="stylesheet" href="resources/css/cursor.css">
+  <link rel="stylesheet" href="resources/css/login.css">
   <link rel="stylesheet" href="resources/css/imports.css">
   <title>Sign up</title>
 </head>
 
 <body class="body login">
-  <?php include('../navbar.php'); ?>
+  <?php include('resources/imports/navbar.php'); ?>
   <div class="cursor"></div>
   <div class="innercursor"></div>
   <div class="center">
@@ -32,9 +32,15 @@
         unset($_SESSION['signuperror']);
       }
       ?>
+      <button onclick="document.getElementById('adminradio').click();">Admin signup</button>
+      <button onclick="document.getElementById('userradio').click();">User Signup</button>
+
+`
     </div>
     <form method="post" name="loginform" action="resources/phpscripts/chksignup.php" id="signupform">
       <div class="right">
+      <input type="radio" name="admin" hidden id="userradio" value="user">
+<input type="radio" name="admin"hidden id="adminradio" value="admin">
         <h1>signup</h1>
         <div class="tab">
           <div class="txtfield">

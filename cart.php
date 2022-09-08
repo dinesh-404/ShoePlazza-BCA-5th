@@ -2,8 +2,12 @@
 
 include('resources/phpscripts/connect.php');
 // $cmd = "select it.id, it.name, it.price, from items from user_cart uc inner joins items it on it.id=uc.item_id where uc.id = 1";
-$user_id = '1';
+session_start();
+if(!isset($_SESSION['uid'])) header('location:signin.php');
+$user_id = $_SESSION['uid'];
+
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' . +$user_id;
+echo $cmd;
 echo "<br>";
 $q = mysqli_query($connect, $cmd);
 $count = 0;
@@ -15,6 +19,7 @@ $count = 0;
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="resources/css/imports.css">
 	<title>Document</title>
 	<style>
 		*{
@@ -57,18 +62,21 @@ $count = 0;
 </head>
 
 <body>
+	<?php include('resources/imports/navbar.php'); ?>
 	<table class="CartTable">
 	<?php
 	$sum = 0;
 	$userp = mysqli_query($connect, $cmd);
+	$row = mysqli_fetch_array($userp); 
+	var_dump($row);
 	while ($row = mysqli_fetch_array($userp)) {
 		$sum = $sum+$row['price'];
 	?>
 			<tr class="CartRow">
-				<td class="cartimg"><img src="productimg/<?php echo $row['image']; ?>" alt="" srcset=""></td>
+				<td class="cartimg"><img src="resources/productimg/<?php echo $row['image']; ?>-1.jpg" alt="" srcset=""></td>
 				<td class="CartColumns"><?php echo $row['name']; ?></td>
 				<td class="CartColumns">₹<?php echo $row['price']; ?></td>
-				<td class="CartColumns"><a href="delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
+				<td class="CartColumns"><a href="resources/phpscripts/delete_cart.php?id=<?php echo $row['id']; ?>">Remove</a></td>
 			</tr>
 
 	<?php
