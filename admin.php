@@ -10,11 +10,14 @@ include('resources/phpscripts/connect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/design.css">
+    <link rel="stylesheet" href="resources/css/imports.css">
+
     <title>Admin Page</title>
 
 </head>
 
 <body>
+    <?php include('resources/imports/navbar.php'); ?>
     <div class="admin-wrapper">
         <h1>
             Hello ! user

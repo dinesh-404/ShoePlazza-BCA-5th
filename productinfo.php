@@ -14,13 +14,11 @@ if(isset($_SESSION['uid'])){
     
     $pcmd = mysqli_query($connect,$qc);
     $status =mysqli_num_rows($pcmd);
-    var_dump($status);
    
 }
 $q = "SELECT * FROM `items` WHERE id = '".$pid."'";
 $cmd = mysqli_query($connect, $q);
 $r = mysqli_fetch_array($cmd);
-var_dump($r);
 ?>
 <!DOCTYPE html>
 <html lang="en">
