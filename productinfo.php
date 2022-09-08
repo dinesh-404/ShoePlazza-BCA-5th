@@ -41,16 +41,16 @@ $r = mysqli_fetch_array($cmd);
         <div class="pleft" id="left">
 
             <div class="imgmain">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-1.jpg" alt="" srcset="" class="image">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-2.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-1" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-2" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-3.jpg" alt="" srcset="" class="image">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-4.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-3" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-4" alt="" srcset="" class="image">
             </div>
             <div class="imgmain">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-5.jpg" alt="" srcset="" class="image">
-                <img src="resources/productimg/<?php echo $r['image']; ?>-6.jpg" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-5" alt="" srcset="" class="image">
+                <img src="resources/productimg/<?php echo $r['image']; ?>-6" alt="" srcset="" class="image">
             </div>
            
         </div>

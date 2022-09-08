@@ -38,17 +38,16 @@ body::-webkit-scrollbar {
 .pcenter {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
 
 }
 
 .pleft {
-    width: 930px;
+    width: 950px;
 }
 
 .pright {
     position: sticky;
-    width: 500px;
     display: block;
     background: white;
     right: 0;

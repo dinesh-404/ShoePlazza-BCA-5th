@@ -59,7 +59,7 @@ $r2 = $row[$random2];
 
     <div class="explore">
         <div class="card">
-            <img src="resources/brandlogo/<?php echo $r1['brand']; ?>" class="logo" alt="jordan logo">
+            <img src="resources/brandlogo/<?php echo $r1['brand']; ?>" class="logo" alt="">
             <img src="resources/productimg/<?php echo $r1['image']; ?>-1.jpg" class="cardimg" alt="">
             <div class="cardtxt">
                 <h2><?php echo $r1['name']; ?> </h2>
