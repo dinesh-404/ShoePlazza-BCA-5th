@@ -119,3 +119,22 @@ function radioval() {//onclick html
 
     }
 }
+let tabrad = document.getElementsByClassName('tblradio');
+for (let i = 0; i < tabrad.length; i++) {
+  tabrad[i].addEventListener('check',()=>{
+
+  })
+    
+}
+function admin(){
+    document.getElementById('adminradio').click();
+    document.getElementById('adminbtn').style.background="gray";
+    document.getElementById('userbtn').style.background="";
+
+}
+function user(){
+    document.getElementById('adminradio').click();
+    document.getElementById('userbtn').style.background="gray";
+    document.getElementById('adminbtn').style.background="";
+
+}

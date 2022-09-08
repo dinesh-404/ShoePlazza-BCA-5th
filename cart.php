@@ -21,7 +21,7 @@ $count = 0;
 	<link rel="stylesheet" href="resources/css/imports.css">
 	<link rel="stylesheet" href="resources/css/shop.css">
 
-	<title>Document</title>
+	<title>My Cart</title>
 </head>
 
 <body>

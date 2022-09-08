@@ -3,9 +3,16 @@
 print_r($_REQUEST);
 $errorMsg = "";
 if (isset($_REQUEST['username'])) {
+	
 	include("connect.php");
-	// $user = $_REQUEST['admin'];
-	$user = 'admin';
+	if(isset($_REQUEST['admin'])){
+
+		$user = $_REQUEST['admin'];
+	}
+	else{
+		$user = 'user';
+	}
+	
 	$fullname = $_REQUEST['fullname'];
 	$username = $_REQUEST['username'];
 	$mobileno = $_REQUEST['mobilenumber'];

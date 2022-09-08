@@ -46,7 +46,7 @@
             background: black;
         }
     </style>
-    <title>Document</title>
+    <title>About Page</title>
 </head>
 
 <body>

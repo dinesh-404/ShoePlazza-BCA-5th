@@ -49,10 +49,10 @@
 .center .left {
   width: 100%;
   height: 100%;
+  padding: 30px;
 }
 
 .center .left h1 {
-  margin: 30px;
   font-size: 10vh;
   text-align: left;
   font-family: "regular", sans-serif;
@@ -60,7 +60,6 @@
 }
 
 .center .left h2 {
-  margin: 30px;
   font-size: 20px;
   font-family: "regular", sans-serif;
   font-weight: 100;
@@ -135,7 +134,21 @@
   height: 100px;
   margin: 10px;
 }
-
+#signup{
+min-height: 650px;
+}
+.adminrbtnwrapper{
+  border: none;
+  background: white;
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.adminrbtnwrapper:hover{
+  background: black;
+  color:white;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
 .txtfield .idpassinput:focus ~ label,
 .txtfield #age:focus ~ label,
 .txtfield #age:valid ~ label,

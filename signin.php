@@ -16,7 +16,7 @@ session_start();
   <link rel="stylesheet" href="resources/css/design.css" />
   <link rel="stylesheet" href="resources/css/imports.css">
 
-  <title>Login</title>
+  <title>Sign in</title>
 </head>
 
 <body class="body login">

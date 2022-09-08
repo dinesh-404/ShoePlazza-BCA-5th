@@ -27,89 +27,18 @@ $r2 = $row[$random2];
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="resources/css/design.css">
 <link rel="stylesheet" href="resources/css/imports.css">
-<style>
 
-    .loader {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        position: relative;
-        border: 4px solid #Fff;
-        top: 50%;
-        animation: loader 2s infinite ease;
-    }
-
-    .loader-inner {
-        vertical-align: top;
-        display: inline-block;
-        width: 100%;
-        background-color: #fff;
-        animation: loader-inner 2s infinite ease-in;
-    }
-
-    @keyframes loader {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        25% {
-            transform: rotate(180deg);
-        }
-
-        50% {
-            transform: rotate(180deg);
-        }
-
-        75% {
-            transform: rotate(360deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes loader-inner {
-        0% {
-            height: 0%;
-        }
-
-        25% {
-            height: 0%;
-        }
-
-        50% {
-            height: 100%;
-        }
-
-        75% {
-            height: 100%;
-        }
-
-        100% {
-            height: 0%;
-        }
-    }
-
-    .loadwrapper {
-        position: fixed;
-        z-index: 5;
-        background: black;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-    }
-</style>
 <title>Home Page</title>
 
 </head>
 
 <body class="body" id="body">
-    <div class="loadwrapper" id='load'>
-
-        <span class="loader"><span class="loader-inner"></span></span>
+<div class="loadwrapper" id='load'>
+    <div class="loader">
+        <div class="loader-inner"></div>
     </div>
-
+</div>
+    
     <?php
     include('resources/imports/navbar.php');
     include('resources/imports/top.php');
@@ -162,9 +91,7 @@ $r2 = $row[$random2];
 
     </script>
     <script>
-        window.addEventListener('load', function() {
-            document.getElementById('load').style.display="none";
-        });
+        
     </script>
 
 </body>

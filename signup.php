@@ -17,6 +17,11 @@
 </head>
 
 <body class="body login">
+<div class="loadwrapper" id='load'>
+    <div class="loader">
+        <div class="loader-inner"></div>
+    </div>
+</div>
   <?php
    include('resources/imports/navbar.php');
    include("resources/imports/cursor.php");
@@ -24,7 +29,7 @@
    ?>
   <div class="cursor"></div>
   <div class="innercursor"></div>
-  <div class="center">
+  <div class="center" id="signup">
     <div class="left">
       <h1>Hello there !</h1>
       <h2>Looks like you're new !! fill your information and get access to our site</h2>
@@ -35,15 +40,15 @@
         unset($_SESSION['signuperror']);
       }
       ?>
-      <button onclick="document.getElementById('adminradio').click();">Admin signup</button>
-      <button onclick="document.getElementById('userradio').click();">User Signup</button>
+      <button class="adminrbtnwrapper" id="adminbtn" onclick="admin();">Admin signup</button>
+      <button class="adminrbtnwrapper" id="userbtn" onclick="user();">User Signup</button>
 
-`
+
     </div>
     <form method="post" name="loginform" action="resources/phpscripts/chksignup.php" id="signupform">
       <div class="right">
-      <input type="radio" name="admin" hidden id="userradio" value="user">
-<input type="radio" name="admin"hidden id="adminradio" value="admin">
+      <input type="radio" name="admin"  id="userradio" class="tblradio" value="user">
+<input type="radio" name="admin" id="adminradio" class="tblradio" value="admin">
         <h1>signup</h1>
         <div class="tab">
           <div class="txtfield">

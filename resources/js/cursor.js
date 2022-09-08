@@ -1,13 +1,17 @@
 // mouse cursor variables
-var mouseCursor = document.querySelector(".cursor");
-var midcur = document.querySelector(".innercursor");
-var a = document.querySelectorAll("li");
-var body = document.querySelectorAll("body");
-var txtfield = document.querySelectorAll("txtfield");
-var login = document.getElementById("center");
-var logbutton = document.getElementById("logbtn");
-var image = document.querySelectorAll('img');
-var footer = document.getElementsByClassName('footer');
+window.addEventListener('load', function() {
+    document.getElementById('load').style.display="none";
+});
+
+let mouseCursor = document.querySelector(".cursor");
+let midcur = document.querySelector(".innercursor");
+let a = document.querySelectorAll("li");
+let body = document.querySelectorAll("body");
+let txtfield = document.querySelectorAll("txtfield");
+let login = document.getElementById("center");
+let logbutton = document.getElementById("logbtn");
+let image = document.querySelectorAll('img');
+let footer = document.getElementsByClassName('footer');
 
 //hides when scroll
 // window.onscroll=function(){
