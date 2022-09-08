@@ -1,7 +1,7 @@
 <?php
 include('resources/phpscripts/connect.php');
 if (isset($_SESSION['uid'])) {
-
+    
     $navcmd = "SELECT * FROM user_cart WHERE user_id = " . $_SESSION['uid'];
     $navq = mysqli_query($connect, $navcmd);
     $navitems = mysqli_num_rows($navq);

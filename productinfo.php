@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("resources/phpscripts/connect.php");
-$status = 1;
+$status = 0;
 
 if(!isset($_GET['pid'])) header('location:shop.php');
 $pid = $_REQUEST['pid'];
@@ -84,7 +84,6 @@ $r = mysqli_fetch_array($cmd);
                 }
                 else{
                     
-                    echo $r['id'];
                     ?>
 
                <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?pid=<?php echo $r['id'];  ?>'" >Add to Cart</button>

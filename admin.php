@@ -1,5 +1,9 @@
 <?php
+session_start();
 include('resources/phpscripts/connect.php');
+echo $_SESSION['admin'];
+if(!isset($_SESSION['admin'])) header('location:signin.php');
+
 ?>
 <!DOCTYPE html>
 
