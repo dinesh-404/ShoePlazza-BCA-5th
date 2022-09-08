@@ -10,21 +10,21 @@ var image = document.querySelectorAll('img');
 var footer = document.getElementsByClassName('footer');
 
 //hides when scroll
-window.onscroll=function(){
-    if(this){
+// window.onscroll=function(){
+//     if(this){
 
-        var scroll = window.scrollY;
-        mouseCursor.style.top = scroll+400 + "px";
-        midcur.style.top = scroll+400 + "px";
-         mouseCursor.classList.remove("changecursor");
-          midcur.classList.remove("midcursor");
+//         var scroll = window.scrollY;
+//         mouseCursor.style.top = scroll+400 + "px";
+//         midcur.style.top = scroll+400 + "px";
+//          mouseCursor.classList.remove("changecursor");
+//           midcur.classList.remove("midcursor");
     
-    }
-    else{
-        mouseCursor.classList.add("changecursor");
-        midcur.classList.add("midcursor");
-    }
-};
+//     }
+//     else{
+//         mouseCursor.classList.add("changecursor");
+//         midcur.classList.add("midcursor");
+//     }
+// };
 //main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
@@ -63,52 +63,25 @@ image.forEach(item => {
         mouseCursor.classList.remove('imghover');
     });
 });
-
-// know cursor style and remove 
-document.addEventListener('mouseover', e => {
-    const tgt = e.target;
-    const computed = window.getComputedStyle(tgt)["cursor"];
-    if (computed == 'none') {
-        mouseCursor.classList.add("changecursor");
-        midcur.classList.add("midcursor");
-    }
-    else {
-        mouseCursor.classList.remove("changecursor");
-        midcur.classList.remove("midcursor");
-    }
-});
 //no cursor if mouse not in webpage
-body.forEach(item => {
-    item.addEventListener("mouseleave", function () {
-        mouseCursor.classList.remove("changecursor");
-        midcur.classList.remove("midcursor");
-    });
 
+document.addEventListener("mousemove", function () {
+    mouseCursor.classList.add("changecursor");
+    midcur.classList.add("midcursor");
 });
-var prevScroll = window.scrollY;
-window.onscroll = function(){
-    var currentScroll = window.scrollY;
-    if(prevScroll>currentScroll){
-        document.getElementById('gototop').style.bottom="30px";
-    }
-    else{
-        document.getElementById('gototop').style.bottom="-50px";
-    }
-    prevScroll=currentScroll;
-}
+document.addEventListener("mouseleave", function () {
+    mouseCursor.classList.remove("changecursor");
+    midcur.classList.remove("midcursor");
+    console.log('body removwe');
+});
+
 function scolltop(){
     window.scrollTo({
         top:0,
         behavior:"smooth"
-    }
-
-    )
+    })
 }
 function explore(){
     document.getElementById('explore').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
 }
-// footer.addEventListener("mouseover",function(){
-//     midcur.classList.remove("midcursor");
-//     mouseCursor.classList.remove("changecursor");
-// });
 

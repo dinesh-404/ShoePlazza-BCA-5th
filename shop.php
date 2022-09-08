@@ -20,20 +20,24 @@ session_start();
 </head>
 
 <body>
-    <?php include("resources/imports/navbar.php"); ?>
-    <div class="cursor"></div>
-    <div class="innercursor"></div>
+    <?php
+    include("resources/imports/navbar.php");
+    include("resources/imports/cursor.php");
+
+
+    ?>
+
     <div class="cardrow" id="nike">
         <?php
         $cmd = "SELECT * FROM `items`";
-        $q = mysqli_query($connect,$cmd);
+        $q = mysqli_query($connect, $cmd);
         $n = mysqli_num_rows($q);
-        $r= mysqli_fetch_all($q,MYSQLI_ASSOC);
-       
-        for ($i=0; $i < $n; $i++) {
-            
-            ?>
-            
+        $r = mysqli_fetch_all($q, MYSQLI_ASSOC);
+
+        for ($i = 0; $i < $n; $i++) {
+
+        ?>
+
             <div class="card">
                 <div class="cardimage">
                     <div class="imgtxt">
@@ -41,15 +45,15 @@ session_start();
                         <p>Price : <?php echo $r[$i]['price']; ?></p>
                     </div>
                     <img src="resources/productimg/<?php echo $r[$i]['image'];  ?>-1.jpg" alt="" srcset="">
-    
+
                 </div>
                 <a class="linkbtn" href="productinfo.php?pid=<?php echo $r[$i]['id'];  ?>">see more</a>
             </div>
-            <?php 
+        <?php
         } ?>
     </div>
     <?php include('resources/imports/footer.php') ?>
-    <script src="resources/js/cursor.js"></script>
+
 </body>
 
 </html>

@@ -28,15 +28,11 @@ $r = mysqli_fetch_array($cmd);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/products.css" />
-    <link rel="stylesheet" href="resources/css/cursor.css">
     <link rel="stylesheet" href="resources/css/imports.css">
 
-    <title>jordanair4</title>
+    <title>ProductPage</title>
 </head>
-
 <body>
-
-    <!-- product one -->
     <div class="cursor"></div>
     <div class="innercursor"></div>
     <?php include('resources/imports/navbar.php'); ?>

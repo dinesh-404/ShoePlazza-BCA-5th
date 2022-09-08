@@ -11,14 +11,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/cursor.css">
   <link rel="stylesheet" href="resources/css/login.css">
   <link rel="stylesheet" href="resources/css/imports.css">
   <title>Sign up</title>
 </head>
 
 <body class="body login">
-  <?php include('resources/imports/navbar.php'); ?>
+  <?php
+   include('resources/imports/navbar.php');
+   include("resources/imports/cursor.php");
+   
+   ?>
   <div class="cursor"></div>
   <div class="innercursor"></div>
   <div class="center">
@@ -94,14 +97,11 @@
 
         <button type="button" class="button loginbtns" id="signupbtn" onclick="current_tab(1)">next</button>
         <button type="button" class="button loginbtns" style="bottom:20px" id="prevbtn" onclick="current_tab(-1)">previous</button>
-        <!-- <input type="submit" value="Submit" class="button" id="submitbtn" style="display: none;"> -->
-
       </div>
     </form>
   </div>
   <?php include('resources/imports/footer.php'); ?>
   <script src="resources/js/Login.js"></script>
-  <script src="resources/js/cursor.js"></script>
   <script src="resources/js/signup.js"></script>
 </body>
 

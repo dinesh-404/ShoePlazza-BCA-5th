@@ -17,7 +17,11 @@ include('resources/phpscripts/connect.php');
 </head>
 
 <body>
-    <?php include('resources/imports/navbar.php'); ?>
+    <?php 
+    include('resources/imports/navbar.php'); 
+    include("resources/imports/cursor.php");
+    
+    ?>
     <div class="admin-wrapper">
         <h1>
             Hello ! user

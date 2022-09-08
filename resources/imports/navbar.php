@@ -1,22 +1,21 @@
-<?php 
-    include('resources/phpscripts/connect.php');
-    if(isset($_SESSION['uid'])){
+<?php
+include('resources/phpscripts/connect.php');
+if (isset($_SESSION['uid'])) {
 
-        $navcmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
-        $navq = mysqli_query($connect,$navcmd);
-        $navitems = mysqli_num_rows($q);
-    }
-    else{
-        $navitems = 0;
-    }
+    $navcmd = "SELECT * FROM user_cart WHERE user_id = " . $_SESSION['uid'];
+    $navq = mysqli_query($connect, $navcmd);
+    $navitems = mysqli_num_rows($navq);
+} else {
+    $navitems = 0;
+}
 ?>
 <div class="navbarDiv">
     <div class="NavLeft">
         <div class="Branding">
-<a href="index.php">
-    <img class="brandlogo"src="resources/images/logo.png" alt="" srcset="">
+            <a href="index.php">
+                <img class="brandlogo" src="resources/images/logo.png" alt="" srcset="">
 
-</a>
+            </a>
         </div>
     </div>
     <div class="NavCenter">
@@ -29,26 +28,25 @@
         </div>
     </div>
     <div class="NavRight">
-    <?php if(!isset($_SESSION['uid'])){ ?>
+        <?php if (!isset($_SESSION['uid'])) { ?>
 
-        <div class="NavContent"> 
-          <a href="signin.php">Login</a>
-        </div>
-          <?php  
-        } 
-        else{
+            <div class="navLogin">
+                <a href="signin.php">Login</a>
+            </div>
+        <?php
+        } else {
             $navimage = $_SESSION['pfp'];
-            
-            ?>
+
+        ?>
             <div class="NavPfp">
                 <a href="profile.php">
                     <img class="Pfp" src="resources/pfp/<?php echo $navimage; ?>" alt="">
                 </a>
-
             </div>
-            <?php
+            <a class="NavLogout" href="resources/phpscripts/logout.php">log out</a>
+        <?php
         }
-            ?>
+        ?>
 
     </div>
 

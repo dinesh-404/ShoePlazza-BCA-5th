@@ -26,7 +26,6 @@ $r2 = $row[$random2];
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="resources/css/design.css">
-<link rel="stylesheet" href="resources/css/cursor.css">
 <link rel="stylesheet" href="resources/css/imports.css">
 <style>
 
@@ -119,9 +118,6 @@ $r2 = $row[$random2];
     ?>
     <div class="cursor"></div>
     <div class="innercursor"></div>
-    <?php
-    // include('navbar.php'); 
-    ?>
     <div class="content"><br><br>
         <h2>
 

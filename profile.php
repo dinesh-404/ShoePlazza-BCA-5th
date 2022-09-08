@@ -23,12 +23,6 @@ if (isset($_SESSION['uid'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/design.css">
     <link rel="stylesheet" href="resources/css/imports.css">
-
-    <style>
-        * {
-            cursor: auto;
-        }
-    </style>
     <title>Profile</title>
 </head>
 
@@ -49,17 +43,16 @@ if (isset($_SESSION['uid'])) {
             <div class="left">
                 <fieldset class="leftWrapper">
                     <legend>Profile</legend>
-                    <!-- <div class="leftWrapper"> -->
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" >
                         <label for='fullname'>Full Name</label>
                         <input type='text' class='fields' name='fullname' value='<?php echo $row['fullname']; ?>' id='fullname' disabled required><br>
                     </div>
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" id="agewrapper">
 
                         <label for='age'>Age</label>
                         <input type='text' class='fields' name='age' value='<?php echo $row['age']; ?>' id='age' disabled required><br>
                     </div>
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" id="genderwrapper">
 
                         <label for='gender'>Gender</label>
                         <input type='text' class='fields' name='gender' value='<?php echo $row['gender']; ?>' id='gender' disabled required><br>
@@ -74,17 +67,17 @@ if (isset($_SESSION['uid'])) {
                         <label for='username'>Username</label>
                         <input type='text' class='fields' name='username' value='<?php echo $row['username']; ?>' id='username' disabled required><br>
                     </div>
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" id="pwdwrapper">
 
                         <label for='password'>Password</label>
-                        <input type='text' class='fields' name='password' value='<?php echo $row['password']; ?>' id='password' disabled required><br>
+                        <input type='text' class='fields' name='password'    id='password' disabled required><br>
                     </div>
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" id="emailwrapper">
 
                         <label for='email'>Email</label>
                         <input type='text' class='fields' name='email' value='<?php echo $row['email']; ?>' id='email' disabled required><br>
                     </div>
-                    <div class="txtfieldwrapper">
+                    <div class="txtfieldwrapper" id="mobilewrapper">
 
                         <label for='mobileno'>Mobile No</label>
                         <input type='text' class='fields' name='mobileno' value='<?php echo $row['mobile']; ?>' id='mobileno' disabled required><br>

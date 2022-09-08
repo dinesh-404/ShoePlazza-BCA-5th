@@ -50,7 +50,11 @@
 </head>
 
 <body>
-    <?php include('resources/imports/navbar.php') ?>
+    <?php
+     include('resources/imports/navbar.php') ;
+    include("resources/imports/cursor.php");
+
+     ?>
     <div class="abg">
 
 
