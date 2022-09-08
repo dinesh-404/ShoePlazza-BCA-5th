@@ -2,12 +2,12 @@
     include('resources/phpscripts/connect.php');
     if(isset($_SESSION['uid'])){
 
-        $cmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
-        $q = mysqli_query($connect,$cmd);
-        $items = mysqli_num_rows($q);
+        $navcmd = "SELECT * FROM user_cart WHERE user_id = ".$_SESSION['uid'];
+        $navq = mysqli_query($connect,$navcmd);
+        $navitems = mysqli_num_rows($q);
     }
     else{
-        $items = 0;
+        $navitems = 0;
     }
 ?>
 <div class="navbarDiv">
@@ -24,7 +24,7 @@
 
             <a class="NavOpt" href="index.php">Home</a>
             <a class="NavOpt" href="shop.php">Shop</a>
-            <a class="NavOpt" href="cart.php">My cart (<?php echo $items; ?>)</a>
+            <a class="NavOpt" href="cart.php">My cart (<?php echo $navitems; ?>)</a>
             <a class="NavOpt" href="about.php">About</a>
         </div>
     </div>
@@ -37,12 +37,12 @@
           <?php  
         } 
         else{
-            $image = $_SESSION['pfp'];
+            $navimage = $_SESSION['pfp'];
             
             ?>
             <div class="NavPfp">
                 <a href="profile.php">
-                    <img class="Pfp" src="resources/pfp/<?php echo $image; ?>" alt="">
+                    <img class="Pfp" src="resources/pfp/<?php echo $navimage; ?>" alt="">
                 </a>
 
             </div>
