@@ -19,12 +19,11 @@ include('resources/phpscripts/connect.php');
         <h1>
             Hello ! user
         </h1>
-        <button>click here to add products</button><br><br>
-        <button>click here to view products</button><br><br>
-        <button>click here to edit products</button><br><br>
-        <button>click here to view items sold</button>
+        <button class="wrapper-btn" id="add-product-btn" onclick="add_product()">Add products</button><br><br>
+        
+        <button class="wrapper-btn" onclick="view_sales()">Sales</button>
     </div>
-    <div class="add-products">
+    <div class="add-products" id="add-product">
         <div class="addLeft">
 
             <form action="resources/phpscripts/add_product.php" method="post" enctype="multipart/form-data" id="products">
@@ -83,15 +82,20 @@ include('resources/phpscripts/connect.php');
             <img src="resources/productimg/nmd_v3/nmd_v3-1.jpg" alt="" id="showimg" class="showimage">
         </div>
     </div>
-    <div class="ShowProducts">
+    <div class="ShowProducts" id="view-sales">
         <?php
         $cmd = "SELECT uc.user_id, uc.status , it.name, it.price ,l.username FROM `user_cart` uc INNER JOIN items it ON uc.item_id = it.id INNER JOIN `login` l ON uc.user_id = l.id ";
         $q = mysqli_query($connect, $cmd);
         $r = mysqli_fetch_all($q, MYSQLI_ASSOC);
-        var_dump($r);
         ?>
         <table class="admintable">
             <tr class="adminrow">
+                <th class="productHead column" colspan="6">
+
+                    Products Bought by Users
+                </th>
+            </tr>
+            <tr class="adminrow headrow">
                 <td class="column">No.</td>
                 <td class="column">User id</td>
                 <td class="column">Username</td>
@@ -100,22 +104,22 @@ include('resources/phpscripts/connect.php');
                 <td class="column">Status</td>
             </tr>
             <?php
-            $n=1;
-             for ($i=0; $i < count($r); $i++) { 
-                # code...
-              
+            $n = 1;
+            for ($i = 0; $i < count($r); $i++) {
+
             ?>
                 <tr class="adminrow">
-                    <td class="column"><?php echo $n; $n++; ?></td>
+                    <td class="column"><?php echo $n;
+                                        $n++; ?></td>
                     <td class="column"><?php echo $r[$i]['user_id']; ?></td>
                     <td class="column"><?php echo $r[$i]['username']; ?></td>
                     <td class="column"><?php echo $r[$i]['name']; ?></td>
                     <td class="column"><?php echo $r[$i]['price']; ?></td>
                     <td class="column"><?php echo $r[$i]['status']; ?></td>
 
-            <?php
+                <?php
             }
-            ?>
+                ?>
         </table>
     </div>
     <script src="resources/js/admin.js"></script>

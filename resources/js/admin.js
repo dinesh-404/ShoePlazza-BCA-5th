@@ -63,9 +63,15 @@ let field = document.getElementsByClassName('adminTxtfield');
 for (let i = 0; i < field.length; i++) {
     txtinput[i].addEventListener("focus", function () {
         // wrapper[i].style.animation = "focus .6s  1 ease-in-out";
-        field[i].style.boxShadow = "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px";
+        field[i].style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 20px 30px";
     })
     txtinput[i].addEventListener("focusout", function () {
         field[i].style.boxShadow = "";
     })
+}
+function add_product(){
+    document.getElementById('add-product').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
+}
+function view_sales(){
+    document.getElementById('view-sales').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
 }

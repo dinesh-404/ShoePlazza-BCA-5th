@@ -322,6 +322,7 @@ body::-webkit-scrollbar {
 
 .add-products {
   display: grid;
+  font-family: 'regular';
   grid-template-columns: 400px 1fr;
   margin: auto;
 }
@@ -331,7 +332,9 @@ body::-webkit-scrollbar {
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all .5s;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
 }
 
@@ -415,9 +418,46 @@ body::-webkit-scrollbar {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .admintable{
+  min-height: 800px;
+  border-spacing: 0;
+  font-family: 'regular';
+  /* color:rgba(0, 0, 0, 0.8); */
   width: 80%;
   margin: 10px auto;
   text-align: center;
-  border: 1px solid black;
-  
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.adminrow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 20px;
+}
+
+.column{
+  font-size: 20px;
+  color: rgb(0,0,0,.8);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.productHead{
+  font-size: 30px;  
+}
+
+.headrow{
+  border-radius: 20px;
+  outline: none;
+}
+.wrapper-btn{
+  padding:10px;
+  border:none;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  transition: all .3s;
+}
+.wrapper-btn:hover{
+  background:black;
+  color:white;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
