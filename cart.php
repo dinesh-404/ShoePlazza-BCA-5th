@@ -2,14 +2,13 @@
 
 include('resources/phpscripts/connect.php');
 session_start();
-// $cmd = "select it.id, it.name, it.price, from items from user_cart uc inner joins items it on it.id=uc.item_id where uc.id = 1";
 if (!isset($_SESSION['uid'])) header('location:signin.php');
 $user_id = $_SESSION['uid'];
-echo $user_id;
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' .$user_id;
 
 $q = mysqli_query($connect, $cmd);
 $count = 0;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +19,23 @@ $count = 0;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="resources/css/imports.css">
 	<link rel="stylesheet" href="resources/css/shop.css">
-
 	<title>My Cart</title>
 </head>
 
 <body>
+	<?php include('resources/imports/cursor.php');  ?>
+<div id="afteranimation">
+
 	<?php include('resources/imports/navbar.php');
-	include('resources/imports/cursor.php');
 	
 	$sum = 0;
-	
 	$userp = mysqli_query($connect, $cmd);
-
-	
-
-	echo mysqli_num_rows($userp);
 	if (mysqli_num_rows($userp) == 0) { ?>
-
-
 		<div class="noItem">
 			<h1>There are no items in your cart :(</h1><br><br>
 			<h3><a href="shop.php">click me to buy some ;)</a>
 			</h3>
 		</div>
-
 	<?php
 	} else {
 	?>
@@ -54,7 +46,6 @@ $count = 0;
 				</th>
 			</tr>
 			<?php
-
 			while ($row = mysqli_fetch_array($userp)) {
 				$sum = $sum + $row['price'];
 			?>
@@ -64,7 +55,6 @@ $count = 0;
 					<td class="CartColumns">₹<?php echo $row['price']; ?></td>
 					<td class="CartColumns"><a href="resources/phpscripts/delete_cart.php?pid=<?php echo $row['id']; ?>">Remove</a></td>
 				</tr>
-
 			<?php
 			}
 			?>
@@ -76,9 +66,7 @@ $count = 0;
 	<?php
 	}
 	include("resources/imports/footer.php");
-	
 	?>
-
+</div>
 </body>
-
 </html>

@@ -33,8 +33,9 @@ $r = mysqli_fetch_array($cmd);
     <title>ProductPage</title>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="innercursor"></div>
+    <?php include('resources/imports/cursor.php'); ?>
+    <div id="afteranimation">
+
     <?php include('resources/imports/navbar.php'); ?>
     <div class="pcenter">
        
@@ -92,6 +93,7 @@ $r = mysqli_fetch_array($cmd);
         </div>
     </div><br>
     <?php include('resources/imports/footer.php'); ?>
+    </div>
     <script src="resources/js/cursor.js"></script>
     <script src="resources/js/products.js"></script>
     <script src="resources/js/scroll.js"></script>

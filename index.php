@@ -33,65 +33,55 @@ $r2 = $row[$random2];
 </head>
 
 <body class="body" id="body">
-<div class="loadwrapper" id='load'>
-    <div class="loader">
-        <div class="loader-inner"></div>
-    </div>
-</div>
-    
     <?php
     include('resources/imports/navbar.php');
     include('resources/imports/top.php');
-
-
+    include('resources/imports/cursor.php');
     ?>
-    <div class="cursor"></div>
-    <div class="innercursor"></div>
-    <div class="content"><br><br>
-        <h2>
+    <div id="afteranimation">
 
-            Hello !! <br>
-            Welcome to ShoePlazza<br>
-        </h2>
-        <button type="button" class="button" id="button" onclick="explore()">Explore</button>
-    </div>
-    <h1 id="explore">Featured</h1><br>
+        <div class="content"><br><br>
+            <h2>
 
-    <div class="explore">
-        <div class="card">
-            <img src="resources/brandlogo/<?php echo $r1['brand']; ?>" class="logo" alt="">
-            <img src="resources/productimg/<?php echo $r1['image']; ?>-1.jpg" class="cardimg" alt="">
-            <div class="cardtxt">
-                <h2><?php echo $r1['name']; ?> </h2>
-                <button onclick="location.href='productinfo.php?pid=<?php echo $r1['id']; ?>'">See More</button>
+                Hello !! <br>
+                Welcome to ShoePlazza<br>
+            </h2>
+            <button type="button" class="button" id="button" onclick="explore()">Explore</button>
+        </div>
+        <h1 id="explore">Featured</h1><br>
+
+        <div class="explore">
+            <div class="card">
+                <img src="resources/brandlogo/<?php echo $r1['brand']; ?>" class="logo" alt="">
+                <img src="resources/productimg/<?php echo $r1['image']; ?>-1.jpg" class="cardimg" alt="">
+                <div class="cardtxt">
+                    <h2><?php echo $r1['name']; ?> </h2>
+                    <button onclick="location.href='productinfo.php?pid=<?php echo $r1['id']; ?>'">See More</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="resources/brandlogo/<?php echo $r2['brand']; ?>" class="logo" alt="jordan logo">
+
+                <img src="resources/productimg/<?php echo $r2['image']; ?>-1.jpg" class="cardimg" alt="">
+                <div class="cardtxt">
+                    <h2><?php echo $r2['name']; ?> </h2>
+                    <button onclick="location.href='productinfo.php?pid=<?php echo $r2['id']; ?>'">See More</button>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="resources/brandlogo/<?php echo $r2['brand']; ?>" class="logo" alt="jordan logo">
 
-            <img src="resources/productimg/<?php echo $r2['image']; ?>-1.jpg" class="cardimg" alt="">
-            <div class="cardtxt">
-                <h2><?php echo $r2['name']; ?> </h2>
-                <button onclick="location.href='productinfo.php?pid=<?php echo $r2['id']; ?>'">See More</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel" id="pannike">
-        <img src="resources/images/nikenobg.png" class="brand" alt="" srcset="">
-        <button class="button" onclick="header('location:/ShoePlazza/index.php');
+        <div class="panel" id="pannike">
+            <img src="resources/images/nikenobg.png" class="brand" alt="" srcset="">
+            <button class="button" onclick="header('location:/ShoePlazza/index.php');
 ">Shop now</button>
-    </div><br>
-    <div class="panel" id="panaddidas">
-        <img src="resources/images/addidashome.png" class="brand" alt="" srcset="">
-        <button class="button">Shop now</button>
+        </div><br>
+        <div class="panel" id="panaddidas">
+            <img src="resources/images/addidashome.png" class="brand" alt="" srcset="">
+            <button class="button">Shop now</button>
+        </div>
+        <?php include('resources/imports/footer.php'); ?>
     </div>
-    <?php include('resources/imports/footer.php'); ?>
     <script src="resources/js/cursor.js">
-
-    </script>
-    <script>
-        
     </script>
 
 </body>
