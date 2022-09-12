@@ -34,15 +34,16 @@ $r2 = $row[$random2];
 
 <body class="body" id="body">
     <?php
+    include('resources/imports/cursor.php');
+?>
+    <div id="afteranimation">
+<?php
     include('resources/imports/navbar.php');
     include('resources/imports/top.php');
-    include('resources/imports/cursor.php');
     ?>
-    <div id="afteranimation">
 
         <div class="content"><br><br>
             <h2>
-
                 Hello !! <br>
                 Welcome to ShoePlazza<br>
             </h2>
@@ -72,12 +73,12 @@ $r2 = $row[$random2];
 
         <div class="panel" id="pannike">
             <img src="resources/images/nikenobg.png" class="brand" alt="" srcset="">
-            <button class="button" onclick="header('location:/ShoePlazza/index.php');
+            <button class="button" onclick="location.href='shop.php'
 ">Shop now</button>
         </div><br>
         <div class="panel" id="panaddidas">
             <img src="resources/images/addidashome.png" class="brand" alt="" srcset="">
-            <button class="button">Shop now</button>
+            <button class="button" onclick="location.href='shop.php'">Shop now</button>
         </div>
         <?php include('resources/imports/footer.php'); ?>
     </div>

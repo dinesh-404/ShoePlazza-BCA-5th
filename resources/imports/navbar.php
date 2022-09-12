@@ -2,7 +2,10 @@
 include('resources/phpscripts/connect.php');
 if (isset($_SESSION['uid'])) {
     
-    $navcmd = "SELECT * FROM user_cart WHERE user_id = " . $_SESSION['uid'];
+    $navcmd = "SELECT * FROM user_cart WHERE user_id = " .$_SESSION['uid'];
+    $pfpcmd = "SELECT `image` FROM `login` WHERE id=".$_SESSION['uid'];
+    $pfpq = mysqli_query($connect,$pfpcmd);
+    $img = mysqli_fetch_array($pfpq);
     $navq = mysqli_query($connect, $navcmd);
     $navitems = mysqli_num_rows($navq);
 } else {
@@ -35,12 +38,12 @@ if (isset($_SESSION['uid'])) {
             </div>
         <?php
         } else {
-            $navimage = $_SESSION['pfp'];
+           
 
         ?>
             <div class="NavPfp">
                 <a href="profile.php">
-                    <img class="Pfp" src="resources/pfp/<?php echo $navimage; ?>" alt="">
+                    <img class="Pfp" src="resources/pfp/<?php echo $img['image']; ?>" alt="">
                 </a>
             </div>
             <a class="NavLogout" href="resources/phpscripts/logout.php">log out</a>

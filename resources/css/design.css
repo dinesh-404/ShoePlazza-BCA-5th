@@ -243,10 +243,10 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  height: 700px;
+  height: 900px;
 }
 .ProfileWrapper .left {
-  height: 100%;
+  height: 800px;
   margin: 30px;
   position: relative;
 }
@@ -262,17 +262,17 @@ body::-webkit-scrollbar {
   
 }
 .ProfileWrapper .right fieldset {
-  padding: 35px;
+  /* padding: 35px; */
   border: none;
   position: relative;
 }
 .ProfileWrapper .fields {
   margin: 10px;
   color: rgb(0, 0, 0, 0.6);
-  height: 30px;
+  height: 20px;
   border: none;
   width: 300px;
-  padding-left: 100px;
+  padding-left: 150px;
   background: none;
   position: relative;
   border: none;
@@ -281,13 +281,13 @@ body::-webkit-scrollbar {
 
 .ProfileWrapper .txtfieldwrapper label {
   position: absolute;
-  top: 14px;
+  top: 9px;
   font-weight: 600;
   left: 20px;
   color: rgba(0, 0, 0, 0.829);
 }
 .ProfileWrapper .txtfieldwrapper {
-  margin: 7px;
+  margin: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 400px;
   text-align: right;
@@ -297,6 +297,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
   transition: all 0.5s;
 }
+
 
 .ProfileWrapper .right {
   padding: 30px;

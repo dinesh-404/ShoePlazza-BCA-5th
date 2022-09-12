@@ -7,9 +7,10 @@ if (!strlen($_FILES['avatar']['name']) == 0) {
     // profile photo
     $src = $_FILES['avatar']['tmp_name'];
     //destination path
-    $despath = $_SERVER['DOCUMENT_ROOT'] . "ShoePlazza/resources/pfp/";
     // relative path for copy
-    $dest = $despath . $_FILES['avatar']['name'];
+    $dest = "../pfp/". $_FILES['avatar']['name'];
+    var_dump($dest);
+    
     $imgpath = $_FILES['avatar']['name'];
     copy($src, $dest);
 } else {
@@ -39,10 +40,10 @@ if (isset($_REQUEST['username'])) {
     
 
     if ($result == 0) {
-        header('location:../../profile.php');
+        // header('location:../../profile.php');
     } else {
         echo "error";
     }
 } else {
-    header("location:../../profile.php");
+    // header("location:../../profile.php");
 }

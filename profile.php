@@ -71,9 +71,14 @@ if (isset($_SESSION['uid'])) {
                         </div>
                         <div class="txtfieldwrapper" id="pwdwrapper">
 
-                            <label for='password'>Password</label>
-                            <input type='text' class='fields' name='password' id='password' disabled required><br>
+                            <label for='password'>Current password</label>
+                            <input type='text' class='fields pwd' name='password' id='password' disabled required><br>
                         </div>
+                        <!-- <div class="txtfieldwrapper" id="pwddwrapper">
+
+                            <label for='password'>New Password</label>
+                            <input type='text' class='fields pwd' name='password' id='password' disabled required><br>
+                        </div> -->
                         <div class="txtfieldwrapper" id="emailwrapper">
 
                             <label for='email'>Email</label>
@@ -90,8 +95,7 @@ if (isset($_SESSION['uid'])) {
                 <div class="right">
                     <fieldset class="imgwrapper">
                         <legend id="pfplegend">profile pic</legend>
-                        <?php
-                        ?>
+                        
                         <img src='<?php echo $imgpath; ?>' alt='cant load profile' name='profilepic' class='profilepic' id='pfp' ondblclick='filebrowse()'>
                         <input type="file" name="avatar" id="filebrowse" onchange="readfile()" style="display: none;">
                         <input type="hidden" name="nofileupdate" value="<?php echo $row['image'] ?>">
