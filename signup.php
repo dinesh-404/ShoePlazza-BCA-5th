@@ -17,11 +17,6 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
 </head>
 
 <body class="body login">
-  <div class="loadwrapper" id='load'>
-    <div class="loader">
-      <div class="loader-inner"></div>
-    </div>
-  </div>
   <?php
   include("resources/imports/cursor.php");
   ?>
@@ -48,8 +43,8 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
       </div>
       <form method="post" name="loginform" action="resources/phpscripts/chksignup.php" id="signupform">
         <div class="right">
-          <input type="radio" name="admin" id="userradio" class="tblradio" value="user">
-          <input type="radio" name="admin" id="adminradio" class="tblradio" value="admin">
+          <input type="radio" name="chkuser" hidden id="userradio" class="tblradio" value="user">
+          <input type="radio" name="chkuser" hidden id="adminradio" class="tblradio" value="admin">
           <h1>signup</h1>
           <div class="tab">
             <div class="txtfield">
@@ -73,11 +68,11 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
             </div>
             <div class="txtfield">
               <input type="text" required name="age" class="idpassinput" oninput="input(1)" id="age" />
-              <label class="idpasslbl">age</label>
+              <label class="idpasslbl" id="agelbl">age</label>
             </div>
             <div class="txtfield">
               <input type="text" required name="email" class="idpassinput" oninput="input(2)" id="mail" />
-              <label class="idpasslbl">Email-address</label>
+              <label class="idpasslbl" id="maillbl">Email-address</label>
             </div>
           </div>
           <div class="tab">
@@ -87,16 +82,16 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
             </div>
             <div class="txtfield">
               <input type="password" required name="password" class="idpassinput" id="pass" oninput="input(4)" />
-              <label class="idpasslbl">password</label>
+              <label class="idpasslbl" id="passlbl">password</label>
               <button type="button" class="showpwd" onclick="showpass()"><img src="resources/images/eyeclosed.png" alt="eyeclosed" id="pwdimg"></button>
 
             </div>
             <div class="txtfield">
               <input type="txtfield" required name="mobilenumber" id="mobileno" class="idpassinput" oninput="input(5)" />
-              <label class="idpasslbl">Mobile no</label>
+              <label class="idpasslbl" id="mobilelbl">Mobile no</label>
             </div>
-            <div class="txtfield" style="border:none;">
-              <textarea class="txtarea" required name="address"></textarea>
+            <div class="txtfield">
+              <input type="text" name="address" id="address" required oninput="input(6)" class="idpassinput">
               <label class="idpasslbl">Address</label>
             </div>
           </div>

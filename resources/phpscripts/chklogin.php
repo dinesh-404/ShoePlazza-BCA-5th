@@ -29,7 +29,6 @@ else if ($n1 > 0) {
 } 
 
 else {
-	header('location:../../signin.php');
-	echo "last else";
+	header('location:../../signin.php?err="please login again"');
 }
 ?>

@@ -3,6 +3,7 @@ session_start();
 if (isset($_SESSION['uid'])) {
   header('location:/ShoePlazza/index.php');
 }
+
 ?>
 
 <!DOCTYPE html>

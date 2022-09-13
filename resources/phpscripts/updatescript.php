@@ -1,27 +1,24 @@
 <?php
 include("connect.php");
 print_r($_REQUEST);
+
 session_start();
-$id = $_SESSION['uid'];
-if (!strlen($_FILES['avatar']['name']) == 0) {
-    // profile photo
-    $src = $_FILES['avatar']['tmp_name'];
-    //destination path
-    // relative path for copy
-    $dest = "../pfp/". $_FILES['avatar']['name'];
-    var_dump($dest);
-    
-    $imgpath = $_FILES['avatar']['name'];
-    copy($src, $dest);
-} else {
-    $imgpath = $_REQUEST['nofileupdate'];
-}
-var_dump($_FILES);
-
-
+if (!isset($_SESSION['uid'])) header('location:../../signin.php');
 if (isset($_REQUEST['username'])) {
-    echo "<br>request log<br>";
-    print_r($_REQUEST);
+    if (!strlen($_FILES['avatar']['name']) == 0) {
+        // profile photo
+        $src = $_FILES['avatar']['tmp_name'];
+        //destination path
+        // relative path for copy
+        $dest = "../pfp/" . $_FILES['avatar']['name'];
+        var_dump($dest);
+
+        $imgpath = $_FILES['avatar']['name'];
+        copy($src, $dest);
+    } else {
+        $imgpath = $_REQUEST['nofileupdate'];
+    }
+    $id = $_SESSION['uid'];
     $uname = $_REQUEST['fullname'];
     $age = $_REQUEST['age'];
     $gender = $_REQUEST['gender'];
@@ -31,19 +28,13 @@ if (isset($_REQUEST['username'])) {
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['mobileno'];
     $image =  $imgpath;
-
-
     $updatecmd = "UPDATE `login` SET `fullname`='" . $uname . "',`age`='" . $age . "',`gender`='" . $gender . "',`username`='" . $username . "',`password`='" . $password . "',`address`='" . $address . "',`email`='" . $email . "',`mobile`='" . $mobile . "',`image`='" . $image . "' WHERE `id`=$id";
-
-     $updatedata = mysqli_query($connect, $updatecmd, $result = MYSQLI_STORE_RESULT);
-
-    
-
+    $updatedata = mysqli_query($connect, $updatecmd, $result = MYSQLI_STORE_RESULT);
     if ($result == 0) {
-        // header('location:../../profile.php');
+        header('location:../../profile.php');
     } else {
         echo "error";
     }
 } else {
-    // header("location:../../profile.php");
+    header("location:../../profile.php?err='please re-submit the form'");
 }

@@ -1,1 +1,0 @@
-<button class="gototop" id="gototop" onclick="scolltop()"></button>

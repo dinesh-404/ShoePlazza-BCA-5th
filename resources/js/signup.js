@@ -1,24 +1,27 @@
 var currpage = 0;
 show_tab(currpage);
+var err = "";
 let len = document.getElementsByClassName("tab").length;
 var txtfield = document.getElementsByClassName("idpassinput");
+let lbl = document.getElementsByClassName('idpasslbl');
 function show_tab(n) {
     console.log(currpage);
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
     if (n == 0) {
         document.getElementById("prevbtn").style.display = "none";
-        document.getElementById("signupbtn").innerHTML ="next";
+        document.getElementById("signupbtn").innerHTML = "next";
     } else {
         document.getElementById("prevbtn").style.display = "block";
-        document.getElementById("signupbtn").innerHTML ="submit";
+        document.getElementById("signupbtn").innerHTML = "submit";
     }
 
 }
 function current_tab(n) {
     let x = document.getElementsByClassName("tab");
     if (n == 1 && !validation()) {
-        alert("kindly enter fields marked with red border correctly");
+        alert(err);
+        err = "";
         return false;
     }
     x[currpage].style.display = "none";
@@ -40,21 +43,25 @@ function validation() {
     y = x[currpage].getElementsByClassName("idpassinput");
     for (i = 0; i < y.length; i++) {
         if (y[i].value == "") {
-            y[i].style.border = "2px solid red";
+            lbl[i].style.color = "#ff3d3d";
             validate++;
         }
     }
-    //age validation
-    var age = document.getElementById('age');
-    if (isNaN(age.value) || age.value < 1 || age.value > 100) {
-        console.log("age error");
-        age.style.border = "2px solid red";
-        validate++;
-
+    if (validate > 0) {
+        err += "please enter empty fields\n";
     }
+    //age validation
+    let age = document.getElementById('age');
+    let agelbl = document.getElementById('agelbl');
+    if (isNaN(age.value) || age.value < 1 || age.value > 100) {
+        agelbl.style.color = "red";
+        err += "please enter valid age \n";
+        validate++;
+    }
+
     //    radio gender validation
     var r = document.getElementsByClassName('ok');
-    var lbl = document.getElementsByClassName('radio');
+    var rdobtn = document.getElementsByClassName('radio');
     var a = 0;
     for (let i = 0; i < r.length; i++) {
         if (r[i].checked) {
@@ -65,25 +72,28 @@ function validation() {
         }
     }
     if (a == r.length) {
-        for (let i = 0; i < lbl.length; i++) {
-            lbl[i].style.color = "red";
+        err += "please enter valid gender \n ";
+
+        for (let i = 0; i < rdobtn.length; i++) {
+            rdobtn[i].style.color = "red";
         }
         validate++;
-        console.log('red value error' + validate);
     }
     //mobile validation
     if (currpage == 1) {
-        var mobile = document.getElementById('mobileno');
+        let mobile = document.getElementById('mobileno');
         var mval = document.getElementById('mobileno').value;
         if (!isNaN(mobile) || !mval.length == 10 || mval == "" || !/[6-9]/.test(mval)) {
-            mobile.style.border = "2px solid red";
+            document.getElementById('mobilelbl').style.color = "red";
             validate++;
+            err += "mobile no already exists \n";
         }
 
         //passwrd
-        var pass = document.getElementById('pass').value;
+        let pass = document.getElementById('pass').value;
         if (pass.length > 7 || !/[0-9]/.test(pass) || !/[a-z]/.test(pass)) {
-            console.log('password');
+            err += "please enter valid password which have numbers and characters \n";
+            document.getElementById('passlbl').style.color = "red";
             validate++;
         }
 
@@ -94,7 +104,8 @@ function validation() {
         var at = mail.search('@');
         var dot = mail.search(/\./);
         if (at < 2 || dot < 2 || mail == "") {
-            document.getElementById('mail').classList.add("invalid");
+            document.getElementById('maillbl').style.color = "red";
+            err += "please enter an valid email \n";
             validate++;
         }
     }
@@ -108,33 +119,33 @@ function validation() {
 
 }
 function input(n) {//onclick html
-    txtfield[n].style.border = "none";
+    lbl[n].style.color = "unset";
 }
 
 function radioval() {//onclick html
-    var lbl = document.getElementsByClassName('radio');
-    for (let i = 0; i < lbl.length; i++) {
-        lbl[i].style.background = "none";
-        lbl[i].style.color = "black";
+    var rdobtn = document.getElementsByClassName('radio');
+    for (let i = 0; i < rdobtn.length; i++) {
+        rdobtn[i].style.background = "none";
+        rdobtn[i].style.color = "black";
 
     }
 }
 let tabrad = document.getElementsByClassName('tblradio');
 for (let i = 0; i < tabrad.length; i++) {
-  tabrad[i].addEventListener('check',()=>{
+    tabrad[i].addEventListener('check', () => {
 
-  })
-    
-}
-function admin(){
-    document.getElementById('adminradio').click();
-    document.getElementById('adminbtn').style.background="gray";
-    document.getElementById('userbtn').style.background="";
+    })
 
 }
-function user(){
+function admin() {
     document.getElementById('adminradio').click();
-    document.getElementById('userbtn').style.background="gray";
-    document.getElementById('adminbtn').style.background="";
+    document.getElementById('adminbtn').style.background = "gray";
+    document.getElementById('userbtn').style.background = "";
+
+}
+function user() {
+    document.getElementById('adminradio').click();
+    document.getElementById('userbtn').style.background = "gray";
+    document.getElementById('adminbtn').style.background = "";
 
 }

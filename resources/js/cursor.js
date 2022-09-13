@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
         document.getElementById('inner').classList.remove('loader-inner');
         document.getElementById('animation').classList.remove('loader');
         document.getElementById('afteranimation').style.opacity = "1";
-    },1000);
+    },100);
 
     console.log('load');
 })
