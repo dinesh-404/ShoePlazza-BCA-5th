@@ -169,6 +169,7 @@ a {
 
 .innercursor {
   display: none;
+  z-index: 20;
   position: absolute;
 }
 
@@ -179,7 +180,7 @@ a {
   border: 3px solid white;
   border-radius: 50%;
   position: absolute;
-  transition: all 50ms linear;
+  transition: all 70ms linear;
   pointer-events: none;
   background: white;
   mix-blend-mode: difference;
@@ -210,9 +211,9 @@ a {
 
 .onclick {
   position: absolute;
-  background-color: #313131;
-  border: 1px solid #313131;
-  transition: all .2s;
+  background-color: black;
+  border: 1px solid black;
+  transition: all .1s;
 }
 
 .txtfieldfocus {

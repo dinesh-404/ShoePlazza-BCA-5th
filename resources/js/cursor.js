@@ -9,7 +9,6 @@ var footer = document.getElementsByClassName('footer');
 //main cursor movements
 window.addEventListener("mousemove", cursor);
 function cursor(e) {
-    //console.log(e.pageY);
     mainCur.style.top = e.pageY + "px";
     mainCur.style.left = e.pageX + "px";
     midcur.style.top = e.pageY + "px";
@@ -19,7 +18,6 @@ function cursor(e) {
 document.addEventListener('mousedown', function () {
     mainCur.classList.add('onclick');
 });
-
 document.addEventListener('mouseup', function () {
     mainCur.classList.remove('onclick');
 });
@@ -32,10 +30,7 @@ link.forEach(item => {
         mainCur.classList.remove('hover');
     });
 });
-
-
 // change style on hover
-
 document.addEventListener('mouseover', () => {
     mainCur.classList.add("changecursor");
     midcur.classList.add("midcursor");
@@ -44,25 +39,11 @@ document.addEventListener('mouseover', () => {
 document.addEventListener("mouseout", function () {
     mainCur.classList.remove("changecursor");
     midcur.classList.remove("midcursor");
-    console.log("out of window");
 });
-var prevScroll = window.scrollY;
-window.onscroll = function () {
-    var currentScroll = window.scrollY;
-    if (prevScroll > currentScroll) {
-        document.getElementById('gototop').style.bottom = "30px";
-    }
-    else {
-        document.getElementById('gototop').style.bottom = "-50px";
-    }
-    prevScroll = currentScroll;
-}
-function scolltop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-}
 function explore() {
-    document.getElementById('explore').scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    document.getElementById('explore').scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end"
+    });
 }

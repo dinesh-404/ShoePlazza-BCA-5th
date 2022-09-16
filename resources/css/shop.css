@@ -88,10 +88,6 @@ body {
     font-family: sans-serif;
     text-decoration: none;
 }
-*{
-    cursor:auto;
-}
-
 .CartRow {
     border-radius: 10px;
     overflow: hidden;

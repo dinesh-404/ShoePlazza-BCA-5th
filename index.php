@@ -33,7 +33,6 @@ $r2 = $row[$random2];
     <?php
     include('resources/imports/cursor.php');
     include('resources/imports/navbar.php');
-    include('resources/imports/top.php');
     ?>
         <div class="content"><br><br>
             <h2>
