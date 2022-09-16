@@ -13,6 +13,3 @@ function showpass() {
     click = 0;
   }
 }
-window.addEventListener('DOMContentLoaded',function(){
-  console.log('loaded');
-})

@@ -15,7 +15,6 @@ function show_tab(n) {
         document.getElementById("prevbtn").style.display = "block";
         document.getElementById("signupbtn").innerHTML = "submit";
     }
-
 }
 function current_tab(n) {
     let x = document.getElementsByClassName("tab");
@@ -28,7 +27,6 @@ function current_tab(n) {
     currpage = currpage + n;
     if (currpage >= x.length) {
         document.getElementById("signupform").submit();
-        console.log("submitted");
         return false;
     }
     show_tab(currpage);
@@ -96,7 +94,6 @@ function validation() {
             document.getElementById('passlbl').style.color = "red";
             validate++;
         }
-
     }
     //email
     if (currpage == 0) {
@@ -116,7 +113,6 @@ function validation() {
         return false;
     }
     return true;
-
 }
 function input(n) {//onclick html
     lbl[n].style.color = "unset";
@@ -127,7 +123,6 @@ function radioval() {//onclick html
     for (let i = 0; i < rdobtn.length; i++) {
         rdobtn[i].style.background = "none";
         rdobtn[i].style.color = "black";
-
     }
 }
 let tabrad = document.getElementsByClassName('tblradio');
@@ -135,17 +130,14 @@ for (let i = 0; i < tabrad.length; i++) {
     tabrad[i].addEventListener('check', () => {
 
     })
-
 }
 function admin() {
     document.getElementById('adminradio').click();
     document.getElementById('adminbtn').style.background = "gray";
     document.getElementById('userbtn').style.background = "";
-
 }
 function user() {
     document.getElementById('adminradio').click();
     document.getElementById('userbtn').style.background = "gray";
     document.getElementById('adminbtn').style.background = "";
-
 }

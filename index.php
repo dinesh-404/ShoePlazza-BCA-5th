@@ -17,8 +17,6 @@ if ($random1 == $random2) {
 }
 $r1 = $row[$random1];
 $r2 = $row[$random2];
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +25,6 @@ $r2 = $row[$random2];
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="resources/css/design.css">
 <link rel="stylesheet" href="resources/css/imports.css">
-
 <title>Home Page</title>
 
 </head>
@@ -35,13 +32,9 @@ $r2 = $row[$random2];
 <body class="body" id="body">
     <?php
     include('resources/imports/cursor.php');
-?>
-    <div id="afteranimation">
-<?php
     include('resources/imports/navbar.php');
     include('resources/imports/top.php');
     ?>
-
         <div class="content"><br><br>
             <h2>
                 Hello !! <br>
@@ -57,7 +50,8 @@ $r2 = $row[$random2];
                 <img src="resources/productimg/<?php echo $r1['image']; ?>-1.jpg" class="cardimg" alt="">
                 <div class="cardtxt">
                     <h2><?php echo $r1['name']; ?> </h2>
-                    <button onclick="location.href='productinfo.php?pid=<?php echo $r1['id']; ?>'">See More</button>
+                    <button class="seemore" onclick="location.href='productinfo.php?pid=<?php echo $r1['id']; ?>'">See More</button>
+
                 </div>
             </div>
             <div class="card">
@@ -66,14 +60,14 @@ $r2 = $row[$random2];
                 <img src="resources/productimg/<?php echo $r2['image']; ?>-1.jpg" class="cardimg" alt="">
                 <div class="cardtxt">
                     <h2><?php echo $r2['name']; ?> </h2>
-                    <button onclick="location.href='productinfo.php?pid=<?php echo $r2['id']; ?>'">See More</button>
+                    <button class="seemore" onclick="location.href='productinfo.php?pid=<?php echo $r2['id']; ?>'">See More</button>
                 </div>
             </div>
         </div>
 
         <div class="panel" id="pannike">
             <img src="resources/images/nikenobg.png" class="brand" alt="" srcset="">
-            <button class="button" onclick="location.href='shop.php'
+            <button class="button" class="seemore" onclick="location.href='shop.php'
 ">Shop now</button>
         </div><br>
         <div class="panel" id="panaddidas">

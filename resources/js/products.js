@@ -9,7 +9,6 @@ function radiocolor() {
         else {
             lbl[i].classList.remove('btnchange');
         }
-
     }
 }
 function quantity(n) {
@@ -19,22 +18,19 @@ function quantity(n) {
     if (val >= 1) {
         num = val + n;
     }
-    if(num>=1){
-        qty.value=num;
+    if (num >= 1) {
+        qty.value = num;
         price(num);
     }
-    
-    console.log(qty);
 }
 var rate = 0;
 window.addEventListener('DOMContentLoaded', () => {
     rate = document.getElementById('price').value;
 });
-function price(x){
+function price(x) {
     var valu = document.getElementById('price').value;
     var priceval = parseInt(rate);
-    valu = priceval*x;
-    document.getElementById('price').value=valu;
+    valu = priceval * x;
+    document.getElementById('price').value = valu;
 }
 
-        

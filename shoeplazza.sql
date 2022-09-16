@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 12, 2022 at 03:35 AM
+-- Generation Time: Sep 14, 2022 at 03:52 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.4.9
 
@@ -20,36 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `shoeplazza`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin_login`
---
-
-DROP TABLE IF EXISTS `admin_login`;
-CREATE TABLE IF NOT EXISTS `admin_login` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(30) NOT NULL,
-  `age` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gender` varchar(6) NOT NULL,
-  `username` varchar(10) NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `address` varchar(50) DEFAULT NULL,
-  `email` varchar(20) DEFAULT NULL,
-  `mobile` varchar(10) NOT NULL,
-  `image` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `admin_login`
---
-
-INSERT INTO `admin_login` (`id`, `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`, `image`) VALUES
-(6, 'luxury', '11', 'male', 'luzury', 'luxury993', 'luxury', 'luxury@gmail.com', '9797979797', 'noprofile.png'),
-(4, 'ok', '19', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'),
-(7, 'dineshh', '20', 'male', 'xoxoxo', 'xoxoxo007', 'zjknfvksjnfksd', 'dinesh@gmail.com', '9898989898', 'noprofile.png');
 
 -- --------------------------------------------------------
 
@@ -102,17 +72,17 @@ CREATE TABLE IF NOT EXISTS `login` (
   `email` varchar(20) DEFAULT NULL,
   `mobile` varchar(10) NOT NULL,
   `image` varchar(50) DEFAULT NULL,
+  `role` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id`, `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`, `image`) VALUES
-(1, 'dineshh', '19', 'male', 'dinesh', 'dinesh1200', 'kjdndkjvndkjv', 'khuntidnsh@gmail.com', '6353535353', 'person-logo-icon-png-svg.png'),
-(3, 'jenti', '10', 'male', 'jbtukadiya', 'jentijdjdj', 'kjfnvkdfjnvfj', 'jenti@gmail.com', '6868686868', '96b9b930a74c92cd3475b685ea0d0af6.jpg'),
-(4, 'dkfjnsjd', '18', 'male', 'dineshhhhh', 'dineshhhhh', 'rhsdgdgs', 'dinesh@gsdjdv.com', '9797979797', 'noprofile.png');
+INSERT INTO `login` (`id`, `fullname`, `age`, `gender`, `username`, `password`, `address`, `email`, `mobile`, `image`, `role`) VALUES
+(1, 'dineshh', '19', 'male', 'dinesh', 'dinesh1200', 'kjdndkjvndkjv', 'khuntidnsh@gmail.com', '6353535353', 'IMG_6009-3.jpg', 'admin'),
+(3, 'jenti', '10', 'male', 'jbtukadiya', 'jentijdjdj', 'kjfnvkdfjnvfj', 'jenti@gmail.com', '6868686868', '96b9b930a74c92cd3475b685ea0d0af6.jpg', 'user');
 
 -- --------------------------------------------------------
 
@@ -130,7 +100,14 @@ CREATE TABLE IF NOT EXISTS `user_cart` (
   KEY `item_id` (`item_id`),
   KEY `item_id_2` (`item_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_cart`
+--
+
+INSERT INTO `user_cart` (`id`, `item_id`, `user_id`, `status`) VALUES
+(8, 7, 1, 'added to cart');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

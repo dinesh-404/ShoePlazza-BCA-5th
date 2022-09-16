@@ -5,7 +5,6 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,44 +13,33 @@ session_start();
     <link rel="stylesheet" href="resources/css/imports.css">
     <title>shop</title>
 </head>
-
 <body>
     <?php
     include("resources/imports/cursor.php");
+    include("resources/imports/navbar.php");
     ?>
-    <div id="afteranimation">
-
+    <div class="cardrow" id="nike">
         <?php
-        include("resources/imports/navbar.php");
+        $cmd = "SELECT * FROM `items`";
+        $q = mysqli_query($connect, $cmd);
+        $n = mysqli_num_rows($q);
+        $r = mysqli_fetch_all($q, MYSQLI_ASSOC);
+        for ($i = 0; $i < $n; $i++) {
         ?>
-
-        <div class="cardrow" id="nike">
-            <?php
-            $cmd = "SELECT * FROM `items`";
-            $q = mysqli_query($connect, $cmd);
-            $n = mysqli_num_rows($q);
-            $r = mysqli_fetch_all($q, MYSQLI_ASSOC);
-
-            for ($i = 0; $i < $n; $i++) {
-
-            ?>
-
-                <div class="card">
-                    <div class="cardimage">
-                        <div class="imgtxt">
-                            <h1><?php echo $r[$i]['name']; ?></h1>
-                            <p>Price : <?php echo $r[$i]['price']; ?></p>
-                        </div>
-                        <img src="resources/productimg/<?php echo $r[$i]['image'];  ?>-1.jpg" alt="" srcset="">
-
+            <div class="card">
+                <div class="cardimage">
+                    <div class="imgtxt">
+                        <h1><?php echo $r[$i]['name']; ?></h1>
+                        <p>Price : <?php echo $r[$i]['price']; ?></p>
                     </div>
-                    <a class="linkbtn" href="productinfo.php?pid=<?php echo $r[$i]['id'];  ?>">see more</a>
+                    <img src="resources/productimg/<?php echo $r[$i]['image'];  ?>-1.jpg" alt="" srcset="">
                 </div>
-            <?php
-            } ?>
-        </div>
-        <?php include('resources/imports/footer.php') ?>
+                <a class="linkbtn" href="productinfo.php?pid=<?php echo $r[$i]['id'];  ?>">see more</a>
+            </div>
+        <?php
+        } ?>
     </div>
+    <?php include('resources/imports/footer.php') ?>
 </body>
 
 </html>

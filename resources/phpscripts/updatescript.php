@@ -31,7 +31,7 @@ if (isset($_REQUEST['username'])) {
     $updatecmd = "UPDATE `login` SET `fullname`='" . $uname . "',`age`='" . $age . "',`gender`='" . $gender . "',`username`='" . $username . "',`password`='" . $password . "',`address`='" . $address . "',`email`='" . $email . "',`mobile`='" . $mobile . "',`image`='" . $image . "' WHERE `id`=$id";
     $updatedata = mysqli_query($connect, $updatecmd, $result = MYSQLI_STORE_RESULT);
     if ($result == 0) {
-        header('location:../../profile.php');
+        header('location:../../profile.php?err="updated successfully"');
     } else {
         echo "error";
     }

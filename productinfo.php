@@ -2,21 +2,15 @@
 session_start();
 include("resources/phpscripts/connect.php");
 $status = 0;
-
-if(!isset($_GET['pid'])) header('location:shop.php');
+if (!isset($_GET['pid'])) header('location:shop.php');
 $pid = $_REQUEST['pid'];
-
-if(isset($_SESSION['uid'])){
-    
-    
+if (isset($_SESSION['uid'])) {
     $usr = $_SESSION['uid'];
-    $qc = "SELECT status FROM user_cart WHERE user_id ='".$usr."' AND item_id= '".$pid."'";
-    
-    $pcmd = mysqli_query($connect,$qc);
-    $status =mysqli_num_rows($pcmd);
-   
+    $qc = "SELECT status FROM user_cart WHERE user_id ='" . $usr . "' AND item_id= '" . $pid . "'";
+    $pcmd = mysqli_query($connect, $qc);
+    $status = mysqli_num_rows($pcmd);
 }
-$q = "SELECT * FROM `items` WHERE id = '".$pid."'";
+$q = "SELECT * FROM `items` WHERE id = '" . $pid . "'";
 $cmd = mysqli_query($connect, $q);
 $r = mysqli_fetch_array($cmd);
 ?>
@@ -32,13 +26,12 @@ $r = mysqli_fetch_array($cmd);
 
     <title>ProductPage</title>
 </head>
+
 <body>
     <?php include('resources/imports/cursor.php'); ?>
-    <div id="afteranimation">
-
     <?php include('resources/imports/navbar.php'); ?>
     <div class="pcenter">
-       
+
         <div class="pleft" id="left">
 
             <div class="imgmain">
@@ -53,7 +46,7 @@ $r = mysqli_fetch_array($cmd);
                 <img src="resources/productimg/<?php echo $r['image']; ?>-5" alt="" srcset="" class="image">
                 <img src="resources/productimg/<?php echo $r['image']; ?>-6" alt="" srcset="" class="image">
             </div>
-           
+
         </div>
         <div class="pright" id="right">
             <div class="noscroll" id="noscroll">
@@ -62,32 +55,24 @@ $r = mysqli_fetch_array($cmd);
                     <?php
                     echo $r['information'];
                     ?>
-                   
                 </p>
                 <br>
                 <div class="rate">
                     <h2>₹
-
-                    <?php
-
-                    echo $r['price'];
-                    ?>
-                    only
+                        <?php
+                        echo $r['price'];
+                        ?>
+                        only
                     </h2>
-
                 </div>
-                <?php 
-                
-                if($status>0){
-                    ?>
-               <button class="cartbtn" disabled >added to cart</button>
-<?php
-                }
-                else{
-                    
-                    ?>
-
-               <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?pid=<?php echo $r['id'];  ?>'" >Add to Cart</button>
+                <?php
+                if ($status > 0) {
+                ?>
+                    <button class="cartbtn" disabled>added to cart</button>
+                <?php
+                } else {
+                ?>
+                    <button class="cartbtn" onclick="location.href='resources/phpscripts/add_to_cart.php?pid=<?php echo $r['id'];  ?>'">Add to Cart</button>
                 <?php } ?>
             </div>
         </div>
@@ -97,7 +82,6 @@ $r = mysqli_fetch_array($cmd);
     <script src="resources/js/cursor.js"></script>
     <script src="resources/js/products.js"></script>
     <script src="resources/js/scroll.js"></script>
-
 </body>
 
 </html>

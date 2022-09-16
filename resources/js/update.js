@@ -7,19 +7,15 @@ let pfplabel = document.getElementById('pfplegend');
 let fileinput = document.getElementById('filebrowse');
 var en = 0;
 function enable() {
-
     if (en == 0) {
         for (let i = 0; i < fields.length; i++) {
             fields[i].disabled = false;
-            // wrapper[i].style.animation = "inputshadow .6s  1 ease-in-out";
             wrapper[i].style.boxShadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px";
-            // wrapper[i].classList.add('shadowinput');
         }
         pfp.style.boxShadow = "rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset";
         pfplabel.innerHTML = "Double click to change profile pic";
         document.getElementById('updatebtn').classList.add('nodisplay');
         document.getElementById('updatesubmit').classList.remove('nodisplay');
-
         en++;
     }
     else {
@@ -80,7 +76,6 @@ function validate() {
         document.getElementById('genderwrapper').style.border = "2px solid red"
         validate++;
     }
-
     if (validate == 0) {
         form.submit();
     }
@@ -104,7 +99,6 @@ function filebrowse() {
         document.getElementById('filebrowse').click();
     }
 }
-
 for (let i = 0; i < fields.length; i++) {
     fields[i].addEventListener("focus", function () {
         wrapper[i].style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px";

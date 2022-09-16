@@ -1,29 +1,24 @@
 <div class="Footer">
     <div class="FooterLeft">
         <div class="FooterMid">
-
             <a href="mailto:khuntidnsh@gmail.com">Mail us</a>
-            <a href="#">About us</a>
-            <a href="#">Login</a>
-            <a href="#">Signup</a>
-            <a href="#">Shop</a>
-            <a href="#">Go to cart</a>
-
-        </div> 
-        
+            <a href="about.php">About us</a>
+            <a href="login.php">Login</a>
+            <a href="signup.php">Signup</a>
+            <a href="shop.php">Shop</a>
+            <a href="cart.php">Go to cart</a>
+        </div>
     </div>
-
     <div class="FooterRight">
-<div class="img">
-        <img src="resources/NavbarIcons/fbicon.png" alt="" srcset="">
-        <img src="resources/NavbarIcons/linkedinicon.png" alt="" srcset="">
-        <img src="resources/NavbarIcons/twittericon.png" alt="" srcset="">
-        <img src="resources/NavbarIcons/instaicon.png" alt="" srcset="">
-</div>
+        <div class="img">
+            <img src="resources/NavbarIcons/fbicon.png" alt="" srcset="">
+            <img src="resources/NavbarIcons/linkedinicon.png" alt="" srcset="">
+            <img src="resources/NavbarIcons/twittericon.png" alt="" srcset="">
+            <img src="resources/NavbarIcons/instaicon.png" alt="" srcset="">
+        </div>
     </div>
     <div class="FooterCopy">
-
-            &copy;2022 all rights reserved
-            developed by dinesh
-</div>
+        &copy;2022 all rights reserved
+        developed by dinesh
+    </div>
 </div>

@@ -5,14 +5,11 @@ session_start();
 if (!isset($_SESSION['uid'])) header('location:signin.php');
 $user_id = $_SESSION['uid'];
 $cmd = 'SELECT it.id ,it.name,it.price,it.image FROM user_cart ut INNER JOIN items it on it.id = ut.item_id WHERE ut.user_id= ' .$user_id;
-
 $q = mysqli_query($connect, $cmd);
 $count = 0;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,13 +18,10 @@ $count = 0;
 	<link rel="stylesheet" href="resources/css/shop.css">
 	<title>My Cart</title>
 </head>
-
 <body>
 	<?php include('resources/imports/cursor.php');  ?>
 <div id="afteranimation">
-
 	<?php include('resources/imports/navbar.php');
-	
 	$sum = 0;
 	$userp = mysqli_query($connect, $cmd);
 	if (mysqli_num_rows($userp) == 0) { ?>

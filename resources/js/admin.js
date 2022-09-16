@@ -4,14 +4,11 @@ let txtinput = document.getElementsByClassName('input');
 let val = 1
 function showImg() {
     if (fileinput.files.length > 0) {
-
         for (let i = 0; i < fileinput.files.length; i++) {
             imgtag[i].src = URL.createObjectURL(fileinput.files[i]);
-
         }
         document.getElementsByClassName('addRight')[0].style.display = "unset";
         if (fileinput.files.length < 5 || fileinput.files.length < 5) {
-
             alert('enter 6 files');
         }
         if (fileinput.files.length == 6) {
@@ -22,11 +19,10 @@ function showImg() {
 function validate() {
     for (let i = 0; i < txtinput.length; i++) {
         if (txtinput[i].value == "") {
-            alert('please enter correct values');
+            alert('please enter values in empty textbox');
             val++;
             break;
         }
-
     }
     if (val == 0) {
         document.getElementById('products').submit();
@@ -34,7 +30,6 @@ function validate() {
     else {
         console.log('cant do');
     }
-
 };
 function adidas() {
     document.getElementById('adidas').click();
@@ -55,7 +50,7 @@ for (let i = 0; i < rbtn.length; i++) {
     })
 }
 let browsebtn = document.getElementById('browse');
-browsebtn.addEventListener('click',()=>{
+browsebtn.addEventListener('click', () => {
     fileinput.click();
 })
 
@@ -69,9 +64,9 @@ for (let i = 0; i < field.length; i++) {
         field[i].style.boxShadow = "";
     })
 }
-function add_product(){
-    document.getElementById('add-product').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
+function add_product() {
+    document.getElementById('add-product').scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
 }
-function view_sales(){
-    document.getElementById('view-sales').scrollIntoView({behavior:"smooth",block:"start",inline:"end"});
+function view_sales() {
+    document.getElementById('view-sales').scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
 }

@@ -1,12 +1,15 @@
 <?php
 session_start();
 include('resources/phpscripts/connect.php');
-echo $_SESSION['admin'];
 if (!isset($_SESSION['admin'])) header('location:signin.php');
+else{
+    $cmd = "select username from login where id = ".$_SESSION['uid']." and role = 'admin'";
+    $q = mysqli_query($connect,$cmd);
+    $arr = mysqli_fetch_array($q);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,18 +18,16 @@ if (!isset($_SESSION['admin'])) header('location:signin.php');
     <link rel="stylesheet" href="resources/css/imports.css">
     <title>Admin Page</title>
 </head>
-
 <body>
     <?php
     include('resources/imports/navbar.php');
     include("resources/imports/cursor.php");
     ?>
-    <div id="afteranimation">
-
         <div class="admin-wrapper">
             <h1>
-                Hello ! user
+                Hello ! <?php echo $arr['username']; ?> <br>
             </h1>
+            <h4>this is your admin page</h4>
             <button class="wrapper-btn" id="add-product-btn" onclick="add_product()">Add products</button><br><br>
             <button class="wrapper-btn" onclick="view_sales()">Sales</button>
         </div>
