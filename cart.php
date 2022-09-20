@@ -19,9 +19,8 @@ $count = 0;
 	<title>My Cart</title>
 </head>
 <body>
-	<?php include('resources/imports/cursor.php');  ?>
-<div id="afteranimation">
-	<?php include('resources/imports/navbar.php');
+	<?php include('resources/imports/cursor.php'); 
+	include('resources/imports/navbar.php');
 	$sum = 0;
 	$userp = mysqli_query($connect, $cmd);
 	if (mysqli_num_rows($userp) == 0) { ?>
@@ -61,6 +60,5 @@ $count = 0;
 	}
 	include("resources/imports/footer.php");
 	?>
-</div>
 </body>
 </html>

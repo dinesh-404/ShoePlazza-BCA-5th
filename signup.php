@@ -14,13 +14,14 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
   <title>Sign up</title>
 </head>
 
-<body class="body login">
+<body>
   <?php
   include("resources/imports/cursor.php");
   include('resources/imports/navbar.php');
   ?>
   <div class="center" id="signup">
     <div class="left">
+
       <h1>Hello there !</h1>
       <h2>Looks like you're new !! fill your information and get access to our site</h2>
       <h2>already a member ?<a href="signin.php">sign in</a></h2>
@@ -35,10 +36,12 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
     </div>
     
     <form method="post" name="loginform" action="resources/phpscripts/chksignup.php" id="signupform">
+
       <div class="right">
         <input type="radio" name="chkuser" hidden id="userradio" class="tblradio" value="user">
         <input type="radio" name="chkuser" hidden id="adminradio" class="tblradio" value="admin">
         <h1>signup</h1>
+
         <div class="tab">
           <div class="txtfield">
             <input type="text" required name="fullname" class="idpassinput" oninput="input(0)" autofocus />
@@ -68,6 +71,7 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
             <label class="idpasslbl" id="maillbl">Email-address</label>
           </div>
         </div>
+
         <div class="tab">
           <div class="txtfield">
             <input type="text" required name="username" class="idpassinput" oninput="input(3)" />
@@ -88,7 +92,6 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
             <label class="idpasslbl">Address</label>
           </div>
         </div>
-
         <button type="button" class="button loginbtns" id="signupbtn" onclick="current_tab(1)">next</button>
         <button type="button" class="button loginbtns" style="bottom:20px" id="prevbtn" onclick="current_tab(-1)">previous</button>
       </div>
@@ -98,6 +101,6 @@ if (isset($_SESSION['uid'])) header('location:profile.php');
   <script src="resources/js/Login.js"></script>
   <script src="resources/js/cursor.js"></script>
   <script src="resources/js/signup.js"></script>
-</body>
+</body=>
 
 </html>

@@ -15,20 +15,12 @@ body {
 body::-webkit-scrollbar{
     display: none;
 }
-.card{
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    transition: all .7s;
-    margin-bottom: 50px;
-}
+
+
 .cardimage img {
     width: 100%;
-    height: 400px;
     font-size: 0;
+    height:auto;
 }
 .cardrow {   
     padding:10px;

@@ -1,7 +1,5 @@
 <?php
 include("connect.php");
-print_r($_REQUEST);
-
 session_start();
 if (!isset($_SESSION['uid'])) header('location:../../signin.php');
 if (isset($_REQUEST['username'])) {
@@ -11,8 +9,6 @@ if (isset($_REQUEST['username'])) {
         //destination path
         // relative path for copy
         $dest = "../pfp/" . $_FILES['avatar']['name'];
-        var_dump($dest);
-
         $imgpath = $_FILES['avatar']['name'];
         copy($src, $dest);
     } else {

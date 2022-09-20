@@ -68,7 +68,7 @@
 
 a {
   text-decoration: none;
-  color: var(--background-black);
+  color: black;
   cursor: none;
 }
 
@@ -119,8 +119,8 @@ a {
   height: max-content;
   position: relative;
   display: grid;
-  background: var(--background-white);
-  color: var(--textcolor);
+  background:white;
+  color: black;
   grid-template-rows: 1fr 30px;
   grid-template-columns: 1fr 1fr;
   margin: 0;
@@ -139,14 +139,14 @@ a {
 }
 
 .FooterMid a {
-  color: var(--textcolor);
+  color: black;
   display: block;
   text-decoration: none;
   margin: 10px;
 }
 
 .FooterMid a:hover {
-  color: var(--txthover);
+  color: gray;
 }
 
 .FooterCopy {
@@ -158,8 +158,8 @@ a {
   margin: 0;
   transform: translateX(50%);
   padding: 0;
-  color: var(--textcolor);
-  background: var(--footerbg);
+  color: black;
+  background: white;
 }
 
 .cursor {
