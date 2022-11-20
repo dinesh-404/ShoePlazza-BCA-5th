@@ -4,101 +4,155 @@
       url("../fonts/titilliumweb-regular-webfont.woff") format("woff"),
       url("../fonts/TitilliumWeb-Regular.ttf") format("truetype");
   }
-  body,
-  html {
-    padding: 0;
-    margin: 0;
-    font-family: "regular";
-    -ms-overflow-style: none;
-    background-color: white;
+html,
+body {
+    background: white;
     cursor: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-  }
-  
-  body::-webkit-scrollbar {
+    margin: 0;
+    padding: 0;
+    font-family: 'regular';
+}
+body::-webkit-scrollbar{
     display: none;
-  }
-  
-  .imgmain img {
-    width: 50%;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .imgmain {
-    display: block;
-    margin: 0;
-    padding: 0;
+}
+.card{
+    position: relative;
     width: 100%;
-  
+    height: 300px;
     overflow: hidden;
-    object-fit: cover;
-    font-size: 0;
-  }
-  
-  .pcenter {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  
-  .pleft {
-    width: 950px;
-  }
-  
-  .pright {
-    position: sticky;
-    display: block;
-    background: white;
-    right: 0;
-  }
-  
-  .noscroll {
-    position: sticky;
-    text-align: center;
-    overflow: scroll;
-    display: block;
-    height: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .noscroll h1 {
-    font-size: 40px;
-  }
-  
-  .noscroll p {
-    margin: 10px 50px 10px 50px;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 20px;
-  }
-  
-  .noscroll h1 {
-    font-weight: lighter;
-    width: 100%;
-  }
-  .down {
-    background: white;
-    width: 100%;
-    display: block;
-    height: 500px;
-  }
-  .pright .rate {
-    color: rgb(0, 0, 0, 0.8);
-  }
-  .pright .cartbtn {
-    width: 300px;
-    height: 50px;
-    transition: all 1s;
-    border: none;
     border-radius: 10px;
-  }
-  .imgwide {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all .7s;
+    margin-bottom: 50px;
+}
+.cardimage img {
+    width: 100%;
+    font-size: 0;
+}
+.cardrow {   
+    padding:10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.card .linkbtn{
+    bottom:-50px;
+    margin: 0;
+    border: 0;
+    background: black;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    transition: all 1s;
+}
+.card:hover > .linkbtn{
+    bottom: 0;
+}
+.card:hover{
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 22px 70px 4px;
+}
+
+.card .linkbtn:hover{
+    background:#0000007b;
+    color:black;
+}
+img{
+    font-size: 0;
+}
+.imgtxt{
+    position: absolute;
+    top:0;
+    font-size: 12px;
+    color:rgba(0, 0, 0, 0.8);
+    left:4px;
+}
+.cardimage p{
+    display:none;
+    transition: all 1s;
+
+}
+.card:hover p{
+    display:block;
+}
+
+/* cart */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.CartRow {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    transition: all .7s;
+}
+
+.CartTable {
+    border-collapse: separate;
+    border-spacing: 0 30px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    width: 80%;
+}
+
+.CartTable h1 {
+    margin: 0;
+    font-size: 70px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.CartRow .CartColumns {
+    padding: 50px;
+}
+
+.cartimg img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-  }
-  
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cartimg {
+    margin: 0;
+    width: 160px;
+    height: 180px;
+    padding: 0;
+}
+
+.CartRow:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.noItem {
+    height: 700px;
+    margin: 50px;
+    color: black;
+}
+
+.noItem h3 {
+    animation: clickhere infinite 1s ease-in-out;
+}
+
+@keyframes clickhere {
+    0% {
+        font-size: 20px;
+    }
+
+    50% {
+        font-size: 20.5px;
+    }
+
+    100% {
+        font-size: 20px;
+    }
+}
